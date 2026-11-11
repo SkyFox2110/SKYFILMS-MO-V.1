@@ -233,7 +233,7 @@ Este capítulo contiene los formatos controlados de Skyfilms S.A.S. Todos se dil
 \firmas
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cab{F-009}{Planificación de la Operación}{Jefe de Pilotos UAS / Piloto remoto}{Gerente de Operaciones}{Antes de cada operación, a partir de F-008. Incluye la revisión de viabilidad y los datos de la misión.}
+\cab{F-009}{Planificación de la Operación}{Jefe de Pilotos UAS / Piloto remoto}{Gerente General}{Antes de cada operación, a partir de F-008. Incluye la revisión de viabilidad y los datos de la misión.}
 
 \campos{
 \textbf{No. orden de vuelo (F-009):} & \textbf{Fecha y hora de inicio / fin:} \\ \hline
@@ -401,3 +401,76 @@ Este capítulo contiene los formatos controlados de Skyfilms S.A.S. Todos se dil
 \textbf{Total de minutos de vuelo acumulados:} & \textbf{Total de minutos nocturnos acumulados:} \\ \hline
 \textbf{Servicio máximo permitido:} 10 h continuas dentro de 24 h & \textbf{Revisado por el Jefe de Pilotos (nombre y firma):} \\ \hline
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-015}{Acuse de Recibo del Manual}{Receptor de la copia}{Gerente SMS}{Cada vez que se entrega una versión nueva del Manual de Operaciones, del SMS, del MCM o de las OpSpecs. El Gerente SMS entrega la copia dentro de los 5 días hábiles siguientes a la aprobación.}
+
+\campos{
+\textbf{Documento entregado:} & \textbf{Versión y fecha de emisión:} \\ \hline
+\textbf{Nombre del receptor:} & \textbf{Cargo o rol:} \\ \hline
+\textbf{Fecha de entrega:} & \textbf{Forma:} $\square$ Digital (PDF) \quad $\square$ Impresa \\ \hline
+\textbf{Versión anterior retirada o destruida:} $\square$ Sí \quad $\square$ N/A & \textbf{Acuse No.:} \\ \hline
+}
+\caja{Declaración del receptor}{1.2cm}
+\par\noindent Declaro que recibí la versión indicada, que la leí y que me comprometo a aplicarla.\par\medskip
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-016}{Registro de Asistencia a Capacitación}{Instructor}{Jefe de Pilotos UAS}{En cada sesión de capacitación inicial, periódica, por cambios o extraordinaria, incluidos el repaso de manuales de usuario y el diligenciamiento de formatos.}
+
+\campos{
+\textbf{Curso o tema:} & \textbf{Tipo:} $\square$ Inicial \quad $\square$ Periódica \quad $\square$ Cambios \quad $\square$ Extraordinaria \\ \hline
+\textbf{Fecha y duración (h):} & \textbf{Instructor:} \\ \hline
+\textbf{Lugar:} & \textbf{Material utilizado:} \\ \hline
+}
+
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{4.5cm}|p{3cm}|p{3cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Nombre} & \textbf{Cargo} & \textbf{Documento} & \textbf{Firma} \\ \hline
+\fx{ & & & \\ \hline }
+\end{tabularx}}
+
+\vspace{0.3cm}
+\caja{Observaciones}{1cm}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-017}{Evaluación y Cierre de Capacitación}{Instructor / evaluador}{Jefe de Pilotos UAS}{Al terminar cada capacitación, junto con el F-016, para dejar el resultado y cerrar el entrenamiento de cada persona.}
+
+\campos{
+\textbf{Curso o tema:} & \textbf{F-016 relacionado (fecha):} \\ \hline
+\textbf{Nombre del evaluado:} & \textbf{Cargo:} \\ \hline
+\textbf{Evaluación teórica (nota):} & \textbf{Evaluación práctica:} $\square$ Aprobada \quad $\square$ No aprobada \quad $\square$ N/A \\ \hline
+\textbf{Resultado:} $\square$ Competente \quad $\square$ Requiere reentrenamiento & \textbf{Próximo entrenamiento periódico (cada 4 meses):} \\ \hline
+}
+\caja{Observaciones y acciones de refuerzo}{1.2cm}
+\campos{
+\textbf{Cierre del entrenamiento (fecha):} & \textbf{Revisado por el Jefe de Pilotos (nombre y firma):} \\ \hline
+}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section{Guía de diligenciamiento de los formatos}\label{fmt:guia}
+
+\renewcommand{\arraystretch}{1.3}
+\textbf{Reglas generales:} escribir con letra legible y tinta no borrable, o digitar el formato; no usar corrector, y corregir con una línea y la firma de quien corrige; la fecha va como día/mes/año y la hora en formato UTC-5 de 24 horas; las unidades son las del capítulo de Generalidades; todo espacio sin dato se marca N/A; el formato se firma el mismo día; y se archiva en el Sistema de Gestión Documental dentro de los 3 días hábiles siguientes.
+
+\begin{longtable}{|p{2cm}|p{4.3cm}|p{8cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Formato} & \textbf{Campo} & \textbf{Cómo se diligencia} \\ \hline
+\endhead
+F-001 & Matrícula y RUAS & Los de la aeronave según su registro ante la Aerocivil. \\ \hline
+F-001 & Tiempo de vuelo & Desde el despegue hasta el aterrizaje, en minutos. \\ \hline
+F-001 & Ciclos de batería & Un ciclo por cada carga y descarga; se anota el número de serie de la batería. \\ \hline
+F-001 & Novedades & Toda falla, alerta o suceso; si no hubo, N/A. Se acumulan horas y ciclos de la aeronave. \\ \hline
+F-014 & Minutos día y noche & Se copian del F-001; el vuelo de noche es el que se hace entre el ocaso y el amanecer. \\ \hline
+F-014 & Inicio y fin de servicio & Hora de inicio de la jornada (preparación) y de fin (cierre); se verifica el tope de 10 h en 24 h. \\ \hline
+F-014 & Totales acumulados & Suma corrida de minutos; el Jefe de Pilotos la revisa cada mes. \\ \hline
+F-015 & Documento y versión & Código, versión y fecha del documento que aparece en su carátula. \\ \hline
+F-015 & Acuse No. & Consecutivo del Gerente SMS, año y número (por ejemplo, 2026-001). \\ \hline
+F-016 & Duración y asistentes & Horas reales de la sesión; cada asistente firma personalmente. \\ \hline
+F-017 & Resultado & Competente solo con teoría aprobada y práctica aprobada o N/A; de lo contrario, reentrenamiento. \\ \hline
+\end{longtable}
+
+\textbf{Conservación:} los formatos de vuelo, los de entrenamiento y los acuses se conservan por cinco (5) años, y las hojas de vida y el libro de cada aeronave, durante su vida útil y cinco años más; ante un suceso se aplica la preservación del capítulo de Control Documental.

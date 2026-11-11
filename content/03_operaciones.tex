@@ -65,7 +65,7 @@ Toda decisión operacional deberá orientarse a preservar la seguridad de las pe
 
 \section{Perfil Operacional}
 
-Skyfilms S.A.S. desarrolla operaciones con Sistemas de Aeronaves No Tripuladas (UAS) en la categoría específica, conforme a las autorizaciones otorgadas por la Unidad Administrativa Especial de Aeronáutica Civil (UAEAC) y a las limitaciones establecidas en las Especificaciones Operacionales (OpSpecs).
+Skyfilms S.A.S. desarrolla operaciones con Sistemas de Aeronaves No Tripuladas (UAS) en la categoría específica, conforme a las autorizaciones otorgadas por la Unidad Administrativa Especial de Aeronáutica Civil (Aerocivil) y a las limitaciones establecidas en las Especificaciones Operacionales (OpSpecs).
 
 Las operaciones autorizadas corresponden exclusivamente a actividades de captura de imágenes, video y datos con fines comerciales y audiovisuales, utilizando aeronaves multirrotor operadas bajo condiciones VLOS.
 
@@ -132,7 +132,7 @@ Las operaciones EVLOS (Extended Visual Line of Sight) y BVLOS (Beyond Visual Lin
 
 \subsection{Operaciones no autorizadas}
 
-Salvo autorización expresa de la Aeronáutica Civil, Skyfilms no realizará las siguientes actividades:
+Salvo autorización expresa de la Aerocivil, Skyfilms no realizará las siguientes actividades:
 
 \begin{itemize}
 
@@ -245,11 +245,7 @@ Los equipos tecnológicos no integrados de fábrica pero asociados a la operaci�
 \end{table}
 
 \subsection{Software Utilizado}
-\begin{itemize}
-    \item \textbf{DJI Fly:} App principal para el Mavic 4 Pro, instalada en el control DJI RC Pro 2. Versión actualizada oficial. Licencia gratuita. Controla telemetría, límites de vuelo y RTH.
-    \item \textbf{Betaflight Configurator:} Software de código abierto utilizado exclusivamente en tierra para la configuración, tuning y asignación de failsafe (RTH por GPS) de la controladora del dron FPV.
-    \item \textbf{UAV Forecast:} App meteorológica para verificación de viento, ráfagas, satélites y KP Index en locación.
-\end{itemize}
+El software autorizado, con su versión, licencia y aeronave compatible, se relaciona en la sección \textit{Versiones, licencias y compatibilidad del software} del capítulo de equipos tecnológicos. No se usa software no declarado en ese cuadro.
 
 \subsection{Descripción del Enlace C2}
 El enlace C2 es el medio primario de comando y control. Sus especificaciones por aeronave son:
@@ -429,6 +425,30 @@ Para cada UAS se conserva, como mínimo:
 \section{Equipos tecnológicos}
 
 Los equipos tecnológicos asociados (ETA) de Skyfilms están relacionados en la sección \textit{Equipos Tecnológicos Asociados (ETA)} de la flota. Cada equipo se registra ante la Aerocivil con marca, modelo y número de serie, y se controla en el Sistema de Gestión Documental.
+
+\subsection{Versiones, licencias y compatibilidad del software}
+
+Antes de cada operación, el piloto verifica que el software esté actualizado y registra la versión instalada en el F-002. Las licencias y su vigencia se conservan como evidencia en el Sistema de Gestión Documental.
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{3.2cm}|p{3.8cm}|p{3.6cm}|p{3.4cm}|}
+\hline
+\textbf{Software} & \textbf{Uso} & \textbf{Licencia} & \textbf{Aeronaves} \\ \hline
+DJI Fly & Control, telemetría y registro de vuelo & Gratuita del fabricante & Mavic 4 Pro \\ \hline
+UAV Forecast & Meteorología, Kp y satélites & Según el plan contratado & Planificación (todas) \\ \hline
+Google Earth Pro & Exploración digital del área & Gratuita & Planificación (todas) \\ \hline
+Betaflight Configurator & Configuración y failsafe en tierra & Código abierto & Pavo20 Pro II \\ \hline
+ExpressLRS Configurator & Configuración del radioenlace en tierra & Código abierto & Pavo20 Pro II \\ \hline
+\end{longtable}
+
+No se emplean aplicaciones de terceros para vuelo automático ni para procesamiento de misión: el vuelo automático y autónomo no hacen parte del alcance de este Manual.
+
+\subsection{Estaciones de control en tierra}
+
+\begin{itemize}
+\item \textbf{Mavic 4 Pro:} control DJI RC Pro 2 con pantalla integrada y DJI Fly. Antenas integradas, enlace DJI O4 y registro de vuelo en el mismo equipo.
+\item \textbf{Pavo20 Pro II:} radio RadioMaster TX16S con módulo ELRS XBand y gafas DJI Goggles 2 para el video del O4 Pro. La radio envía los mandos y recibe la telemetría; las gafas reciben el video y muestran los datos en pantalla (OSD).
+\end{itemize}
 
 \section{Gestión del Enlace (C2)}
 
@@ -1090,7 +1110,7 @@ Cuando el Área de Operación no cumpla con las condiciones mínimas de segurida
 
 \textbf{Procedimiento relacionado}
 
-PO-001 – Planificación de la Operación
+Procedimiento descrito en esta sección del Manual de Operaciones (Planificación de la Operación).
 
 \vspace{0.3cm}
 
@@ -1468,7 +1488,7 @@ Cuando el riesgo residual permanezca por encima del nivel aceptable, la misión 
 
 \textbf{Procedimiento relacionado}
 
-PO-002 Evaluación del Riesgo Operacional.
+Procedimiento descrito en esta sección del Manual de Operaciones (Evaluación del Riesgo Operacional).
 
 \vspace{0.2cm}
 
@@ -1634,7 +1654,7 @@ Cuando durante el briefing se identifiquen cambios significativos respecto a la 
 
 \textbf{Procedimiento relacionado}
 
-PO-003 Briefing Operacional.
+Procedimiento descrito en esta sección del Manual de Operaciones (Briefing Operacional).
 
 \vspace{0.2cm}
 
@@ -1818,7 +1838,7 @@ Una vez concluida la misión, el Piloto Remoto deberá:
 
 \textbf{Procedimiento relacionado}
 
-PO-004 Ejecución de la Operación.
+Procedimiento descrito en esta sección del Manual de Operaciones (Ejecución de la Operación).
 
 \vspace{0.3cm}
 
@@ -1916,7 +1936,7 @@ Las operaciones destinadas al cubrimiento de eventos deberán considerar, como m
 
 \end{itemize}
 
-Cuando la operación implique concentraciones de personas, únicamente podrá desarrollarse si cuenta con las autorizaciones exigidas por la Aeronáutica Civil y se han implementado las medidas de mitigación correspondientes.
+Cuando la operación implique concentraciones de personas, únicamente podrá desarrollarse si cuenta con las autorizaciones exigidas por la Aerocivil y se han implementado las medidas de mitigación correspondientes.
 
 
 
@@ -2130,6 +2150,12 @@ Operación suspendida.
 
 \\ \hline
 
+Pérdida de sistemas adicionales o de servicios de apoyo (iluminación, comunicaciones, energía) &
+Suspender la operación y aterrizar; de noche, con la luz de la aeronave apagada, aterrizar de inmediato. &
+Operación suspendida hasta restablecer el sistema.
+
+\\ \hline
+
 Falla del sistema de propulsión (motor, controlador o batería) &
 Aterrizaje inmediato en una zona segura, alejado de personas. &
 Operación suspendida.
@@ -2181,6 +2207,12 @@ Reanudar únicamente cuando desaparezca el conflicto.
 Pérdida del Observador Visual &
 Suspender inmediatamente la misión FPV y aterrizar la aeronave. &
 Operación suspendida.
+
+\\ \hline
+
+Incapacidad del observador &
+Avisar al piloto, suspender la operación y aterrizar; atender al observador. &
+Operación suspendida hasta contar con un observador.
 
 \\ \hline
 
@@ -2301,6 +2333,17 @@ Operación suspendida hasta garantizar condiciones seguras.
 
 
 
+\subsection{Reporte externo a la Aerocivil}
+
+\begin{itemize}
+\item \textbf{Responsable:} el Gerente SMS, con apoyo del Jefe de Pilotos y del piloto remoto, que le entrega el F-013 el mismo día del suceso.
+\item \textbf{Eventos reportables (RAC 100.240):} lesión grave o pérdida del conocimiento de una persona; colisión contra infraestructura o daños a propiedad; colisión con otra UA; colisión con una aeronave tripulada; y colisión con fauna.
+\item \textbf{Canal:} Formato de Notificación del Suceso de la Dirección Técnica de Investigación de Accidentes (DIACC) de la Aerocivil, con los datos exigidos por el RAC 114.336.
+\item \textbf{Plazo:} dentro de las 48 horas siguientes al suceso.
+\item \textbf{Evidencia:} el Gerente SMS conserva el formato enviado, el comprobante de radicación y la respuesta de la Aerocivil junto con el F-013, en el Sistema de Gestión Documental.
+\item \textbf{Registros:} se conservan los registros de vuelo (logs) de la aeronave hasta que la Aerocivil determine su destino.
+\end{itemize}
+
 \subsection{Criterios de decisión en emergencia}
 
 \begin{itemize}
@@ -2337,7 +2380,7 @@ Cuando ocurra un accidente durante una operación UAS, la tripulación deberá:
 
 \textbf{Procedimiento relacionado}
 
-PO-005 Gestión de Condiciones Anormales y Emergencias.
+Procedimiento descrito en esta sección del Manual de Operaciones (Gestión de Condiciones Anormales y Emergencias).
 
 \vspace{0.3cm}
 
@@ -2478,7 +2521,7 @@ Antes de dar por finalizada la misión deberá verificarse que:
 
 \textbf{Procedimiento relacionado}
 
-PO-006 Finalización de la Operación.
+Procedimiento descrito en esta sección del Manual de Operaciones (Finalización de la Operación).
 
 \vspace{0.3cm}
 
