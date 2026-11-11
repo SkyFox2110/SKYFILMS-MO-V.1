@@ -75,12 +75,12 @@ Skyfilms S.A.S. operará la siguiente flota, sujeta a los procesos de adquisici�
         \rowcolor[gray]{0.9} \textbf{Parámetro} & \textbf{Especificación} \\ \hline
         \textbf{Marca / Modelo} & DJI / Mavic 4 Pro \\ \hline
         \textbf{Número de Serie / RUAS} & En proceso de adquisición \\ \hline
-        \textbf{MTOW (Peso al despegue)} & 958 g (Aprox. sujeto a ficha final del fabricante) \\ \hline
+        \textbf{MTOW (Peso al despegue)} & 1085 g (MTOM según el Manual de usuario DJI Mavic 4 Pro, v1.0, p. 93) \\ \hline
         \textbf{Dimensiones} & 347 x 283 x 107 mm (desplegado) \\ \hline
         \textbf{Clasificación / Tipo de vuelo} & Multirrotor / VTOL (Despegue y aterrizaje vertical) \\ \hline
         \textbf{Velocidad máx. (Ascenso/Descenso/Vuelo)} & 8 m/s / 6 m/s / 21 m/s \\ \hline
         \textbf{Techo máx. de operación} & 6000 m s.n.m. \\ \hline
-        \textbf{Autonomía / Radio de acción} & 43 minutos (sin viento) / Hasta 750 m (Restricción VLOS) \\ \hline
+        \textbf{Autonomía / Radio de acción} & 43 minutos (sin viento); tiempo máximo de vuelo planificado: 80\,\% de la autonomía (RAC 100.210 k) / Hasta 750 m (Restricción VLOS) \\ \hline
         \textbf{Resistencia al viento / Temp.} & 12 m/s / -10°C a 40°C \\ \hline
         \textbf{Sistemas GNSS} & GPS + Galileo + BeiDou \\ \hline
         \textbf{Protección IP} & N/A \\ \hline
@@ -183,7 +183,7 @@ Todas las aeronaves no tripuladas registradas por \textbf{Skyfilms} en la base d
 
 \begin{enumerate}[label=\alph*)]
     \item Número de Registro RUAS asignado por la Aerocivil.
-    \item Nombre del explotador: ``Skyfilms''.
+    \item Nombre o razón social del explotador: ``Skyfilms S.A.S.''.
     \item Correo electrónico de contacto del explotador: \texttt{hola@skyfilms.com.co}.
     \item Correo electrónico institucional de la Aerocivil: \texttt{atencionalciudadano@aerocivil.gov.co}.
 \end{enumerate}
@@ -726,10 +726,49 @@ Zona destinada al público o terceros, separada físicamente del área operacion
 
 \end{table}
 
+\paragraph{Medida D de las aeronaves de Skyfilms.}
+La directiva exige dimensionar el dronpuerto con la aeronave de mayor tamaño. La medida D es el diámetro del círculo que abarca toda la aeronave, incluidas las puntas de las hélices. Con los datos de las fichas técnicas, la aeronave de referencia es el DJI Mavic 4 Pro (347 × 283 mm desplegado, diagonal aproximada de 0,45 m), por lo que se adopta $D = 0{,}45$ m. Las demás aeronaves tienen una medida D menor y pueden operar desde el mismo dronpuerto.
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|X|c|c|}
+\hline
+\textbf{Área (según Tabla \ref{tab:dronpuerto})} & \textbf{Múltiplo de D} & \textbf{Medida con D = 0,45 m} \\ \hline
+TLOF & 1D & 0,45 m \\ \hline
+FATO (a cada lado desde la TLOF) & 1,5D & 0,68 m \\ \hline
+Área de seguridad SA (a cada lado desde la FATO) & 3D & 1,35 m \\ \hline
+Área de operación (a cada lado desde la SA) & 4D & 1,80 m \\ \hline
+Área de espera o espectadores (hacia el exterior desde el área de operación) & 2D & 0,90 m \\ \hline
+\end{tabularx}
+\caption{Dimensiones mínimas del Área de Operación Temporal para D = 0,45 m.}
+\end{table}
+
+El Piloto Remoto verificará, antes de cada misión, que el dronpuerto cumple estas medidas con la aeronave que se va a emplear. El área de espera o espectadores es obligatoria en espacios públicos de tránsito recurrente y se demarca con cintas, lazos u objetos visibles que impidan el ingreso al área de operación.
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=.92\textwidth]{Imagenes/Area_Operacion_Completa.png}
-\caption{Configuración general del Área de Operación Temporal (AOT).}
+\begin{tikzpicture}[scale=1, font=\small]
+  % Unidad: 1D = 0.4 cm (esquema proporcional a la medida D)
+  \def\D{0.4}
+  \draw[fill=gray!8, dashed] (-11*\D,-11*\D) rectangle (11*\D,11*\D);
+  \draw[fill=gray!20] (-9*\D,-9*\D) rectangle (9*\D,9*\D);
+  \draw[fill=blue!10] (-5*\D,-5*\D) rectangle (5*\D,5*\D);
+  \draw[fill=blue!25] (-2*\D,-2*\D) rectangle (2*\D,2*\D);
+  \draw[fill=blue!50] (0,0) circle (0.5*\D);
+  \node at (0,0) {\bfseries\scriptsize H};
+  \node[anchor=west] at (11.4*\D,9.5*\D) {Área de espera o espectadores (2D)};
+  \node[anchor=west] at (11.4*\D,6.5*\D) {Área de operación (4D)};
+  \node[anchor=west] at (11.4*\D,2.8*\D) {Área de seguridad SA (3D)};
+  \node[anchor=west] at (11.4*\D,-0.8*\D) {FATO (1.5D)};
+  \node[anchor=west] at (11.4*\D,-3.5*\D) {TLOF (1D, centrada en el DRP)};
+  \draw[-{Latex}] (11.35*\D,9.5*\D) -- (10.6*\D,9.5*\D);
+  \draw[-{Latex}] (11.35*\D,6.5*\D) -- (8.4*\D,6.5*\D);
+  \draw[-{Latex}] (11.35*\D,2.8*\D) -- (4.4*\D,2.8*\D);
+  \draw[-{Latex}] (11.35*\D,-0.8*\D) -- (1.6*\D,-0.8*\D);
+  \draw[-{Latex}] (11.35*\D,-3.5*\D) -- (0.3*\D,-0.4*\D);
+\end{tikzpicture}
+\caption{Configuración general del Área de Operación Temporal (AOT). Cada franja se mide a cada lado desde el borde de la anterior, en múltiplos de la dimensión D (Directiva MAUT-5.0-22-014).}
 \label{fig:aot}
 \end{figure}
 
@@ -749,6 +788,17 @@ Utilizada en operaciones recurrentes o de larga duración, tales como produccion
 
 Utilizada en operaciones ocasionales o desplazamientos. Se implementa mediante dronpads portátiles y elementos temporales de señalización tales como conos, cintas o barreras móviles, los cuales serán retirados una vez finalizada la misión.
 
+\end{enumerate}
+
+Skyfilms opera exclusivamente con dronpuertos móviles y temporales, dado que no dispone de bases fijas de lanzamiento (ver Instalaciones Administrativas y Operativas). El montaje y desmontaje se realiza así:
+
+\begin{enumerate}
+\item \textbf{Selección del punto:} el Piloto Remoto inspecciona el sitio, ubica el punto de referencia del dronpuerto (DRP) sobre una superficie nivelada y libre de obstáculos y registra sus coordenadas en el Formato de Planificación de la Operación (F-009).
+\item \textbf{Montaje de la TLOF:} se coloca el dronpad portátil centrado en el DRP y se fija a la superficie.
+\item \textbf{Demarcación de áreas:} con las medidas de la Tabla \ref{tab:dronpuerto}, se delimitan la FATO, el área de seguridad y el área de operación con conos y cinta; si hay público, se demarca el área de espera.
+\item \textbf{Equipamiento:} se disponen el extintor, la manta ignífuga, el botiquín, el medio de comunicación de la tripulación y, en operación nocturna, la iluminación descrita en esta sección.
+\item \textbf{Verificación:} el Piloto Remoto confirma el cumplimiento en la Lista de Chequeo Preoperacional (F-002) antes de energizar los motores.
+\item \textbf{Desmontaje:} finalizada la misión se retiran el equipamiento, los conos y la cinta, y se deja el sitio limpio y sin residuos.
 \end{enumerate}
 
 \subsection{Requisitos Operacionales del Área (Dronpuerto)}
@@ -771,7 +821,7 @@ Antes de autorizar el inicio de cualquier operación de vuelo, el Piloto Remoto 
     \end{itemize}
 
     \item \textbf{Requisitos Específicos para Vuelo Nocturno:}
-    Cuando la operación esté planificada en horario nocturno, además de los requisitos anteriores, el Área de Operación debe contar con iluminación artificial adecuada (reflectores portátiles o iluminación LED en el Dronpad) que permita al Piloto Remoto visualizar con total claridad el punto exacto de aterrizaje y el entorno inmediato, sin generar deslumbramiento que afecte la línea de vista visual (VLOS) hacia la aeronave.
+    Cuando la operación esté planificada en horario nocturno, además de los requisitos anteriores, el Área de Operación debe contar con iluminación artificial adecuada (reflectores portátiles o iluminación LED en el Dronpad) que permita al Piloto Remoto visualizar con total claridad el punto exacto de aterrizaje y el entorno inmediato, sin generar deslumbramiento que afecte la línea de vista visual (VLOS) hacia la aeronave. Como mínimo se instalarán: demarcación reflectante en todas las aristas de la TLOF y de la FATO; y al menos dos luces enfrentadas, situadas a más de 1 metro de altura y fuera del área de seguridad, cuya luz se dirija hacia la TLOF y la FATO. La demarcación y las luces no deben generar superficies que obstaculicen la operación (Directiva MAUT-5.0-22-014, numeral 7.4.6).
 
     \item \textbf{Rutas de Evacuación y Respuesta a Emergencias:}
     El Piloto Remoto debe identificar y comunicar al equipo de apoyo las rutas de evacuación rápida desde el punto de operación, garantizando además que exista espacio suficiente para el acceso de personal de emergencia (bomberos, ambulancias) en caso de que un incidente lo requiera.
@@ -845,7 +895,7 @@ Cuando el Área de Operación no cumpla con las condiciones mínimas de segurida
 
 \textbf{Procedimiento relacionado}
 
-PO-MO-001 – Planificación de la Operación
+PO-001 – Planificación de la Operación
 
 \vspace{0.3cm}
 
@@ -853,24 +903,13 @@ PO-MO-001 – Planificación de la Operación
 
 \begin{itemize}
 
-\item FO-MO-002 – Planeación de la Misión
+\item F-009 – Planificación de la Operación
 
-\item FO-MO-005 – Tarjeta de Riesgos
+\item F-011 – Evaluación del Riesgo Operacional
 
-\item FO-MO-006 – Lista de Verificación de Planeación de la Misión
+\item F-002 – Lista de Chequeo Preoperacional
 
-\item FO-MO-013 – Briefing Operacional de Campo
-
-\end{itemize}
-
-\textbf{Matrices relacionadas}
-
-\begin{itemize}
-
-\item MT-MO-001 – Matriz de Programación, Revisión y Viabilidad
-
-\item MT-MO-002 – Matriz de Seguimiento Operacional UAS
-
+\item F-010 – Briefing Operacional
 
 \end{itemize}
 
@@ -1797,10 +1836,13 @@ Para la ejecución y autorización de vuelos nocturnos, el Piloto Remoto y el eq
 
 \begin{itemize}
     \item \textbf{Adición en el Certificado:} El Piloto Remoto al mando debe contar de manera obligatoria con la adición vigente de ``Vuelo Nocturno'' en su Certificado de Idoneidad como piloto UAS (CIPU).
-    \item \textbf{Iluminación de la Aeronave:} La aeronave no tripulada (UA) debe estar equipada con luces de navegación y/o estroboscópicas (integradas de fábrica o acopladas de manera segura sin afectar el centro de gravedad) que permanezcan encendidas durante toda la operación. Estas luces deben hacer a la aeronave claramente visible en el cielo nocturno para la tripulación y para otras aeronaves en el espacio aéreo.
+    \item \textbf{Iluminación de la Aeronave:} La aeronave no tripulada (UA) debe operar con las luces instaladas de fábrica o autorizadas por su fabricante, encendidas de forma permanente durante toda la operación nocturna (RAC 100.220 a). Estas luces deben hacer a la aeronave claramente visible en el cielo nocturno para la tripulación y para otras aeronaves en el espacio aéreo. En el DJI Mavic 4 Pro, los ledes delanteros se configuran para permanecer encendidos; el modo \textit{Auto} los apaga al grabar y no debe usarse de noche. Antes de cada vuelo se verifica que las luces funcionan, y no se instalan accesorios que no estén autorizados por el fabricante.
     \item \textbf{Modalidad de Vuelo Estricta:} La operación nocturna se restringirá \textbf{únicamente a la modalidad VLOS} (Visibilidad en Línea de Vista), sin exceder en ningún momento un radio de 750 metros horizontales medidos desde la posición fija del piloto.
     \item \textbf{Reconocimiento Diurno Obligatorio (Scouting):} Es de carácter mandatorio realizar una inspección física y visual del área de operación en horario diurno (con luz solar) antes de la ejecución del vuelo nocturno en esa misma locación. Este reconocimiento tiene como objetivo principal la identificación de obstáculos no iluminados (líneas eléctricas, cables, antenas, vegetación alta) y el establecimiento de rutas de vuelo seguras y puntos de aterrizaje de emergencia.
     \item \textbf{Apoyo de Observador Visual:} Toda operación nocturna requerirá incondicionalmente el apoyo de un Observador Visual asignado por el Jefe de Pilotos, quien asistirá en el monitoreo del entorno para prevenir colisiones e identificar cualquier amenaza en la oscuridad.
+    \item \textbf{Límites de la operación:} el tiempo de vuelo planificado no excederá el 80\,\% de la autonomía de la aeronave (RAC 100.210 k); la operación se realiza desde un punto fijo (RAC 100.210 n) y a una altura máxima de 400 ft (122 m) sobre el terreno. En zona urbana se mantiene una distancia mínima de 30 m a personas y edificaciones (RAC 100.220 b).
+    \item \textbf{Falla de iluminación:} si las luces de la aeronave se apagan o fallan durante el vuelo, el Piloto Remoto aterriza de inmediato en el punto seguro más cercano e informa al Observador Visual y al Jefe de Pilotos.
+    \item \textbf{Lista de chequeo y riesgo nocturno:} toda operación nocturna incluye la sección nocturna de la Lista de Chequeo Preoperacional (F-002) y una Evaluación del Riesgo Operacional (F-011) que considere la pérdida de referencias visuales, la desorientación espacial y los obstáculos no iluminados.
 \end{itemize}
 
 \section{Procedimientos Anormales y de Emergencia}
