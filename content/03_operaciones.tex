@@ -73,7 +73,7 @@ Skyfilms S.A.S. operará la siguiente flota, sujeta a los procesos de adquisici�
     \begin{tabular}{|p{5cm}|p{9cm}|}
         \hline
         \rowcolor[gray]{0.9} \textbf{Parámetro} & \textbf{Especificación} \\ \hline
-        \textbf{Marca / Modelo} & DJI / Mavic 4 Pro \\ \hline
+        \textbf{Marca / Modelo} & DJI / Mavic 4 Pro Creator Combo (incluye control DJI RC Pro 2) \\ \hline
         \textbf{Número de Serie / RUAS} & En proceso de adquisición \\ \hline
         \textbf{MTOW (Peso al despegue)} & 1085 g (MTOM según el Manual de usuario DJI Mavic 4 Pro, v1.0, p. 93) \\ \hline
         \textbf{Dimensiones} & 347 x 283 x 107 mm (desplegado) \\ \hline
@@ -106,9 +106,9 @@ Skyfilms S.A.S. operará la siguiente flota, sujeta a los procesos de adquisici�
         \textbf{Clasificación / Tipo de vuelo} & Multirrotor FPV / VTOL \\ \hline
         \textbf{Velocidad máx. (Ascenso/Descenso/Vuelo)} & Por determinar en vuelos de prueba (modo Acro) \\ \hline
         \textbf{Techo máx. de operación} & Por confirmar (límite operacional del manual: 400 ft AGL) \\ \hline
-        \textbf{Autonomía / Radio de acción} & 8 a 10 min según batería (datos del fabricante con baterías 4S de 580 a 680 mAh); tiempo máximo de vuelo planificado: 80\,\% de la autonomía / Hasta 750 m (Restricción VLOS con observador) \\ \hline
+        \textbf{Autonomía / Radio de acción} & 8 a 10 min según batería (datos del fabricante con baterías 4S de 580 a 680 mAh); tiempo máximo de vuelo planificado: 80\,\% de la autonomía / Distancia máxima de operación prevista: 250 m (el límite legal VLOS es de 750 m), siempre con observador \\ \hline
         \textbf{Resistencia al viento / Temp.} & Por determinar en vuelos de prueba \\ \hline
-        \textbf{Sistemas GNSS} & Módulo GPS externo (no incluido de fábrica): modelo por confirmar \\ \hline
+        \textbf{Sistemas GNSS} & Módulo GPS externo (requerido; no incluido de fábrica): modelo por confirmar \\ \hline
         \textbf{Protección IP} & Sin certificación IP \\ \hline
         \textbf{Frecuencias / Sistema C2} & ELRS XBand (Gemini Xrossband) 2.4 GHz y 915 MHz (control) / 5.8 GHz (video DJI O4 Pro) \\ \hline
         \textbf{Latencia / Encriptación} & Por medir en la demostración del enlace C2 / Salto de frecuencia y frase de enlace (\textit{binding phrase}) de ExpressLRS \\ \hline
@@ -131,13 +131,14 @@ Los equipos tecnológicos no integrados de fábrica pero asociados a la operaci�
         Módulo y receptor ELRS & ELRS XBand (Gemini Xrossband), modelo por confirmar & En proceso & Control del Pavo20 Pro en 2.4 GHz y 915 MHz. \\ \hline
         Visor FPV & DJI Goggles 2 & En proceso & Visualización en tiempo real. Uso exclusivo con Observador VLOS. \\ \hline
         Tira LED & Tira LED blanca, modelo por confirmar & En proceso & Iluminación de la aeronave FPV en vuelo nocturno. \\ \hline
-        Control remoto del Mavic 4 Pro y dispositivo móvil & Control DJI y dispositivo con DJI Fly, modelos por confirmar & En proceso & Estación de control del Mavic 4 Pro. \\ \hline
+        Control remoto del Mavic 4 Pro & DJI RC Pro 2 (Creator Combo) con pantalla integrada y DJI Fly & En proceso & Estación de control del Mavic 4 Pro. \\ \hline
+        Módulo GPS & Módulo GPS externo para el Pavo20 Pro, modelo por confirmar & En proceso & Posición y rescate por GPS (failsafe). \\ \hline
     \end{tabular}
 \end{table}
 
 \subsection{Software Utilizado}
 \begin{itemize}
-    \item \textbf{DJI Fly:} App principal para el Mavic 4 Pro. Versión actualizada oficial. Licencia gratuita. Controla telemetría, límites de vuelo y RTH.
+    \item \textbf{DJI Fly:} App principal para el Mavic 4 Pro, instalada en el control DJI RC Pro 2. Versión actualizada oficial. Licencia gratuita. Controla telemetría, límites de vuelo y RTH.
     \item \textbf{Betaflight Configurator:} Software de código abierto utilizado exclusivamente en tierra para la configuración, tuning y asignación de failsafe (RTH por GPS) de la controladora del dron FPV.
     \item \textbf{UAV Forecast:} App meteorológica para verificación de viento, ráfagas, satélites y KP Index en locación.
 \end{itemize}
@@ -145,7 +146,7 @@ Los equipos tecnológicos no integrados de fábrica pero asociados a la operaci�
 \subsection{Descripción del Enlace C2}
 El enlace C2 es el medio primario de comando y control. Sus especificaciones por aeronave son:
 \begin{itemize}
-    \item \textbf{DJI Mavic 4 Pro (DJI O4):} Opera en bandas de 2.4 GHz y 5.8 GHz con conmutación automática anti-interferencias. Failsafe configurado para retornar al punto de origen (RTH) ante la pérdida de señal.
+    \item \textbf{DJI Mavic 4 Pro Creator Combo (DJI O4):} Se controla con el DJI RC Pro 2. Opera en bandas de 2.4 GHz y 5.8 GHz con conmutación automática anti-interferencias y encriptación AES-256. Failsafe configurado para retornar al punto de origen (RTH) ante la pérdida de señal.
     \item \textbf{BetaFPV Pavo20 Pro (FPV):} El control opera bajo el protocolo de código abierto ExpressLRS con receptor XBand (Gemini Xrossband) en 2.4 GHz y 915 MHz, con salto de frecuencia; el video se transmite en 5.8 GHz mediante DJI O4 Pro. La telemetría incluye LQ (Link Quality) y RSSI. El Failsafe está configurado a través de Betaflight para activar rescate por GPS (RTH) ante la desconexión total del radio control.
 \end{itemize}
 
@@ -1721,7 +1722,7 @@ Pavo20 Pro & 5.8 GHz (DJI O4 Pro) & Video FPV & Enlace de video independiente \\
 
 \textbf{Estado de los equipos.} Radios, antenas, cables y conectores se revisan antes de cada operación y deben estar en buen estado físico y funcional (F-002).
 
-\textbf{Fuentes de energía de la estación de control.} El control del Mavic y el celular o tablet funcionan con sus baterías internas, y la radio TX16S y las gafas con sus baterías, cargadas por completo antes de la misión. El piloto verifica el nivel antes de cada vuelo, y se lleva batería externa de respaldo para el celular o la tablet y la radio. No se opera con menos del 30\,\% de carga en la estación de control.
+\textbf{Fuentes de energía de la estación de control.} El control DJI RC Pro 2 (con pantalla integrada), la radio TX16S y las gafas funcionan con sus baterías internas, cargadas por completo antes de la misión. El piloto verifica el nivel antes de cada vuelo, y se lleva batería externa de respaldo para el control y la radio. No se opera con menos del 30\,\% de carga en la estación de control.
 
 \subsection{Secuencia de transmisión y recepción de datos}
 
@@ -1749,11 +1750,11 @@ Mavic 4 Pro: el control DJI envía los mandos y recibe telemetría y video por e
 \subsection{Limitaciones del enlace C2}
 
 \begin{itemize}
-\item \textbf{Alcance:} la operación no supera 750 m de distancia horizontal ni 400 ft AGL. El alcance aceptado del enlace se define en la demostración de este capítulo.
+\item \textbf{Alcance:} el Mavic 4 Pro opera hasta 750 m de distancia horizontal (límite VLOS) y el Pavo20 Pro, hasta 250 m; ninguno supera 400 ft AGL. El alcance aceptado de cada enlace se define en la demostración de este capítulo.
 \item \textbf{Obstáculos:} estructuras, árboles y terreno bloquean o reflejan la señal; el piloto mantiene línea de vista libre entre la antena y la aeronave.
 \item \textbf{Antena:} la orientación de la antena de la radio y la posición de la aeronave respecto al patrón de radiación afectan la señal; no se apunta la punta de la antena a la aeronave.
 \item \textbf{Potencia e interferencia:} zonas con mucha señal Wi-Fi, torres o equipos industriales reducen el desempeño y se evitan.
-\item \textbf{Pavo20 Pro:} por tamaño y potencia, se opera con el observador y a menor distancia que el Mavic cuando el enlace se degrada.
+\item \textbf{Pavo20 Pro:} por tamaño y potencia, se opera siempre con observador y a una distancia máxima de 250 m.
 \end{itemize}
 
 \subsection{Herramientas contra la interferencia y la pérdida del enlace}
@@ -1779,7 +1780,7 @@ Ninguna de las aeronaves de Skyfilms permite cambiar de estación de control dur
 \begin{longtable}{|p{3.4cm}|p{3.4cm}|p{3.2cm}|p{3.7cm}|}
 \hline
 \rowcolor[gray]{0.9}\textbf{Equipo} & \textbf{Antena / tipo} & \textbf{Ganancia} & \textbf{Banda} \\ \hline
-Control Mavic 4 Pro & Integrada, omnidireccional & Por confirmar (datasheet) & 2.4 y 5.8 GHz \\ \hline
+Control DJI RC Pro 2 & Integrada, omnidireccional & Por confirmar (datasheet) & 2.4 y 5.8 GHz \\ \hline
 Radio TX16S + XBand & Por confirmar, omnidireccional & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
 Receptor Pavo20 Pro & Por confirmar & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
 Gafas DJI Goggles 2 & Integradas & Por confirmar (datasheet) & 5.8 GHz \\ \hline
@@ -1808,7 +1809,7 @@ Antes de iniciar operaciones, Skyfilms demuestra el enlace C2 de cada aeronave a
 
 \begin{itemize}
 \item \textbf{Vuelos:} un mínimo de 3 vuelos que muestran el funcionamiento del enlace a su alcance máximo. Si un vuelo presenta fallas, se corrigen y se repiten las 3 repeticiones.
-\item \textbf{Distancia:} el alcance aceptado es de 750 m; el enlace se demuestra estable a esa distancia más el 20\,\% (900 m), medida entre la estación de control y la aeronave, y a no más de 400 ft AGL en todas las fases.
+\item \textbf{Distancia:} el alcance aceptado es de 750 m para el Mavic 4 Pro y de 250 m para el Pavo20 Pro. El enlace se demuestra estable a esa distancia más el 20\,\% (900 m y 300 m, respectivamente), medida entre la estación de control y la aeronave, y a no más de 400 ft AGL en todas las fases.
 \item \textbf{Maniobras:} a esa distancia se hacen giros de 360° a derecha e izquierda y ángulos de alabeo de 10° o más, o traslaciones laterales uniformes.
 \item \textbf{Validación:} el video FPV (o de la cámara de la aeronave) es una de las fuentes principales para verificar la estabilidad; la telemetría se transmite de forma permanente.
 \item \textbf{Frecuencias y equipos:} se identifican las frecuencias de transmisión y recepción, y los equipos (antenas, módulos, cables, conectores, pantallas) corresponden a lo descrito en este Manual.
@@ -1964,7 +1965,7 @@ Para la ejecución y autorización de vuelos nocturnos, el Piloto Remoto y el eq
 \begin{itemize}
     \item \textbf{Adición en el Certificado:} El Piloto Remoto al mando debe contar de manera obligatoria con la adición vigente de ``Vuelo Nocturno'' en su Certificado de Idoneidad como piloto UAS (CIPU).
     \item \textbf{Iluminación de la Aeronave:} La aeronave no tripulada (UA) debe operar con las luces instaladas de fábrica o autorizadas por su fabricante, encendidas de forma permanente durante toda la operación nocturna (RAC 100.220 a). Estas luces deben hacer a la aeronave claramente visible en el cielo nocturno para la tripulación y para otras aeronaves en el espacio aéreo. En el DJI Mavic 4 Pro, los ledes delanteros se configuran para permanecer encendidos; el modo \textit{Auto} los apaga al grabar y no debe usarse de noche. Antes de cada vuelo se verifica que las luces funcionan, y no se instalan accesorios que no estén autorizados por el fabricante.
-    \item \textbf{Modalidad de Vuelo Estricta:} La operación nocturna se restringirá \textbf{únicamente a la modalidad VLOS} (Visibilidad en Línea de Vista), sin exceder en ningún momento un radio de 750 metros horizontales medidos desde la posición fija del piloto.
+    \item \textbf{Modalidad de Vuelo Estricta:} La operación nocturna se restringirá \textbf{únicamente a la modalidad VLOS} (Visibilidad en Línea de Vista), sin exceder en ningún momento un radio de 750 metros horizontales medidos desde la posición fija del piloto (250 metros con el Pavo20 Pro).
     \item \textbf{Reconocimiento Diurno Obligatorio (Scouting):} Es de carácter mandatorio realizar una inspección física y visual del área de operación en horario diurno (con luz solar) antes de la ejecución del vuelo nocturno en esa misma locación. Este reconocimiento tiene como objetivo principal la identificación de obstáculos no iluminados (líneas eléctricas, cables, antenas, vegetación alta) y el establecimiento de rutas de vuelo seguras y puntos de aterrizaje de emergencia.
     \item \textbf{Apoyo de Observador Visual:} Toda operación nocturna requerirá incondicionalmente el apoyo de un Observador Visual asignado por el Jefe de Pilotos, quien asistirá en el monitoreo del entorno para prevenir colisiones e identificar cualquier amenaza en la oscuridad.
     \item \textbf{Límites de la operación:} el tiempo de vuelo planificado no excederá el 80\,\% de la autonomía de la aeronave (RAC 100.210 k); la operación se realiza desde un punto fijo (RAC 100.210 n) y a una altura máxima de 400 ft (122 m) sobre el terreno. En zona urbana se mantiene una distancia mínima de 30 m a personas y edificaciones (RAC 100.220 b).
