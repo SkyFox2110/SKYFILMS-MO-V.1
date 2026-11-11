@@ -28,7 +28,7 @@ Este capítulo contiene los formatos controlados de Skyfilms S.A.S. Todos se dil
   \par\noindent\begin{tabularx}{\textwidth}{|X|X|}\hline
   \textbf{Nombre:} & \textbf{Firma:} \\[0.6cm] \hline \end{tabularx}
 }
-\newcommand{\chk}{\footnotesize $\square$ CHK\ \ $\square$ NO CHK\ \ $\square$ NA}
+\newcommand{\chk}{$\square$ CHK\ \ $\square$ NO CHK\ \ $\square$ NA}
 \newcommand{\lcitem}[2]{#1 & #2 & \chk \\ \hline}
 \newcommand{\lchead}[1]{\multicolumn{3}{|l|}{\cellcolor[gray]{0.85}\textbf{#1}} \\ \hline}
 \newcommand{\fx}[1]{#1#1#1#1#1}
@@ -46,10 +46,9 @@ Este capítulo contiene los formatos controlados de Skyfilms S.A.S. Todos se dil
 
 \textbf{Registro de vuelos}\par\smallskip
 
-{\footnotesize
-\begin{tabularx}{\textwidth}{|p{1.5cm}|p{1.3cm}|X|p{1.3cm}|p{1.3cm}|p{1.1cm}|p{1.2cm}|p{1.2cm}|X|}
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.5cm}|p{1.3cm}|X|p{1.3cm}|p{1.3cm}|p{1.1cm}|p{1.2cm}|p{1.2cm}|X|}
 \hline
-\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{F-009 No.} & \textbf{Piloto / Observador} & \textbf{Despegue} & \textbf{Aterriz.} & \textbf{Min.} & \textbf{Día / Noche} & \textbf{Ciclos bat.} & \textbf{Novedades (nada = N/A)} \\ \hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{F-009 No.} & \textbf{Piloto / Observador} & \textbf{Desp.} & \textbf{Aterr.} & \textbf{Min.} & \textbf{Día / Noche} & \textbf{Ciclos} & \textbf{Novedades (nada = N/A)} \\ \hline
 \fx{ & & & & & & & & \\ \hline } \fx{ & & & & & & & & \\ \hline }
 \end{tabularx}}
 
@@ -147,10 +146,9 @@ Este capítulo contiene los formatos controlados de Skyfilms S.A.S. Todos se dil
 \textbf{Fecha de compra:} & \textbf{Ciclos máximos de operación:} \\ \hline
 }
 
-{\footnotesize
-\begin{tabularx}{\textwidth}{|p{1.7cm}|X|p{1.6cm}|p{1.4cm}|p{1.3cm}|X|p{1.6cm}|}
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.7cm}|X|p{1.6cm}|p{1.4cm}|p{1.3cm}|X|p{1.6cm}|}
 \hline
-\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Voltaje por celda (V)} & \textbf{Voltaje total (V)} & \textbf{Temp. (°C)} & \textbf{Ciclos} & \textbf{Estado físico (hinchada, golpe, normal)} & \textbf{Firma piloto} \\ \hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Voltaje por celda (V)} & \textbf{Total (V)} & \textbf{Temp. (°C)} & \textbf{Ciclos} & \textbf{Estado físico (hinchada, golpe, normal)} & \textbf{Firma piloto} \\ \hline
 \fx{ & & & & & & \\ \hline } \fx{ & & & & & & \\ \hline }
 \end{tabularx}}
 
@@ -214,8 +212,7 @@ Este capítulo contiene los formatos controlados de Skyfilms S.A.S. Todos se dil
 \textbf{Equipos asociados (ETA) y seriales:} & \textbf{Firmware actual:} \\ \hline
 }
 
-{\footnotesize
-\begin{tabularx}{\textwidth}{|p{1.8cm}|p{2.5cm}|X|p{2.5cm}|X|}
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{1.8cm}|p{2.5cm}|X|p{2.5cm}|X|}
 \hline
 \rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Tipo (menor / mayor / correctivo)} & \textbf{Descripción} & \textbf{Taller / técnico} & \textbf{Condición final / F-005} \\ \hline
 \fx{ & & & & \\ \hline } \fx{ & & & & \\ \hline }
@@ -305,8 +302,7 @@ Este capítulo contiene los formatos controlados de Skyfilms S.A.S. Todos se dil
 
 \textbf{Cada factor se califica de 1 (favorable) a 5 (crítico).} Un factor en 5, o un total de más de 60 puntos, es \textbf{NO GO}.
 
-{\footnotesize
-\begin{tabularx}{\textwidth}{|p{0.9cm}|X|X|p{1.1cm}|}
+{\setlength{\tabcolsep}{3pt}\begin{tabularx}{\textwidth}{|p{0.9cm}|X|X|p{1.1cm}|}
 \hline
 \rowcolor[gray]{0.9}\textbf{No.} & \textbf{Factor} & \textbf{1 (favorable)  $\rightarrow$  5 (crítico)} & \textbf{Valor} \\ \hline
 1 & Información de la misión & Específica $\rightarrow$ vaga o sin información & \\ \hline
