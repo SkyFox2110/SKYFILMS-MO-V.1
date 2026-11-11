@@ -99,9 +99,9 @@ Skyfilms S.A.S. operará la siguiente flota, sujeta a los procesos de adquisici�
     \begin{tabular}{|p{5cm}|p{9cm}|}
         \hline
         \rowcolor[gray]{0.9} \textbf{Parámetro} & \textbf{Especificación} \\ \hline
-        \textbf{Marca / Modelo} & BetaFPV / Pavo20 Pro (cinewhoop FPV de 2,2 pulgadas) \\ \hline
+        \textbf{Marca / Modelo} & BetaFPV / Pavo20 Pro II con DJI O4 Pro (cinewhoop FPV de 2,2 pulgadas) \\ \hline
         \textbf{Número de Serie / RUAS} & En proceso de adquisición (Serie de FC) \\ \hline
-        \textbf{MTOW (Peso al despegue)} & Por pesar: aeronave lista para volar con batería, receptor y tira LED. Referencia del fabricante: 116 g sin batería, con transmisor DJI O4 Pro \\ \hline
+        \textbf{MTOW (Peso al despegue)} & Por pesar: aeronave lista para volar con batería, receptor y tira LED. Referencia del fabricante: 116,2 g sin batería, con DJI O4 Pro \\ \hline
         \textbf{Dimensiones} & Distancia entre ejes de 93,9 mm; hélices de 2,2 pulgadas de 3 palas. Medida D (con hélices): por medir, aprox. 0,15 m \\ \hline
         \textbf{Clasificación / Tipo de vuelo} & Multirrotor FPV / VTOL \\ \hline
         \textbf{Velocidad máx. (Ascenso/Descenso/Vuelo)} & Por determinar en vuelos de prueba (modo Acro) \\ \hline
@@ -113,7 +113,7 @@ Skyfilms S.A.S. operará la siguiente flota, sujeta a los procesos de adquisici�
         \textbf{Frecuencias / Sistema C2} & ELRS XBand (Gemini Xrossband) 2.4 GHz y 915 MHz (control) / 5.8 GHz (video DJI O4 Pro) \\ \hline
         \textbf{Latencia / Encriptación} & Por medir en la demostración del enlace C2 / Salto de frecuencia y frase de enlace (\textit{binding phrase}) de ExpressLRS \\ \hline
         \textbf{Detección de obstáculos} & N/A (Vuelo visual manual 100\%) \\ \hline
-        \textbf{Carga útil / Cámara} & Cámara DJI O4 Pro integrada + tira LED blanca \\ \hline
+        \textbf{Carga útil / Cámara} & Cámara DJI O4 Pro integrada + tira LED NightFire RGB de 500 mm incluida por el fabricante \\ \hline
         \textbf{Fuente de energía} & Batería LiPo 3S/4S externa (580 a 680 mAh, conector XT30) \\ \hline
     \end{tabular}
 \end{table}
@@ -130,7 +130,7 @@ Los equipos tecnológicos no integrados de fábrica pero asociados a la operaci�
         Radiocontrol & RadioMaster TX16S (ELRS) & En proceso & Enlace C2 del Pavo20 Pro. \\ \hline
         Módulo y receptor ELRS & ELRS XBand (Gemini Xrossband), modelo por confirmar & En proceso & Control del Pavo20 Pro en 2.4 GHz y 915 MHz. \\ \hline
         Visor FPV & DJI Goggles 2 & En proceso & Visualización en tiempo real. Uso exclusivo con Observador VLOS. \\ \hline
-        Tira LED & Tira LED blanca, modelo por confirmar & En proceso & Iluminación de la aeronave FPV en vuelo nocturno. \\ \hline
+        Tira LED & BetaFPV NightFire RGB (500 mm), incluida en el empaque del fabricante & Serie del equipo & Luz de la aeronave FPV en vuelo nocturno: fija en color blanco, sin efectos. \\ \hline
         Control remoto del Mavic 4 Pro & DJI RC Pro 2 (Creator Combo) con pantalla integrada y DJI Fly & En proceso & Estación de control del Mavic 4 Pro. \\ \hline
         Módulo GPS & Módulo GPS externo para el Pavo20 Pro, modelo por confirmar & En proceso & Posición y rescate por GPS (failsafe). \\ \hline
     \end{tabular}
@@ -1964,7 +1964,7 @@ Para la ejecución y autorización de vuelos nocturnos, el Piloto Remoto y el eq
 
 \begin{itemize}
     \item \textbf{Adición en el Certificado:} El Piloto Remoto al mando debe contar de manera obligatoria con la adición vigente de ``Vuelo Nocturno'' en su Certificado de Idoneidad como piloto UAS (CIPU).
-    \item \textbf{Iluminación de la Aeronave:} La aeronave no tripulada (UA) debe operar con las luces instaladas de fábrica o autorizadas por su fabricante, encendidas de forma permanente durante toda la operación nocturna (RAC 100.220 a). Estas luces deben hacer a la aeronave claramente visible en el cielo nocturno para la tripulación y para otras aeronaves en el espacio aéreo. En el DJI Mavic 4 Pro, los ledes delanteros se configuran para permanecer encendidos; el modo \textit{Auto} los apaga al grabar y no debe usarse de noche. Antes de cada vuelo se verifica que las luces funcionan, y no se instalan accesorios que no estén autorizados por el fabricante.
+    \item \textbf{Iluminación de la Aeronave:} La aeronave no tripulada (UA) debe operar con las luces instaladas de fábrica o autorizadas por su fabricante, encendidas de forma permanente durante toda la operación nocturna (RAC 100.220 a). Estas luces deben hacer a la aeronave claramente visible en el cielo nocturno para la tripulación y para otras aeronaves en el espacio aéreo. En el DJI Mavic 4 Pro, los ledes delanteros se configuran para permanecer encendidos; el modo \textit{Auto} los apaga al grabar y no debe usarse de noche. En el BetaFPV Pavo20 Pro II, la luz es la tira LED NightFire incluida por el fabricante, configurada en color blanco fijo, sin efectos ni destellos. Antes de cada vuelo se verifica que las luces funcionan, y no se instalan accesorios que no estén autorizados por el fabricante.
     \item \textbf{Modalidad de Vuelo Estricta:} La operación nocturna se restringirá \textbf{únicamente a la modalidad VLOS} (Visibilidad en Línea de Vista), sin exceder en ningún momento un radio de 750 metros horizontales medidos desde la posición fija del piloto (250 metros con el Pavo20 Pro).
     \item \textbf{Reconocimiento Diurno Obligatorio (Scouting):} Es de carácter mandatorio realizar una inspección física y visual del área de operación en horario diurno (con luz solar) antes de la ejecución del vuelo nocturno en esa misma locación. Este reconocimiento tiene como objetivo principal la identificación de obstáculos no iluminados (líneas eléctricas, cables, antenas, vegetación alta) y el establecimiento de rutas de vuelo seguras y puntos de aterrizaje de emergencia.
     \item \textbf{Apoyo de Observador Visual:} Toda operación nocturna requerirá incondicionalmente el apoyo de un Observador Visual asignado por el Jefe de Pilotos, quien asistirá en el monitoreo del entorno para prevenir colisiones e identificar cualquier amenaza en la oscuridad.
