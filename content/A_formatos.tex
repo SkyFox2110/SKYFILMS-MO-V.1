@@ -1,0 +1,385 @@
+\chapter{Formatos Operacionales}
+\label{anexo:formatos}
+
+Este anexo contiene los formatos controlados de Skyfilms S.A.S. Todos se diligencian en su totalidad: el espacio sin información se marca \textbf{N/A}, y no se dejan casillas en blanco. Las listas de chequeo se marcan con \textbf{CHK} (cumple), \textbf{NO CHK} (no cumple) o \textbf{NA} (no aplica); un \textbf{NO CHK} en un ítem crítico (\textbf{[C]}) impide el vuelo hasta corregirlo. Una copia impresa se considera \textit{copia no controlada}.
+
+% --- Macros de formato ---
+\newcommand{\cab}[5]{%
+  \clearpage
+  \section{#1 --- #2}\label{fmt:#1}
+  \renewcommand{\arraystretch}{1.4}
+  \par\noindent\begin{tabularx}{\textwidth}{|l|X|l|X|}
+    \hline
+    \rowcolor[gray]{0.9}\textbf{Código} & #1 & \textbf{Versión} & 1.0 \\ \hline
+    \textbf{Fecha de emisión} & 23/06/2026 & \textbf{Explotador} & Skyfilms S.A.S. \\ \hline
+    \textbf{Diligencia} & #3 & \textbf{Recibe / archiva} & #4 \\ \hline
+    \multicolumn{4}{|p{\dimexpr\textwidth-2\tabcolsep-2\arrayrulewidth}|}{\textbf{Cuándo se usa:} #5} \\ \hline
+  \end{tabularx}
+  \vspace{0.4cm}
+}
+\newcommand{\campos}[1]{%
+  \par\noindent\begin{tabularx}{\textwidth}{|X|X|}\hline #1 \end{tabularx}\vspace{0.3cm}
+}
+\newcommand{\caja}[2]{%
+  \par\noindent\begin{tabularx}{\textwidth}{|X|}\hline \textbf{#1} \\ \hline \rule{0pt}{#2} \\ \hline \end{tabularx}\vspace{0.3cm}
+}
+\newcommand{\firmas}{%
+  \par\noindent\begin{tabularx}{\textwidth}{|X|X|}\hline
+  \textbf{Nombre:} & \textbf{Firma:} \\[0.6cm] \hline \end{tabularx}
+}
+\newcommand{\chk}{\footnotesize $\square$ CHK\ \ $\square$ NO CHK\ \ $\square$ NA}
+\newcommand{\lcitem}[2]{#1 & #2 & \chk \\ \hline}
+\newcommand{\lchead}[1]{\multicolumn{3}{|l|}{\cellcolor[gray]{0.85}\textbf{#1}} \\ \hline}
+\newcommand{\fx}[1]{#1#1#1#1#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-001}{Libro de Vuelo}{Piloto remoto}{Jefe de Pilotos UAS}{Un libro por aeronave. Se registra cada vuelo, el mismo día de la operación.}
+
+\textbf{Portada del libro (una por aeronave)}\par\smallskip
+\campos{
+\textbf{Explotador:} Skyfilms S.A.S. & \textbf{NIT:} 902.039.520-1 \\ \hline
+\textbf{Fabricante / Modelo:} & \textbf{No. de serie de la UA:} \\ \hline
+\textbf{No. RUAS:} & \textbf{No. de póliza de responsabilidad:} \\ \hline
+\textbf{Tipo de operación:} Captura de imágenes o datos & \textbf{Firma Jefe de Pilotos UAS:} \\ \hline
+}
+
+\textbf{Registro de vuelos}\par\smallskip
+
+{\footnotesize
+\begin{tabularx}{\textwidth}{|p{1.5cm}|p{1.3cm}|X|p{1.3cm}|p{1.3cm}|p{1.1cm}|p{1.2cm}|p{1.2cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{F-009 No.} & \textbf{Piloto / Observador} & \textbf{Despegue} & \textbf{Aterriz.} & \textbf{Min.} & \textbf{Día / Noche} & \textbf{Ciclos bat.} & \textbf{Novedades (nada = N/A)} \\ \hline
+\fx{ & & & & & & & & \\ \hline } \fx{ & & & & & & & & \\ \hline }
+\end{tabularx}}
+
+\vspace{0.3cm}
+\campos{
+\textbf{Horas totales acumuladas de la UA:} & \textbf{Ciclos totales de batería:} \\ \hline
+\textbf{Próximo mantenimiento programado a las (h o ciclos):} & \textbf{Firma del piloto que cierra la hoja:} \\ \hline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-002}{Lista de Chequeo Preoperacional}{Piloto remoto}{Jefe de Pilotos UAS}{Antes de cada operación y antes de energizar los motores. Se completan las secciones comunes, la de la aeronave utilizada y la de vuelo nocturno cuando aplique.}
+
+\campos{
+\textbf{No. de F-009 / orden:} & \textbf{Fecha:} \\ \hline
+\textbf{Piloto remoto:} & \textbf{Observador:} \\ \hline
+\textbf{Aeronave:} $\square$ Mavic 4 Pro \quad $\square$ Pavo20 Pro & \textbf{RUAS:} \\ \hline
+\textbf{Lugar:} & \textbf{Operación:} $\square$ Diurna \quad $\square$ Nocturna \\ \hline
+}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{0.9cm}|p{0.5\textwidth}|p{0.32\textwidth}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{No.} & \textbf{Verificación} & \textbf{Resultado} \\ \hline
+\lchead{A. Documentos, entorno y personal}
+\lcitem{1}{[C] Permisos, autorizaciones y limitaciones de OpSpecs vigentes; F-009 y F-011 aprobados}
+\lcitem{2}{[C] Pilotos y observador con licencia, certificado médico y descanso adecuados; sin alcohol (12 h) ni sustancias}
+\lcitem{3}{[C] Clima in situ dentro de los límites del F-009 (viento, visibilidad, lluvia); consulta NOTAM y UAV Forecast}
+\lcitem{4}{[C] Zona despegue / aterrizaje y dronpuerto armados y señalizados; personas ajenas fuera del área}
+\lcitem{5}{Briefing de campo (F-010) realizado con toda la tripulación}
+\lchead{B. Aeronave (común)}
+\lcitem{6}{[C] Estructura, brazos, hélices y tornillos sin daño ni holgura; hélices bien instaladas}
+\lcitem{7}{[C] Baterías sin hinchazón ni daño, cargadas y registradas en F-004}
+\lcitem{8}{Gimbal y cámara libres; tarjeta de memoria con espacio}
+\lcitem{9}{Firmware y aplicación actualizados sin avisos de error}
+\lchead{C. Estación de control y enlace C2}
+\lcitem{10}{[C] Radio y estación de control con batería suficiente, aeronave enlazada y telemetría activa}
+\lcitem{11}{[C] Failsafe y retorno a casa verificados (altura de RTH, punto de origen registrado)}
+\lcitem{12}{Frecuencias libres de interferencia; comunicación con observador comprobada}
+\lchead{D. Solo Mavic 4 Pro}
+\lcitem{13}{[C] Sensores de obstáculos limpios y activos; GNSS con satélites suficientes}
+\lcitem{14}{ID remoto activo; límites de altura y distancia configurados según OpSpecs}
+\lchead{E. Solo Pavo20 Pro (FPV)}
+\lcitem{15}{[C] Enlace ELRS XBand verificado (LQ y RSSI) en 2.4 GHz; 915 MHz solo si está autorizado ante la ANE}
+\lcitem{16}{[C] Failsafe de Betaflight probado con la radio y rescate GPS configurado}
+\lcitem{17}{[C] Prueba de motores en el suelo y sentido de giro, sin hélices al primer encendido tras mantenimiento}
+\lcitem{18}{[C] Observador presente y comunicación con el piloto; visor (DJI Goggles) con batería y señal de video}
+\lchead{F. Adicional para vuelo nocturno}
+\lcitem{19}{[C] Luces de fábrica de la aeronave encendidas de forma permanente (Mavic: luces frontales en modo siempre encendido, no automático)}
+\lcitem{20}{[C] Pavo20 Pro: tira LED fija, visible y sin modo estroboscópico, según lo aprobado en el MO}
+\lcitem{21}{Iluminación del dronpuerto, bordes reflectivos y luces de referencia comprobados}
+\lcitem{22}{Luz y visibilidad suficientes en el área de despegue; observador con linterna y comunicación}
+\lchead{G. Decisión}
+\lcitem{23}{[C] Todos los ítems críticos en CHK: \textbf{GO} para energizar motores}
+\end{longtable}
+
+\vspace{0.3cm}
+\caja{Observaciones:}{1.5cm}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-003}{Lista de Chequeo Postoperacional}{Piloto remoto}{Jefe de Pilotos UAS}{Al terminar cada operación, con la aeronave apagada y desconectada.}
+
+\campos{
+\textbf{No. de F-009 / orden:} & \textbf{Fecha:} \\ \hline
+\textbf{Piloto remoto:} & \textbf{Aeronave / RUAS:} \\ \hline
+\textbf{Tiempo total de vuelo (min):} & \textbf{Número de vuelos:} \\ \hline
+}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{0.9cm}|p{0.5\textwidth}|p{0.32\textwidth}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{No.} & \textbf{Verificación} & \textbf{Resultado} \\ \hline
+\lcitem{1}{Aeronave apagada y baterías retiradas; hélices detenidas}
+\lcitem{2}{Inspección visual de estructura, hélices, motores y gimbal: sin daños ni golpes}
+\lcitem{3}{Temperatura de motores y baterías normal; sin olores ni deformaciones}
+\lcitem{4}{Voltaje y porcentaje final de baterías registrados en F-004; baterías en voltaje de almacenamiento si no se usan en 48 h}
+\lcitem{5}{Registro de datos y bitácora de la aeronave descargados; incidencias de telemetría anotadas}
+\lcitem{6}{Libro de vuelo (F-001) actualizado}
+\lcitem{7}{Área de operación y dronpuerto recogidos; sin residuos ni objetos olvidados}
+\lcitem{8}{Aeronave y accesorios guardados limpios y asegurados}
+\lcitem{9}{Novedad de seguridad operacional: $\square$ Sí (reportar F-006 / F-012 / F-013) \quad $\square$ No}
+\lcitem{10}{Daño o anomalía técnica: $\square$ Sí (reportar F-005 y marcar la aeronave no operativa) \quad $\square$ No}
+\end{longtable}
+
+\vspace{0.3cm}
+\caja{Observaciones:}{1.5cm}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-004}{Registro de Baterías}{Piloto remoto / Mantenimiento}{Jefe de Pilotos UAS}{Cada vez que se carga, descarga o usa una batería. Un formato por batería.}
+
+\campos{
+\textbf{Batería No.:} & \textbf{S/N:} \\ \hline
+\textbf{Tipo (LiPo / Li-ion) y capacidad:} & \textbf{Aeronave asignada:} \\ \hline
+\textbf{Fecha de compra:} & \textbf{Ciclos máximos de operación:} \\ \hline
+}
+
+{\footnotesize
+\begin{tabularx}{\textwidth}{|p{1.7cm}|X|p{1.6cm}|p{1.4cm}|p{1.3cm}|X|p{1.6cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Voltaje por celda (V)} & \textbf{Voltaje total (V)} & \textbf{Temp. (°C)} & \textbf{Ciclos} & \textbf{Estado físico (hinchada, golpe, normal)} & \textbf{Firma piloto} \\ \hline
+\fx{ & & & & & & \\ \hline } \fx{ & & & & & & \\ \hline }
+\end{tabularx}}
+
+\vspace{0.3cm}
+\textbf{Criterio de retiro:} se retira de servicio y se registra en F-005 toda batería con hinchazón, daño físico, diferencia de voltaje entre celdas superior a 0,1 V, calentamiento anormal o que alcance el máximo de ciclos.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-005}{Reporte de Mantenimiento y Orden de Trabajo}{Piloto remoto / Técnico}{Jefe de Pilotos UAS}{Ante cualquier falla, golpe, reemplazo de partes o mantenimiento programado, menor, mayor o correctivo, propio o en taller externo.}
+
+\campos{
+\textbf{No. de orden:} & \textbf{Fecha:} \\ \hline
+\textbf{Aeronave / RUAS / serie:} & \textbf{Horas y ciclos acumulados:} \\ \hline
+\textbf{Tipo:} $\square$ Programado \quad $\square$ Correctivo \quad $\square$ Preventivo & \textbf{Lugar:} $\square$ Skyfilms \quad $\square$ Taller externo \\ \hline
+\textbf{Nombre y dirección del taller (si aplica):} & \textbf{Técnico responsable:} \\ \hline
+}
+
+\caja{1. Descripción del evento o falla}{1.8cm}
+\caja{2. Condición de la aeronave (operativa / no operativa)}{1.2cm}
+\caja{3. Trabajo realizado y procedimiento del fabricante aplicado}{2cm}
+
+\begin{tabularx}{\textwidth}{|p{0.8cm}|X|p{3cm}|p{3cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{No.} & \textbf{Componente reemplazado} & \textbf{Marca / P/N} & \textbf{Serie nueva} & \textbf{Origen / trazabilidad} \\ \hline
+1 & & & & \\ \hline 2 & & & & \\ \hline 3 & & & & \\ \hline 4 & & & & \\ \hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\campos{
+\textbf{Disposición final de componentes retirados:} $\square$ Reciclaje \quad $\square$ Residuo especial \quad $\square$ Devolución & \textbf{Prueba posterior y liberación a servicio:} $\square$ Sí \quad $\square$ No \\ \hline
+\textbf{Evidencia fotográfica adjunta:} $\square$ Sí \quad $\square$ No & \textbf{Fecha de próximo mantenimiento:} \\ \hline
+}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-006}{Reporte SMS (Seguridad Operacional)}{Cualquier miembro del personal}{Gerente SMS}{Para informar cualquier peligro, evento o situación de seguridad operacional, real o potencial. Es voluntario y no sancionatorio, salvo conductas dolosas o de negligencia grave.}
+
+\campos{
+\textbf{Reportante (opcional si es confidencial):} & \textbf{Cargo:} \\ \hline
+\textbf{Fecha del reporte:} & \textbf{Teléfono / correo:} \\ \hline
+\textbf{Fecha y hora del evento:} & \textbf{Lugar:} \\ \hline
+\textbf{Aeronave y F-009 relacionados:} & \textbf{Tipo:} $\square$ Peligro \quad $\square$ Incidente \quad $\square$ Accidente \quad $\square$ Otro \\ \hline
+}
+
+\caja{1. ¿Qué sucedió o puede suceder?}{1.8cm}
+\caja{2. ¿Por qué cree que sucedió?}{1.4cm}
+\caja{3. ¿Cómo se reaccionó? ¿Se continuó la operación?}{1.4cm}
+\caja{4. Consecuencias (personas, equipos, instalaciones, terceros)}{1.4cm}
+\caja{5. ¿Ha sucedido antes? ¿Qué sugiere para evitarlo?}{1.4cm}
+
+\campos{
+\textbf{Conducta de alto riesgo:} $\square$ Sin protección adecuada \quad $\square$ Vuelo sin autorización \quad $\square$ Personas no autorizadas al mando \quad $\square$ Maniobra peligrosa \quad $\square$ Zona restringida \quad $\square$ Otra & \textbf{Radicado SMS (lo asigna el Gerente SMS):} \\ \hline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-007}{Hoja de Vida de la Aeronave}{Jefe de Pilotos UAS}{Archivo técnico}{Se abre al incorporar la aeronave a la flota y se actualiza después de cada mantenimiento.}
+
+\campos{
+\textbf{Marca / Modelo:} $\square$ DJI Mavic 4 Pro \quad $\square$ BetaFPV Pavo20 Pro & \textbf{No. de serie:} \\ \hline
+\textbf{No. de registro (RUAS):} & \textbf{Fecha de compra:} \\ \hline
+\textbf{Póliza de responsabilidad y vencimiento:} & \textbf{MTOW (g) / medida D (m):} \\ \hline
+\textbf{Equipos asociados (ETA) y seriales:} & \textbf{Firmware actual:} \\ \hline
+}
+
+{\footnotesize
+\begin{tabularx}{\textwidth}{|p{1.8cm}|p{2.5cm}|X|p{2.5cm}|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Fecha} & \textbf{Tipo (menor / mayor / correctivo)} & \textbf{Descripción} & \textbf{Taller / técnico} & \textbf{Condición final / F-005} \\ \hline
+\fx{ & & & & \\ \hline } \fx{ & & & & \\ \hline }
+\end{tabularx}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-008}{Solicitud de Servicio}{Cliente}{Jefe de Pilotos UAS}{Cuando el cliente solicita una operación aérea. Es la base de la planificación (F-009) y de la evaluación del riesgo (F-011).}
+
+\campos{
+\textbf{Cliente / razón social:} & \textbf{Contacto y cargo:} \\ \hline
+\textbf{Correo:} & \textbf{Teléfono:} \\ \hline
+\textbf{Dirección / ciudad / departamento:} & \textbf{Sector:} $\square$ Residencial \quad $\square$ Comercial \quad $\square$ Industrial \quad $\square$ Otro \\ \hline
+\textbf{Fecha(s) deseada(s):} & \textbf{Condición:} $\square$ Rural \quad $\square$ Urbana \quad $\square$ Nocturna \\ \hline
+}
+
+\caja{Descripción del servicio: objetivos, tipo de imágenes (panorámicas, detalle, FPV, seguimiento), ubicación exacta (coordenadas y referencias), accesos y condiciones del lugar}{2.5cm}
+\caja{Necesidades de autorización (propiedad, comunidad, evento, entidades)}{1.2cm}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-009}{Planificación de la Operación}{Jefe de Pilotos UAS / Piloto remoto}{Gerente de Operaciones}{Antes de cada operación, a partir de F-008. Incluye la revisión de viabilidad y los datos de la misión.}
+
+\campos{
+\textbf{No. orden de vuelo (F-009):} & \textbf{Fecha y hora de inicio / fin:} \\ \hline
+\textbf{Cliente / ciudad / dirección:} & \textbf{Piloto remoto:} \\ \hline
+\textbf{Observador:} & \textbf{Aeronave / RUAS:} $\square$ Mavic 4 Pro \quad $\square$ Pavo20 Pro \\ \hline
+\textbf{Operación:} $\square$ Diurna \quad $\square$ Nocturna \quad $\square$ Urbana & \textbf{Contacto visual:} $\square$ VLOS \\ \hline
+}
+
+\textbf{Revisión del espacio aéreo y del área}\par\smallskip
+\campos{
+\textbf{Consulta de zona restringida, aeródromos y NOTAM:} & \textbf{Autorizaciones obtenidas (propietario, Aerocivil, otros):} \\ \hline
+\textbf{Distancia máxima horizontal (máx. 750 m):} & \textbf{Altura máxima (máx. 400 ft / 30 m urbano):} \\ \hline
+\textbf{Tiempo máximo planificado (80 \% de la autonomía):} & \textbf{Alertas de batería: baja \_\_\_ \% / crítica \_\_\_ \%} \\ \hline
+\textbf{Tipo de terreno y obstáculos:} & \textbf{Coordenadas (lat. / lon.) del punto de despegue y del área:} \\ \hline
+\textbf{Ubicación del dronpuerto (fijo o móvil) y medida D:} & \textbf{Sitio alterno de aterrizaje y plan de contingencia:} \\ \hline
+}
+
+\textbf{Meteorología prevista}\par\smallskip
+\campos{
+\textbf{Clima / temperatura:} & \textbf{Viento (velocidad y dirección):} \\ \hline
+\textbf{Visibilidad / precipitación:} & \textbf{Satélites esperados / índice Kp:} \\ \hline
+}
+
+\caja{Imagen o croquis del área (con área de operación, zona de espectadores y salidas)}{4cm}
+\caja{Observaciones}{1.2cm}
+
+\campos{
+\textbf{Viable:} $\square$ Sí \quad $\square$ No & \textbf{Avalado por (Jefe de Pilotos):} \\ \hline
+\textbf{Firma del piloto remoto:} & \textbf{Firma de quien avala:} \\[0.6cm] \hline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-010}{Briefing Operacional}{Piloto remoto}{Jefe de Pilotos UAS}{En el sitio, antes de armar la aeronave, con todo el personal que participa.}
+
+\campos{
+\textbf{No. de F-009:} & \textbf{Fecha y hora:} \\ \hline
+\textbf{Piloto remoto / Observador:} & \textbf{Otro personal presente:} \\ \hline
+}
+
+\begin{longtable}{|p{0.9cm}|p{0.5\textwidth}|p{0.32\textwidth}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{No.} & \textbf{Tema} & \textbf{Tratado} \\ \hline
+\lcitem{1}{Objetivo de la misión, rutas, alturas y límites de distancia}
+\lcitem{2}{Roles y responsabilidades: piloto, observador, ayudante}
+\lcitem{3}{Comunicaciones y señales entre piloto y observador; palabra de parada de emergencia}
+\lcitem{4}{Clima, luz, zona de espectadores y personas ajenas}
+\lcitem{5}{Riesgos del F-011 y sus medidas de control}
+\lcitem{6}{Procedimientos de emergencia: pérdida de enlace, falla de GNSS, batería crítica, aterrizaje forzoso, fuego de batería}
+\lcitem{7}{Sitios de aterrizaje alternos y punto de encuentro}
+\lcitem{8}{Vuelo nocturno: luces, dimensionamiento del área y referencias visuales}
+\lcitem{9}{Todos entienden y aceptan su rol; preguntas resueltas}
+\end{longtable}
+
+\vspace{0.3cm}
+\campos{
+\textbf{Firma del piloto remoto:} & \textbf{Firma del observador:} \\[0.6cm] \hline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-011}{Evaluación del Riesgo Operacional}{Piloto remoto}{Jefe de Pilotos UAS}{Antes de cada operación y de nuevo si cambian las condiciones. Es la decisión GO / NO GO.}
+
+\campos{
+\textbf{Piloto remoto:} & \textbf{No. de F-009:} \\ \hline
+\textbf{Fecha de la evaluación:} & \textbf{Fecha de la operación:} \\ \hline
+}
+
+\textbf{Cada factor se califica de 1 (favorable) a 5 (crítico).} Un factor en 5, o un total de más de 60 puntos, es \textbf{NO GO}.
+
+{\footnotesize
+\begin{tabularx}{\textwidth}{|p{0.9cm}|X|X|p{1.1cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{No.} & \textbf{Factor} & \textbf{1 (favorable)  $\rightarrow$  5 (crítico)} & \textbf{Valor} \\ \hline
+1 & Información de la misión & Específica $\rightarrow$ vaga o sin información & \\ \hline
+2 & Zona de despegue / aterrizaje & Libre y nivelada $\rightarrow$ confinada o con obstáculos & \\ \hline
+3 & Personas y propiedad en el área & Ninguna $\rightarrow$ multitud o infraestructura crítica & \\ \hline
+4 & Espacio aéreo y autorizaciones & Libre y autorizado $\rightarrow$ restringido o sin permiso & \\ \hline
+5 & Meteorología (viento, lluvia, visibilidad) & Favorable $\rightarrow$ en el límite de la aeronave & \\ \hline
+6 & Luz y nivel de oscuridad & Día claro $\rightarrow$ noche sin referencias & \\ \hline
+7 & Obstáculos y cables & Ninguno $\rightarrow$ numerosos o invisibles de noche & \\ \hline
+8 & Señal GNSS y enlace C2 & Excelente $\rightarrow$ débil o con interferencia & \\ \hline
+9 & Estado de la aeronave y baterías & Óptimo $\rightarrow$ con anomalías abiertas & \\ \hline
+10 & Experiencia del piloto con la aeronave y el escenario & Alta $\rightarrow$ ninguna & \\ \hline
+11 & Descanso, estado físico y carga de trabajo & Óptimos $\rightarrow$ fatiga o presión & \\ \hline
+12 & Observador y comunicaciones & Experto y en contacto $\rightarrow$ ausente & \\ \hline
+\multicolumn{3}{|r|}{\textbf{Total}} & \\ \hline
+\end{tabularx}}
+
+\vspace{0.3cm}
+\campos{
+\textbf{Decisión:} $\square$ GO \quad $\square$ GO con medidas de mitigación \quad $\square$ NO GO & \textbf{Medidas de mitigación aplicadas:} \\[1.2cm] \hline
+\textbf{Firma del piloto remoto:} & \textbf{Firma del Jefe de Pilotos (si es GO con medidas):} \\[0.6cm] \hline
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-012}{Reporte de Peligros}{Gerente SMS}{Comité de Seguridad Operacional}{Cada vez que se identifica un peligro (por F-006, auditoría, inspección u operación) para evaluarlo y controlarlo.}
+
+\campos{
+\textbf{Peligro No.:} & \textbf{Fecha de identificación:} \\ \hline
+\textbf{Origen (F-006, auditoría, otro):} & \textbf{Proceso u operación afectada:} \\ \hline
+}
+
+\caja{1. Descripción del peligro}{1.4cm}
+\caja{2. Posibles consecuencias}{1.4cm}
+
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Probabilidad inicial (1--5)} & \textbf{Severidad inicial (A--E)} & \textbf{Nivel de riesgo inicial} \\ \hline
+ & & $\square$ Aceptable \quad $\square$ Tolerable \quad $\square$ Intolerable \\ \hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\caja{3. Medidas de mitigación y responsable}{1.6cm}
+
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Probabilidad residual} & \textbf{Severidad residual} & \textbf{Nivel de riesgo residual} \\ \hline
+ & & $\square$ Aceptable \quad $\square$ Tolerable \quad $\square$ Intolerable \\ \hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\campos{
+\textbf{Responsable de la acción:} & \textbf{Fecha límite:} \\ \hline
+\textbf{Seguimiento y verificación de la eficacia:} & \textbf{Estado:} $\square$ Abierto \quad $\square$ En seguimiento \quad $\square$ Cerrado \\ \hline
+}
+\firmas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cab{F-013}{Reporte de Incidente o Accidente}{Piloto remoto / Jefe de Pilotos UAS}{Gerente SMS}{Ante cualquier incidente o accidente con la aeronave. Los datos permiten notificar a la Aerocivil (DIACC) en un máximo de 48 horas y, de ser el caso, al Grupo de Investigación de Accidentes.}
+
+\campos{
+\textbf{Fecha y hora del suceso:} & \textbf{Lugar y coordenadas:} \\ \hline
+\textbf{Aeronave / RUAS:} & \textbf{No. de F-009:} \\ \hline
+\textbf{Piloto remoto / Observador:} & \textbf{Condición:} $\square$ Diurna \quad $\square$ Nocturna \\ \hline
+\textbf{Clasificación:} $\square$ Incidente \quad $\square$ Accidente \quad $\square$ Incidente grave & \textbf{Lesiones:} $\square$ Ninguna \quad $\square$ Leves \quad $\square$ Graves \quad $\square$ Fatales \\ \hline
+\textbf{Daños a terceros (personas, bienes):} & \textbf{Daños a la aeronave:} \\ \hline
+}
+
+\caja{1. Descripción de lo ocurrido (secuencia de hechos)}{2.2cm}
+\caja{2. Acciones inmediatas tomadas (primeros auxilios, aseguramiento del área, evidencia)}{1.4cm}
+\caja{3. Factores que contribuyeron (humanos, técnicos, ambientales, organizacionales)}{1.4cm}
+
+\campos{
+\textbf{Evidencia conservada (aeronave, registros de vuelo, fotos, videos):} & \textbf{Testigos (nombre y contacto):} \\ \hline
+\textbf{Notificación a la Aerocivil (DIACC):} $\square$ Sí \quad $\square$ No \quad Fecha y hora: & \textbf{Notificado al cliente / aseguradora:} $\square$ Sí \quad $\square$ No \\ \hline
+\textbf{Acciones correctivas definidas:} & \textbf{Seguimiento F-012 No.:} \\ \hline
+}
+\firmas
