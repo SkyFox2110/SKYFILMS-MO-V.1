@@ -213,7 +213,7 @@ Skyfilms S.A.S. operará la siguiente flota, sujeta a los procesos de adquisici�
     \end{tabular}
 \end{table}
 
-\subsection{Ficha Técnica: BetaFPV Pavo20 Pro (FPV)}
+\subsection{Ficha Técnica: BetaFPV Pavo20 Pro II (FPV)}
 \begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.2}
@@ -248,12 +248,12 @@ Los equipos tecnológicos no integrados de fábrica pero asociados a la operaci�
     \begin{tabular}{|p{3cm}|p{3.5cm}|p{3.5cm}|p{4cm}|}
         \hline
         \rowcolor[gray]{0.9} \textbf{Tipo de ETA} & \textbf{Marca / Modelo} & \textbf{Serie / Registro} & \textbf{Uso / Limitación} \\ \hline
-        Radiocontrol & RadioMaster TX16S (ELRS) & En proceso & Enlace C2 del Pavo20 Pro. \\ \hline
-        Módulo y receptor ELRS & ELRS XBand (Gemini Xrossband), modelo por confirmar & En proceso & Control del Pavo20 Pro en 2.4 GHz y 915 MHz. \\ \hline
+        Radiocontrol & RadioMaster TX16S (ELRS) & En proceso & Enlace C2 del Pavo20 Pro II. \\ \hline
+        Módulo y receptor ELRS & ELRS XBand (Gemini Xrossband), modelo por confirmar & En proceso & Control del Pavo20 Pro II en 2.4 GHz y 915 MHz. \\ \hline
         Visor FPV & DJI Goggles 2 & En proceso & Visualización en tiempo real. Uso exclusivo con Observador VLOS. \\ \hline
         Tira LED & BetaFPV NightFire RGB (500 mm), incluida en el empaque del fabricante & Serie del equipo & Luz de la aeronave FPV en vuelo nocturno: fija en color blanco, sin efectos. \\ \hline
         Control remoto del Mavic 4 Pro & DJI RC Pro 2 (Creator Combo) con pantalla integrada y DJI Fly & En proceso & Estación de control del Mavic 4 Pro. \\ \hline
-        Módulo GPS & Módulo GPS externo para el Pavo20 Pro, modelo por confirmar & En proceso & Posición y rescate por GPS (failsafe). \\ \hline
+        Módulo GPS & Módulo GPS externo para el Pavo20 Pro II, modelo por confirmar & En proceso & Posición y rescate por GPS (failsafe). \\ \hline
     \end{tabular}
 \end{table}
 
@@ -264,7 +264,7 @@ El software autorizado, con su versión, licencia y aeronave compatible, se rela
 El enlace C2 es el medio primario de comando y control. Sus especificaciones por aeronave son:
 \begin{itemize}
     \item \textbf{DJI Mavic 4 Pro Creator Combo (DJI O4):} Se controla con el DJI RC Pro 2. Opera en bandas de 2.4 GHz y 5.8 GHz con conmutación automática anti-interferencias y encriptación AES-256. Failsafe configurado para retornar al punto de origen (RTH) ante la pérdida de señal.
-    \item \textbf{BetaFPV Pavo20 Pro (FPV):} El control opera bajo el protocolo de código abierto ExpressLRS con receptor XBand (Gemini Xrossband) en 2.4 GHz y 915 MHz, con salto de frecuencia; el video se transmite en 5.8 GHz mediante DJI O4 Pro. La telemetría incluye LQ (Link Quality) y RSSI. El Failsafe está configurado a través de Betaflight para activar rescate por GPS (RTH) ante la desconexión total del radio control.
+    \item \textbf{BetaFPV Pavo20 Pro II (FPV):} El control opera bajo el protocolo de código abierto ExpressLRS con receptor XBand (Gemini Xrossband) en 2.4 GHz y 915 MHz, con salto de frecuencia; el video se transmite en 5.8 GHz mediante DJI O4 Pro. La telemetría incluye LQ (Link Quality) y RSSI. El Failsafe está configurado a través de Betaflight para activar rescate por GPS (RTH) ante la desconexión total del radio control.
 \end{itemize}
 
 
@@ -488,7 +488,7 @@ Como mínimo deberán supervisarse los siguientes parámetros:
 
 \textbf{Parámetro} &
 \textbf{DJI Mavic 4 Pro} &
-\textbf{Pavo20 Pro}
+\textbf{Pavo20 Pro II}
 
 \\ \hline
 
@@ -573,9 +573,9 @@ thick
 
 \node[box, below=of c] (d) {¿Se recupera el enlace?};
 
-\node[box, below left=1cm and 1.8cm of d] (e) {Continuar la operación};
+\node[box, below left=1cm and 0.4cm of d] (e) {Continuar la operación};
 
-\node[box, below right=1cm and 1.8cm of d] (f) {Activar procedimiento de pérdida del enlace};
+\node[box, below right=1cm and 0.4cm of d] (f) {Activar procedimiento\\de pérdida del enlace};
 
 \node[box, below=of f] (g) {RTH / LAND / Failsafe};
 
@@ -619,7 +619,7 @@ Cancelar la misión.
 
 \\ \hline
 
-Pavo20 Pro &
+Pavo20 Pro II &
 Permitir la ejecución del Failsafe configurado (RTH, LAND o procedimiento autorizado). &
 Cancelar la misión.
 
@@ -694,7 +694,7 @@ Skyfilms considera, en todas las fases del vuelo, los siguientes factores que pu
 \subsection{Estrategia de la tripulación ante la pérdida del enlace C2}
 
 \begin{enumerate}
-\item \textbf{Alerta:} el piloto remoto recibe alerta visual y sonora de pérdida o degradación del enlace en la estación de control (aviso de la aplicación DJI Fly en el Mavic; alarma de la radio por LQ baja y mensaje en las gafas en el Pavo20 Pro).
+\item \textbf{Alerta:} el piloto remoto recibe alerta visual y sonora de pérdida o degradación del enlace en la estación de control (aviso de la aplicación DJI Fly en el Mavic; alarma de la radio por LQ baja y mensaje en las gafas en el Pavo20 Pro II).
 \item \textbf{Aviso a la tripulación:} el piloto que detecta la pérdida lo anuncia en voz alta con la frase \textit{<<Pérdida de enlace>>}. El observador mantiene contacto visual con la aeronave y su luz, y avisa a quienes participan en la mitigación.
 \item \textbf{Recuperación:} el piloto suelta los mandos para dejar actuar el failsafe, orienta la antena hacia la aeronave y, si es posible, reduce la distancia a la aeronave; no comanda maniobras bruscas mientras el enlace no se restablezca.
 \item \textbf{Tras recuperar el enlace:} el piloto espera confirmación estable de la telemetría (LQ o indicador de señal), toma el control de nuevo, cancela la misión, aterriza en el punto más cercano seguro y registra el evento en F-003 y F-006.
@@ -712,7 +712,7 @@ Se considera pérdida del enlace cuando se degrada la señal, hay tiempo sin res
 \hline
 \rowcolor[gray]{0.9}\textbf{Aeronave} & \textbf{Respuesta configurada} & \textbf{Verificación} \\ \hline
 DJI Mavic 4 Pro & Retorno a casa (RTH) automático al punto de origen. Altura de RTH por encima del obstáculo más alto del área y nunca superior a 400 ft AGL. & Punto de origen registrado y altura de RTH confirmada en la aplicación (F-002, ítem 11). \\ \hline
-BetaFPV Pavo20 Pro & Failsafe de Betaflight: rescate por GPS (retorno al punto de origen) o aterrizaje controlado. Requiere módulo GPS externo (modelo por confirmar). & Prueba de failsafe con la radio antes del primer vuelo y después de cualquier cambio de configuración (F-002, ítem 16). \\ \hline
+BetaFPV Pavo20 Pro II & Failsafe de Betaflight: rescate por GPS (retorno al punto de origen) o aterrizaje controlado. Requiere módulo GPS externo (modelo por confirmar). & Prueba de failsafe con la radio antes del primer vuelo y después de cualquier cambio de configuración (F-002, ítem 16). \\ \hline
 \end{longtable}
 
 Las acciones de continuar la misión, mantenerse estacionario o aterrizar de emergencia no se configuran como respuesta: la misión siempre se cancela ante una pérdida del enlace.
@@ -728,8 +728,8 @@ Las acciones de continuar la misión, mantenerse estacionario o aterrizar de eme
 \hline
 \rowcolor[gray]{0.9}\textbf{Aeronave} & \textbf{Banda} & \textbf{Uso} & \textbf{Observación} \\ \hline
 Mavic 4 Pro & 2.4 y 5.8 GHz & Comandos, telemetría y video & Selección automática de banda por el sistema DJI O4 \\ \hline
-Pavo20 Pro & 2.4 GHz y 915 MHz (ELRS XBand) & Comandos y telemetría & Dos bandas de forma simultánea: redundancia en frecuencia \\ \hline
-Pavo20 Pro & 5.8 GHz (DJI O4 Pro) & Video FPV & Enlace de video independiente \\ \hline
+Pavo20 Pro II & 2.4 GHz y 915 MHz (ELRS XBand) & Comandos y telemetría & Dos bandas de forma simultánea: redundancia en frecuencia \\ \hline
+Pavo20 Pro II & 5.8 GHz (DJI O4 Pro) & Video FPV & Enlace de video independiente \\ \hline
 \end{longtable}
 
 \textbf{Estado de los equipos.} Radios, antenas, cables y conectores se revisan antes de cada operación y deben estar en buen estado físico y funcional (F-002).
@@ -755,25 +755,25 @@ Pavo20 Pro & 5.8 GHz (DJI O4 Pro) & Video FPV & Enlace de video independiente \\
 \end{tikzpicture}
 \end{center}
 
-Pavo20 Pro: el piloto da los mandos en la radio; el módulo XBand los envía a la aeronave por 2.4 GHz y 915 MHz con salto de frecuencia; la controladora los ejecuta y envía la telemetría de vuelta a la radio. El video sale en 5.8 GHz a las gafas. Los datos de vuelo se almacenan en la aeronave (Blackbox) y las gafas graban el video.
+Pavo20 Pro II: el piloto da los mandos en la radio; el módulo XBand los envía a la aeronave por 2.4 GHz y 915 MHz con salto de frecuencia; la controladora los ejecuta y envía la telemetría de vuelta a la radio. El video sale en 5.8 GHz a las gafas. Los datos de vuelo se almacenan en la aeronave (Blackbox) y las gafas graban el video.
 
 Mavic 4 Pro: el control DJI envía los mandos y recibe telemetría y video por el sistema O4; la aplicación DJI Fly los muestra en la pantalla y guarda el registro de vuelo.
 
 \subsection{Limitaciones del enlace C2}
 
 \begin{itemize}
-\item \textbf{Alcance:} el Mavic 4 Pro opera hasta 750 m de distancia horizontal (límite VLOS) y el Pavo20 Pro, hasta 250 m; ninguno supera 400 ft AGL. El alcance aceptado de cada enlace se define en la demostración de este capítulo.
+\item \textbf{Alcance:} el Mavic 4 Pro opera hasta 750 m de distancia horizontal (límite VLOS) y el Pavo20 Pro II, hasta 250 m; ninguno supera 400 ft AGL. El alcance aceptado de cada enlace se define en la demostración de este capítulo.
 \item \textbf{Obstáculos:} estructuras, árboles y terreno bloquean o reflejan la señal; el piloto mantiene línea de vista libre entre la antena y la aeronave.
 \item \textbf{Antena:} la orientación de la antena de la radio y la posición de la aeronave respecto al patrón de radiación afectan la señal; no se apunta la punta de la antena a la aeronave.
 \item \textbf{Potencia e interferencia:} zonas con mucha señal Wi-Fi, torres o equipos industriales reducen el desempeño y se evitan.
-\item \textbf{Pavo20 Pro:} por tamaño y potencia, se opera siempre con observador y a una distancia máxima de 250 m.
+\item \textbf{Pavo20 Pro II:} por tamaño y potencia, se opera siempre con observador y a una distancia máxima de 250 m.
 \end{itemize}
 
 \subsection{Herramientas contra la interferencia y la pérdida del enlace}
 
 \begin{itemize}
 \item \textbf{Mavic 4 Pro:} enlace del fabricante con selección automática de banda y cifrado según su ficha técnica.
-\item \textbf{Pavo20 Pro:} salto de frecuencia de ExpressLRS, frase de enlace (\textit{binding phrase}) propia que impide el control por terceros, y dos bandas simultáneas con XBand.
+\item \textbf{Pavo20 Pro II:} salto de frecuencia de ExpressLRS, frase de enlace (\textit{binding phrase}) propia que impide el control por terceros, y dos bandas simultáneas con XBand.
 \end{itemize}
 
 \subsection{Cambio entre estaciones de control}
@@ -794,7 +794,7 @@ Ninguna de las aeronaves de Skyfilms permite cambiar de estación de control dur
 \rowcolor[gray]{0.9}\textbf{Equipo} & \textbf{Antena / tipo} & \textbf{Ganancia} & \textbf{Banda} \\ \hline
 Control DJI RC Pro 2 & Integrada, omnidireccional & Por confirmar (datasheet) & 2.4 y 5.8 GHz \\ \hline
 Radio TX16S + XBand & Por confirmar, omnidireccional & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
-Receptor Pavo20 Pro & Por confirmar & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
+Receptor Pavo20 Pro II & Por confirmar & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
 Gafas DJI Goggles 2 & Integradas & Por confirmar (datasheet) & 5.8 GHz \\ \hline
 \end{longtable}
 
@@ -805,7 +805,7 @@ El piloto visualiza y se registran en el log de eventos las siguientes advertenc
 \renewcommand{\arraystretch}{1.3}
 \begin{longtable}{|p{5cm}|p{4.7cm}|p{4cm}|}
 \hline
-\rowcolor[gray]{0.9}\textbf{Advertencia} & \textbf{Mavic 4 Pro} & \textbf{Pavo20 Pro} \\ \hline
+\rowcolor[gray]{0.9}\textbf{Advertencia} & \textbf{Mavic 4 Pro} & \textbf{Pavo20 Pro II} \\ \hline
 Degradación de la posición & Aviso de GNSS en DJI Fly & Satélites en OSD; alarma de la radio \\ \hline
 Degradación del enlace C2 & Aviso de señal en DJI Fly & LQ y RSSI en OSD y radio \\ \hline
 Carga de la batería & Alertas de nivel en DJI Fly & Voltaje en OSD y alarma de batería \\ \hline
@@ -821,12 +821,12 @@ Antes de iniciar operaciones, Skyfilms demuestra el enlace C2 de cada aeronave a
 
 \begin{itemize}
 \item \textbf{Vuelos:} un mínimo de 3 vuelos que muestran el funcionamiento del enlace a su alcance máximo. Si un vuelo presenta fallas, se corrigen y se repiten las 3 repeticiones.
-\item \textbf{Distancia:} el alcance aceptado es de 750 m para el Mavic 4 Pro y de 250 m para el Pavo20 Pro. El enlace se demuestra estable a esa distancia más el 20\,\% (900 m y 300 m, respectivamente), medida entre la estación de control y la aeronave, y a no más de 400 ft AGL en todas las fases.
+\item \textbf{Distancia:} el alcance aceptado es de 750 m para el Mavic 4 Pro y de 250 m para el Pavo20 Pro II. El enlace se demuestra estable a esa distancia más el 20\,\% (900 m y 300 m, respectivamente), medida entre la estación de control y la aeronave, y a no más de 400 ft AGL en todas las fases.
 \item \textbf{Maniobras:} a esa distancia se hacen giros de 360° a derecha e izquierda y ángulos de alabeo de 10° o más, o traslaciones laterales uniformes.
 \item \textbf{Validación:} el video FPV (o de la cámara de la aeronave) es una de las fuentes principales para verificar la estabilidad; la telemetría se transmite de forma permanente.
 \item \textbf{Frecuencias y equipos:} se identifican las frecuencias de transmisión y recepción, y los equipos (antenas, módulos, cables, conectores, pantallas) corresponden a lo descrito en este Manual.
 \item \textbf{Aplicaciones:} el software de mando y control transmite los datos de telemetría a las pantallas y registros de la estación.
-\item \textbf{Redundancia en frecuencia:} el Pavo20 Pro usa dos bandas simultáneas (2.4 GHz y 915 MHz); el Mavic 4 Pro cambia de banda (2.4 y 5.8 GHz) de forma automática.
+\item \textbf{Redundancia en frecuencia:} el Pavo20 Pro II usa dos bandas simultáneas (2.4 GHz y 915 MHz); el Mavic 4 Pro cambia de banda (2.4 y 5.8 GHz) de forma automática.
 \item \textbf{Registro:} los resultados de cada vuelo se anotan en el F-001 y quedan archivados con el F-009.
 \end{itemize}
 
@@ -2015,7 +2015,7 @@ Para la ejecución y autorización de vuelos nocturnos, el Piloto Remoto y el eq
 \begin{itemize}
     \item \textbf{Adición en el Certificado:} El Piloto Remoto al mando debe contar de manera obligatoria con la adición vigente de ``Vuelo Nocturno'' en su Certificado de Idoneidad como piloto UAS (CIPU).
     \item \textbf{Iluminación de la Aeronave:} La aeronave no tripulada (UA) debe operar con las luces instaladas de fábrica o autorizadas por su fabricante, encendidas de forma permanente durante toda la operación nocturna (RAC 100.220 a). Estas luces deben hacer a la aeronave claramente visible en el cielo nocturno para la tripulación y para otras aeronaves en el espacio aéreo. En el DJI Mavic 4 Pro, los ledes delanteros se configuran para permanecer encendidos; el modo \textit{Auto} los apaga al grabar y no debe usarse de noche. En el BetaFPV Pavo20 Pro II, la luz es la tira LED NightFire incluida por el fabricante, configurada en color blanco fijo, sin efectos ni destellos. Antes de cada vuelo se verifica que las luces funcionan, y no se instalan accesorios que no estén autorizados por el fabricante.
-    \item \textbf{Modalidad de Vuelo Estricta:} La operación nocturna se restringirá \textbf{únicamente a la modalidad VLOS} (Visibilidad en Línea de Vista), sin exceder en ningún momento un radio de 750 metros horizontales medidos desde la posición fija del piloto (250 metros con el Pavo20 Pro).
+    \item \textbf{Modalidad de Vuelo Estricta:} La operación nocturna se restringirá \textbf{únicamente a la modalidad VLOS} (Visibilidad en Línea de Vista), sin exceder en ningún momento un radio de 750 metros horizontales medidos desde la posición fija del piloto (250 metros con el Pavo20 Pro II).
     \item \textbf{Reconocimiento Diurno Obligatorio (Scouting):} Es de carácter mandatorio realizar una inspección física y visual del área de operación en horario diurno (con luz solar) antes de la ejecución del vuelo nocturno en esa misma locación. Este reconocimiento tiene como objetivo principal la identificación de obstáculos no iluminados (líneas eléctricas, cables, antenas, vegetación alta) y el establecimiento de rutas de vuelo seguras y puntos de aterrizaje de emergencia.
     \item \textbf{Apoyo de Observador Visual:} Toda operación nocturna requerirá incondicionalmente el apoyo de un Observador Visual asignado por el Jefe de Pilotos, quien asistirá en el monitoreo del entorno para prevenir colisiones e identificar cualquier amenaza en la oscuridad.
     \item \textbf{Límites de la operación:} el tiempo de vuelo planificado no excederá el 80\,\% de la autonomía de la aeronave (RAC 100.210 k); la operación se realiza desde un punto fijo (RAC 100.210 n) y a una altura máxima de 400 ft (122 m) sobre el terreno. En zona urbana se mantiene una distancia mínima de 30 m a personas y edificaciones (RAC 100.220 b).
@@ -2389,7 +2389,7 @@ Operación suspendida hasta garantizar condiciones seguras.
 
 \begin{itemize}
 \item \textbf{Cuándo se activa el RTH:} ante pérdida del enlace C2, batería crítica, degradación de GNSS con control normal, o cuando el piloto decide regresar y el camino de retorno está libre.
-\item \textbf{Cuándo se toma el control manual:} si el RTH no es seguro (obstáculos en el trayecto, falla del GNSS, riesgo para terceros) o si la aeronave se comporta de forma anormal con enlace disponible. El Pavo20 Pro vuela en modo manual (acro) y su rescate por GPS solo se usa ante la pérdida del enlace.
+\item \textbf{Cuándo se toma el control manual:} si el RTH no es seguro (obstáculos en el trayecto, falla del GNSS, riesgo para terceros) o si la aeronave se comporta de forma anormal con enlace disponible. El Pavo20 Pro II vuela en modo manual (acro) y su rescate por GPS solo se usa ante la pérdida del enlace.
 \item \textbf{Zonas de aterrizaje de emergencia:} el dronpuerto, el sitio alterno definido en el F-009 o la zona abierta más cercana, libre de personas y obstáculos. Se definen antes de cada operación.
 \item \textbf{Evacuación médica y orden público:} el piloto llama a la línea de emergencias 123, informa el lugar exacto y la hora, y mantiene a la tripulación junto al afectado. Ante un evento de orden público, se suspende la operación y se retira el personal del área.
 \end{itemize}
