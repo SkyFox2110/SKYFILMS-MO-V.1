@@ -63,6 +63,114 @@ Toda decisión operacional deberá orientarse a preservar la seguridad de las pe
 
 
 
+\section{Perfil Operacional}
+
+Skyfilms S.A.S. desarrolla operaciones con Sistemas de Aeronaves No Tripuladas (UAS) en la categoría específica, conforme a las autorizaciones otorgadas por la Unidad Administrativa Especial de Aeronáutica Civil (UAEAC) y a las limitaciones establecidas en las Especificaciones Operacionales (OpSpecs).
+
+Las operaciones autorizadas corresponden exclusivamente a actividades de captura de imágenes, video y datos con fines comerciales y audiovisuales, utilizando aeronaves multirrotor operadas bajo condiciones VLOS.
+
+Las operaciones se desarrollan bajo procedimientos estandarizados, garantizando el cumplimiento de las condiciones de seguridad operacional establecidas en el presente Manual de Operaciones.
+
+
+\subsection{Producción audiovisual}
+
+Skyfilms realiza operaciones destinadas a la captura de imágenes y video aéreo para producciones cinematográficas, audiovisuales y comerciales.
+
+Entre las principales aplicaciones se incluyen:
+
+\begin{itemize}
+
+\item Producción cinematográfica.
+
+\item Producción para televisión.
+
+\item Producción publicitaria.
+
+\item Producción de contenido para plataformas digitales.
+
+\item Registro audiovisual institucional.
+
+\item Documentales.
+
+\item Producción musical.
+
+\end{itemize}
+
+
+\subsection{Cobertura de eventos}
+
+Skyfilms desarrolla operaciones UAS para el registro audiovisual de eventos deportivos, culturales, empresariales y de entretenimiento, siempre que las condiciones operacionales permitan garantizar un nivel aceptable de seguridad y se cuente con las autorizaciones requeridas por la autoridad competente.
+
+Las operaciones sobre concentraciones de personas únicamente serán realizadas cuando se encuentren expresamente autorizadas por la Aerocivil y se implementen las medidas de mitigación correspondientes.
+
+\subsection{Operaciones FPV}
+
+Skyfilms desarrolla operaciones mediante aeronaves FPV (First Person View) destinadas a la obtención de secuencias audiovisuales dinámicas.
+
+Estas operaciones serán ejecutadas bajo condiciones VLOS (Visual Line of Sight), manteniendo en todo momento un Observador Visual que conserve contacto visual permanente con la aeronave y su entorno, conforme a lo establecido en el RAC 100.
+
+La operación FPV se limitará a escenarios previamente evaluados y autorizados, aplicando procedimientos específicos para la gestión del riesgo y la coordinación entre el Piloto Remoto y el Observador Visual.
+
+
+
+\subsection{Modalidades operacionales}
+
+Skyfilms desarrollará las siguientes modalidades de operación:
+
+\begin{itemize}
+
+\item Operaciones en Vuelo Nocturno.
+
+\item Operaciones VLOS (Visual Line of Sight).
+
+
+\end{itemize}
+
+Las operaciones EVLOS (Extended Visual Line of Sight) y BVLOS (Beyond Visual Line of Sight) no hacen parte del alcance operacional autorizado y únicamente podrán desarrollarse previa modificación de las OpSpecs y actualización del presente Manual de Operaciones.
+
+
+
+\subsection{Operaciones no autorizadas}
+
+Salvo autorización expresa de la Aeronáutica Civil, Skyfilms no realizará las siguientes actividades:
+
+\begin{itemize}
+
+\item Operaciones BVLOS.
+
+\item Transporte de carga.
+
+\item Transporte de mercancías peligrosas.
+
+\item Transporte de personas.
+
+\item Operaciones en enjambre.
+
+\item Fumigación aérea.
+
+\item Liberación de sustancias u objetos desde aeronaves.
+
+\item Operaciones militares o de vigilancia armada.
+
+\item Cualquier otra operación que exceda las limitaciones establecidas en las OpSpecs.
+
+\end{itemize}
+
+
+
+Toda la información técnica y operacional de la flota será administrada mediante el Sistema de Gestión Documental de Skyfilms.
+
+\subsection{Software Utilizado para la Planeación y Operación}
+Para la planificación, ejecución y seguimiento de las operaciones UAS, Skyfilms S.A.S. se apoya en software especializado que permite garantizar la seguridad operacional y la precisión de la misión:
+
+\begin{itemize}
+    \item \textbf{Aplicaciones de Vuelo (DJI Fly):} Utilizadas para el control directo de la aeronave, visualización de telemetría en tiempo real, gestión de enlace C2 y advertencias del sistema.
+    \item \textbf{Software de Planificación Meteorológica (UAV Forecast):} Herramienta de consulta obligatoria en la fase de planificación para verificar velocidad del viento, ráfagas, índice KP (interferencia electromagnética solar), nubosidad y satélites GNSS disponibles.
+    \item \textbf{Sistemas de Información Geográfica (Google Earth Pro):} Utilizado durante el scouting digital para la identificación de obstáculos verticales, delimitación del área de vuelo y análisis de riesgos del entorno.
+\end{itemize}
+
+
+
 \section{Flota UAS}
 Skyfilms S.A.S. operará la siguiente flota, sujeta a los procesos de adquisición y registro formal ante la Aerocivil.
 
@@ -322,278 +430,384 @@ Para cada UAS se conserva, como mínimo:
 
 Los equipos tecnológicos asociados (ETA) de Skyfilms están relacionados en la sección \textit{Equipos Tecnológicos Asociados (ETA)} de la flota. Cada equipo se registra ante la Aerocivil con marca, modelo y número de serie, y se controla en el Sistema de Gestión Documental.
 
-\section{Perfil Operacional}
+\section{Gestión del Enlace (C2)}
 
-Skyfilms S.A.S. desarrolla operaciones con Sistemas de Aeronaves No Tripuladas (UAS) en la categoría específica, conforme a las autorizaciones otorgadas por la Unidad Administrativa Especial de Aeronáutica Civil (UAEAC) y a las limitaciones establecidas en las Especificaciones Operacionales (OpSpecs).
+El enlace de Mando y Control (Command and Control - C2) constituye el medio principal de comunicación entre la estación de control en tierra y la aeronave no tripulada, permitiendo la transmisión de comandos, telemetría y demás información necesaria para el desarrollo seguro de la operación.
 
-Las operaciones autorizadas corresponden exclusivamente a actividades de captura de imágenes, video y datos con fines comerciales y audiovisuales, utilizando aeronaves multirrotor operadas bajo condiciones VLOS.
+Durante todas las fases del vuelo, el Piloto Remoto será responsable de supervisar permanentemente la calidad del enlace C2 y de adoptar las acciones necesarias cuando se presenten degradaciones o pérdidas del mismo.
 
-Las operaciones se desarrollan bajo procedimientos estandarizados, garantizando el cumplimiento de las condiciones de seguridad operacional establecidas en el presente Manual de Operaciones.
+Skyfilms utilizará sistemas de enlace C2 certificados por los fabricantes de las aeronaves empleadas, configurados conforme a las recomendaciones técnicas y a las limitaciones establecidas por la normativa aplicable.
 
 
-\subsection{Producción audiovisual}
+\subsection{Supervisión del enlace C2}
 
-Skyfilms realiza operaciones destinadas a la captura de imágenes y video aéreo para producciones cinematográficas, audiovisuales y comerciales.
+Antes y durante cada operación, el Piloto Remoto deberá verificar continuamente el estado del enlace C2 mediante los indicadores disponibles en la estación de control.
 
-Entre las principales aplicaciones se incluyen:
-
-\begin{itemize}
-
-\item Producción cinematográfica.
-
-\item Producción para televisión.
-
-\item Producción publicitaria.
-
-\item Producción de contenido para plataformas digitales.
-
-\item Registro audiovisual institucional.
-
-\item Documentales.
-
-\item Producción musical.
-
-\end{itemize}
-
-
-\subsection{Cobertura de eventos}
-
-Skyfilms desarrolla operaciones UAS para el registro audiovisual de eventos deportivos, culturales, empresariales y de entretenimiento, siempre que las condiciones operacionales permitan garantizar un nivel aceptable de seguridad y se cuente con las autorizaciones requeridas por la autoridad competente.
-
-Las operaciones sobre concentraciones de personas únicamente serán realizadas cuando se encuentren expresamente autorizadas por la Aerocivil y se implementen las medidas de mitigación correspondientes.
-
-\subsection{Operaciones FPV}
-
-Skyfilms desarrolla operaciones mediante aeronaves FPV (First Person View) destinadas a la obtención de secuencias audiovisuales dinámicas.
-
-Estas operaciones serán ejecutadas bajo condiciones VLOS (Visual Line of Sight), manteniendo en todo momento un Observador Visual que conserve contacto visual permanente con la aeronave y su entorno, conforme a lo establecido en el RAC 100.
-
-La operación FPV se limitará a escenarios previamente evaluados y autorizados, aplicando procedimientos específicos para la gestión del riesgo y la coordinación entre el Piloto Remoto y el Observador Visual.
-
-
-
-\subsection{Modalidades operacionales}
-
-Skyfilms desarrollará las siguientes modalidades de operación:
-
-\begin{itemize}
-
-\item Operaciones en Vuelo Nocturno.
-
-\item Operaciones VLOS (Visual Line of Sight).
-
-
-\end{itemize}
-
-Las operaciones EVLOS (Extended Visual Line of Sight) y BVLOS (Beyond Visual Line of Sight) no hacen parte del alcance operacional autorizado y únicamente podrán desarrollarse previa modificación de las OpSpecs y actualización del presente Manual de Operaciones.
-
-
-
-\subsection{Operaciones no autorizadas}
-
-Salvo autorización expresa de la Aeronáutica Civil, Skyfilms no realizará las siguientes actividades:
-
-\begin{itemize}
-
-\item Operaciones BVLOS.
-
-\item Transporte de carga.
-
-\item Transporte de mercancías peligrosas.
-
-\item Transporte de personas.
-
-\item Operaciones en enjambre.
-
-\item Fumigación aérea.
-
-\item Liberación de sustancias u objetos desde aeronaves.
-
-\item Operaciones militares o de vigilancia armada.
-
-\item Cualquier otra operación que exceda las limitaciones establecidas en las OpSpecs.
-
-\end{itemize}
-
-
-
-Toda la información técnica y operacional de la flota será administrada mediante el Sistema de Gestión Documental de Skyfilms.
-
-\subsection{Software Utilizado para la Planeación y Operación}
-Para la planificación, ejecución y seguimiento de las operaciones UAS, Skyfilms S.A.S. se apoya en software especializado que permite garantizar la seguridad operacional y la precisión de la misión:
-
-\begin{itemize}
-    \item \textbf{Aplicaciones de Vuelo (DJI Fly):} Utilizadas para el control directo de la aeronave, visualización de telemetría en tiempo real, gestión de enlace C2 y advertencias del sistema.
-    \item \textbf{Software de Planificación Meteorológica (UAV Forecast):} Herramienta de consulta obligatoria en la fase de planificación para verificar velocidad del viento, ráfagas, índice KP (interferencia electromagnética solar), nubosidad y satélites GNSS disponibles.
-    \item \textbf{Sistemas de Información Geográfica (Google Earth Pro):} Utilizado durante el scouting digital para la identificación de obstáculos verticales, delimitación del área de vuelo y análisis de riesgos del entorno.
-\end{itemize}
-
-
-
-\section{Planificación de la operación}
-
-Toda operación desarrollada por Skyfilms S.A.S. deberá ser planificada antes de su ejecución, con el propósito de garantizar el cumplimiento de los requisitos operacionales, técnicos y de seguridad establecidos por la organización y por la reglamentación aeronáutica vigente.
-
-La planificación permitirá identificar las condiciones del escenario operacional, definir los recursos necesarios, evaluar los riesgos asociados y establecer las medidas de mitigación requeridas para desarrollar la misión de forma segura y eficiente.
-
-
-
-\subsection{Objetivos de la planificación}
-
-La planificación operacional tiene como objetivos:
-
-\begin{itemize}
-
-\item Verificar la viabilidad de la misión.
-
-\item Identificar peligros antes del inicio de la operación.
-
-\item Definir los recursos humanos y técnicos necesarios.
-
-\item Verificar el cumplimiento de las limitaciones operacionales.
-
-\item Coordinar las actividades de la tripulación.
-
-\item Reducir el riesgo operacional.
-
-\end{itemize}
-
-
-
-\subsection{Información mínima para la planificación}
+Como mínimo deberán supervisarse los siguientes parámetros:
 
 \renewcommand{\arraystretch}{1.3}
 
-\begin{longtable}{|p{5cm}|p{9cm}|}
-
+\begin{longtable}{|p{4.5cm}|p{4cm}|p{4cm}|}
 \hline
 
-\textbf{Información} &
-\textbf{Descripción}
+\textbf{Parámetro} &
+\textbf{DJI Mavic 4 Pro} &
+\textbf{Pavo20 Pro}
 
 \\ \hline
 
-Cliente &
-Nombre del cliente o entidad contratante.
+Calidad del enlace &
+Indicador de señal &
+RSSI / LQ
 
 \\ \hline
 
-Objetivo de la misión &
-Descripción del servicio solicitado.
+Telemetría &
+Disponible &
+Disponible
 
 \\ \hline
 
-Lugar de operación &
-Dirección, municipio y coordenadas cuando aplique.
+Alertas visuales &
+Sí &
+Sí
 
 \\ \hline
 
-Fecha y horario &
-Programación prevista para la operación.
+Alertas sonoras &
+Sí &
+Sí
 
 \\ \hline
 
-Tripulación &
-Piloto remoto y observador visual asignados.
-
-\\ \hline
-
-Aeronave &
-UAS seleccionado para la misión.
-
-\\ \hline
-
-Espacio aéreo &
-Clasificación del espacio aéreo y restricciones aplicables.
-
-\\ \hline
-
-Meteorología &
-Pronóstico de viento, lluvia, nubosidad y visibilidad.
-
-\\ \hline
-
-Permisos &
-Autorizaciones requeridas para la operación.
-
-\\ \hline
-
-Plan de emergencia &
-Procedimientos aplicables en caso de contingencia.
+Estado del enlace &
+En tiempo real &
+En tiempo real
 
 \\ \hline
 
 \end{longtable}
 
 
-\subsection{Responsabilidades durante la planificación}
 
-\begin{table}[H]
+\subsection{Gestión de la degradación del enlace}
 
-\renewcommand{\arraystretch}{1.4}
+Cuando durante la operación se detecte una disminución en la calidad del enlace C2, el Piloto Remoto deberá adoptar, según corresponda, las siguientes acciones:
 
-\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+\begin{itemize}
+
+\item Reducir la distancia respecto a la aeronave.
+
+\item Disminuir la altura de operación cuando resulte conveniente.
+
+\item Reorientar las antenas del sistema de control.
+
+\item Evitar obstáculos que puedan afectar la propagación de la señal.
+
+\item Mantener comunicación permanente con el Observador Visual.
+
+\item Prepararse para finalizar la misión si la condición persiste.
+
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+font=\small,
+node distance=7mm,
+box/.style={
+rectangle,
+rounded corners,
+draw,
+align=center,
+minimum width=4.5cm,
+minimum height=0.9cm
+},
+arrow/.style={
+-{Latex},
+thick
+}
+]
+
+\node[box] (a) {Operación normal};
+
+\node[box, below=of a] (b) {Degradación del enlace C2};
+
+\node[box, below=of b] (c) {Aplicar medidas correctivas};
+
+\node[box, below=of c] (d) {¿Se recupera el enlace?};
+
+\node[box, below left=1cm and 1.8cm of d] (e) {Continuar la operación};
+
+\node[box, below right=1cm and 1.8cm of d] (f) {Activar procedimiento de pérdida del enlace};
+
+\node[box, below=of f] (g) {RTH / LAND / Failsafe};
+
+\node[box, below=of g] (h) {Registrar evento e informar al SMS};
+
+\draw[arrow] (a)--(b);
+\draw[arrow] (b)--(c);
+\draw[arrow] (c)--(d);
+
+\draw[arrow] (d)--node[left]{Sí}(e);
+\draw[arrow] (d)--node[right]{No}(f);
+
+\draw[arrow] (f)--(g);
+\draw[arrow] (g)--(h);
+
+\end{tikzpicture}
+
+\caption{Gestión general de la degradación del enlace C2.}
+\end{figure}
+
+
+\subsection{Pérdida del enlace C2}
+
+Cuando se presente una pérdida total del enlace de mando y control, la tripulación deberá aplicar los procedimientos automáticos y operacionales definidos para cada tipo de aeronave.
+
+\renewcommand{\arraystretch}{1.3}
+
+\begin{longtable}{|p{4.5cm}|p{6cm}|p{3cm}|}
 
 \hline
 
-\textbf{Cargo} &
-\textbf{Responsabilidad}
+\textbf{Sistema} &
+\textbf{Acción inmediata} &
+\textbf{Continuidad}
 
 \\ \hline
 
-Jefe de Pilotos &
-Coordinar y aprobar la planificación de la operación.
+DJI Mavic 4 Pro &
+Permitir la activación automática del Return To Home (RTH) o del procedimiento configurado para pérdida de enlace. &
+Cancelar la misión.
 
 \\ \hline
 
-Piloto Remoto &
-Recopilar la información necesaria para la misión y participar en la planificación.
+Pavo20 Pro &
+Permitir la ejecución del Failsafe configurado (RTH, LAND o procedimiento autorizado). &
+Cancelar la misión.
 
 \\ \hline
 
-Gerente SMS &
-Apoyar la identificación de peligros cuando la complejidad operacional lo requiera.
-
-\\ \hline
-
-Responsable de Mantenimiento &
-Confirmar la disponibilidad técnica de la aeronave.
-
-\\ \hline
-
-\end{tabularx}
-
-\end{table}
+\end{longtable}
 
 
-\subsection{Verificaciones previas}
+\subsection{Gestión de interferencias}
 
-Como parte de la planificación deberán verificarse, como mínimo:
+Cuando se identifique una posible interferencia electromagnética que afecte el enlace C2, el Piloto Remoto deberá:
+
+\begin{itemize}
+
+\item Identificar el origen probable de la interferencia.
+
+\item Modificar la posición de operación cuando sea posible.
+
+\item Evitar la proximidad a fuentes conocidas de interferencia.
+
+\item Suspender la operación cuando no sea posible garantizar un enlace seguro.
+
+\end{itemize}
+
+Las interferencias podrán originarse por:
+
+\begin{itemize}
+
+\item Redes Wi-Fi.
+
+\item Infraestructura de telecomunicaciones.
+
+\item Equipos industriales.
+
+\item Condiciones atmosféricas.
+
+\item Obstáculos físicos.
+
+\end{itemize}
+
+
+\subsection{Limitaciones operacionales}
+
+La confiabilidad del enlace C2 dependerá de factores propios del entorno operacional y de las características técnicas del sistema empleado.
+
+Durante las operaciones deberán considerarse, entre otras, las siguientes limitaciones:
+
+\begin{itemize}
+
+\item Obstáculos naturales o artificiales.
+
+\item Condiciones meteorológicas adversas.
+
+\item Interferencias electromagnéticas.
+
+\item Tipo de operación autorizada (VLOS).
+
+\item Distancia entre la estación de control y la aeronave.
+
+\end{itemize}
+
+\subsection{Factores que afectan el enlace C2}
+
+Skyfilms considera, en todas las fases del vuelo, los siguientes factores que pueden afectar el enlace C2 (Directiva 01-23, numeral 7.1):
+
+\begin{itemize}
+\item \textbf{Atmósfera y meteorología:} lluvia, humedad y cambios atmosféricos que degradan la señal.
+\item \textbf{Reflexión y desvanecimiento:} la señal rebota en el suelo, edificios y en la propia estructura de la aeronave, lo que causa variaciones, retardos y desvanecimiento del nivel de señal.
+\item \textbf{Pérdida del enlace:} falla del equipo, error humano (antena mal orientada, batería de la radio baja) o interferencia electromagnética.
+\end{itemize}
+
+\subsection{Estrategia de la tripulación ante la pérdida del enlace C2}
 
 \begin{enumerate}
-
-\item Condiciones meteorológicas.
-
-\item Restricciones del espacio aéreo.
-
-\item Estado técnico del UAS.
-
-\item Estado de las baterías.
-
-\item Disponibilidad de la tripulación.
-
-\item Disponibilidad del área de despegue y aterrizaje.
-
-\item Riesgos identificados.
-
-\item Permisos y autorizaciones.
-
-\item Equipos de comunicación.
-
-\item Equipos auxiliares.
-
+\item \textbf{Alerta:} el piloto remoto recibe alerta visual y sonora de pérdida o degradación del enlace en la estación de control (aviso de la aplicación DJI Fly en el Mavic; alarma de la radio por LQ baja y mensaje en las gafas en el Pavo20 Pro).
+\item \textbf{Aviso a la tripulación:} el piloto que detecta la pérdida lo anuncia en voz alta con la frase \textit{<<Pérdida de enlace>>}. El observador mantiene contacto visual con la aeronave y su luz, y avisa a quienes participan en la mitigación.
+\item \textbf{Recuperación:} el piloto suelta los mandos para dejar actuar el failsafe, orienta la antena hacia la aeronave y, si es posible, reduce la distancia a la aeronave; no comanda maniobras bruscas mientras el enlace no se restablezca.
+\item \textbf{Tras recuperar el enlace:} el piloto espera confirmación estable de la telemetría (LQ o indicador de señal), toma el control de nuevo, cancela la misión, aterriza en el punto más cercano seguro y registra el evento en F-003 y F-006.
+\item \textbf{Pérdida definitiva:} el observador marca el último punto visto y el piloto anota la última posición registrada. La tripulación despeja a las personas del área de caída probable, ubica y recupera la aeronave de forma segura (sin tocar baterías dañadas), elabora el F-013 y, si hay lesiones o daños a terceros, notifica a la Aerocivil dentro de las 48 horas.
 \end{enumerate}
 
+En vuelo nocturno, el observador sigue las luces de la aeronave durante todo el procedimiento y se conserva la iluminación del dronpuerto para el aterrizaje.
+
+\subsection{Respuesta configurada de la aeronave ante la pérdida del enlace}
+
+Se considera pérdida del enlace cuando se degrada la señal, hay tiempo sin respuesta o retardo, o no hay reacción a los mandos. La respuesta de cada aeronave se configura así y se verifica antes de cada operación (F-002):
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{3cm}|p{5.5cm}|p{5.2cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Aeronave} & \textbf{Respuesta configurada} & \textbf{Verificación} \\ \hline
+DJI Mavic 4 Pro & Retorno a casa (RTH) automático al punto de origen. Altura de RTH por encima del obstáculo más alto del área y nunca superior a 400 ft AGL. & Punto de origen registrado y altura de RTH confirmada en la aplicación (F-002, ítem 11). \\ \hline
+BetaFPV Pavo20 Pro & Failsafe de Betaflight: rescate por GPS (retorno al punto de origen) o aterrizaje controlado. Requiere módulo GPS externo (modelo por confirmar). & Prueba de failsafe con la radio antes del primer vuelo y después de cualquier cambio de configuración (F-002, ítem 16). \\ \hline
+\end{longtable}
+
+Las acciones de continuar la misión, mantenerse estacionario o aterrizar de emergencia no se configuran como respuesta: la misión siempre se cancela ante una pérdida del enlace.
+
+\subsection{Requisitos mínimos del enlace C2}
+
+\textbf{Datos en tiempo real.} Ambas aeronaves envían a la estación de control, por el enlace, estado, posición, ubicación, altura, nivel de batería, actitud, velocidad y video en vivo.
+
+\textbf{Bandas de frecuencia empleadas.} El piloto remoto verifica en el lugar de operación que las bandas utilizadas son apropiadas.
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{3cm}|p{3.2cm}|p{3.5cm}|p{4cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Aeronave} & \textbf{Banda} & \textbf{Uso} & \textbf{Observación} \\ \hline
+Mavic 4 Pro & 2.4 y 5.8 GHz & Comandos, telemetría y video & Selección automática de banda por el sistema DJI O4 \\ \hline
+Pavo20 Pro & 2.4 GHz y 915 MHz (ELRS XBand) & Comandos y telemetría & Dos bandas de forma simultánea: redundancia en frecuencia \\ \hline
+Pavo20 Pro & 5.8 GHz (DJI O4 Pro) & Video FPV & Enlace de video independiente \\ \hline
+\end{longtable}
+
+\textbf{Estado de los equipos.} Radios, antenas, cables y conectores se revisan antes de cada operación y deben estar en buen estado físico y funcional (F-002).
+
+\textbf{Fuentes de energía de la estación de control.} El control DJI RC Pro 2 (con pantalla integrada), la radio TX16S y las gafas funcionan con sus baterías internas, cargadas por completo antes de la misión. El piloto verifica el nivel antes de cada vuelo, y se lleva batería externa de respaldo para el control y la radio. No se opera con menos del 30\,\% de carga en la estación de control.
+
+\subsection{Secuencia de transmisión y recepción de datos}
+
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize, box/.style={draw, rounded corners, align=center, minimum width=2.3cm, minimum height=0.9cm}]
+\node[box] (tx) at (0,0) {Radio TX16S\\(mandos)};
+\node[box] (mod) at (3.4,0) {Módulo ELRS\\XBand};
+\node[box] (rx) at (9.0,0) {Receptor ELRS\\+ controladora};
+\node[box] (mot) at (13.0,0) {Motores\\y luces};
+\draw[-{Stealth}] (tx) -- (mod);
+\draw[{Stealth}-{Stealth}] (mod) -- node[above]{2.4 GHz y 915 MHz} (rx);
+\draw[-{Stealth}] (rx) -- (mot);
+\node[box] (cam) at (9.0,-2.4) {Cámara O4 Pro\\+ transmisor};
+\node[box] (gog) at (3.4,-2.4) {DJI Goggles 2\\(video y OSD)};
+\draw[-{Stealth}] (cam) -- node[above]{5.8 GHz} (gog);
+\node[box] (log) at (13.0,-2.4) {Registro\\(Blackbox)};
+\draw[-{Stealth}] (rx) -- (log);
+\end{tikzpicture}
+\end{center}
+
+Pavo20 Pro: el piloto da los mandos en la radio; el módulo XBand los envía a la aeronave por 2.4 GHz y 915 MHz con salto de frecuencia; la controladora los ejecuta y envía la telemetría de vuelta a la radio. El video sale en 5.8 GHz a las gafas. Los datos de vuelo se almacenan en la aeronave (Blackbox) y las gafas graban el video.
+
+Mavic 4 Pro: el control DJI envía los mandos y recibe telemetría y video por el sistema O4; la aplicación DJI Fly los muestra en la pantalla y guarda el registro de vuelo.
+
+\subsection{Limitaciones del enlace C2}
+
+\begin{itemize}
+\item \textbf{Alcance:} el Mavic 4 Pro opera hasta 750 m de distancia horizontal (límite VLOS) y el Pavo20 Pro, hasta 250 m; ninguno supera 400 ft AGL. El alcance aceptado de cada enlace se define en la demostración de este capítulo.
+\item \textbf{Obstáculos:} estructuras, árboles y terreno bloquean o reflejan la señal; el piloto mantiene línea de vista libre entre la antena y la aeronave.
+\item \textbf{Antena:} la orientación de la antena de la radio y la posición de la aeronave respecto al patrón de radiación afectan la señal; no se apunta la punta de la antena a la aeronave.
+\item \textbf{Potencia e interferencia:} zonas con mucha señal Wi-Fi, torres o equipos industriales reducen el desempeño y se evitan.
+\item \textbf{Pavo20 Pro:} por tamaño y potencia, se opera siempre con observador y a una distancia máxima de 250 m.
+\end{itemize}
+
+\subsection{Herramientas contra la interferencia y la pérdida del enlace}
+
+\begin{itemize}
+\item \textbf{Mavic 4 Pro:} enlace del fabricante con selección automática de banda y cifrado según su ficha técnica.
+\item \textbf{Pavo20 Pro:} salto de frecuencia de ExpressLRS, frase de enlace (\textit{binding phrase}) propia que impide el control por terceros, y dos bandas simultáneas con XBand.
+\end{itemize}
+
+\subsection{Cambio entre estaciones de control}
+
+Ninguna de las aeronaves de Skyfilms permite cambiar de estación de control durante el vuelo. Cada aeronave se opera desde una única estación y un único piloto remoto.
+
+\subsection{Fichas técnicas, respaldo de datos y antenas}
+
+\begin{itemize}
+\item \textbf{Datasheet:} Skyfilms conserva en el Sistema de Gestión Documental las fichas técnicas del fabricante de la radio, el módulo XBand, el receptor, el transmisor de video y el control DJI.
+\item \textbf{Respaldo de datos:} al terminar cada vuelo, el piloto descarga el registro de vuelo (DJI Fly y Blackbox de Betaflight) y lo almacena en la nube con copia de respaldo, asociado al número de F-009.
+\item \textbf{Antenas:} se documentan los tipos, la ganancia y el tipo de enlace de cada antena de la tabla siguiente. Las antenas de los equipos son omnidireccionales.
+\end{itemize}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{3.4cm}|p{3.4cm}|p{3.2cm}|p{3.7cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Equipo} & \textbf{Antena / tipo} & \textbf{Ganancia} & \textbf{Banda} \\ \hline
+Control DJI RC Pro 2 & Integrada, omnidireccional & Por confirmar (datasheet) & 2.4 y 5.8 GHz \\ \hline
+Radio TX16S + XBand & Por confirmar, omnidireccional & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
+Receptor Pavo20 Pro & Por confirmar & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
+Gafas DJI Goggles 2 & Integradas & Por confirmar (datasheet) & 5.8 GHz \\ \hline
+\end{longtable}
+
+\subsection{Advertencias, registro de eventos y seguridad operacional}
+
+El piloto visualiza y se registran en el log de eventos las siguientes advertencias; el log se conserva con respaldo y se analiza en el SMS:
+
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{5cm}|p{4.7cm}|p{4cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Advertencia} & \textbf{Mavic 4 Pro} & \textbf{Pavo20 Pro} \\ \hline
+Degradación de la posición & Aviso de GNSS en DJI Fly & Satélites en OSD; alarma de la radio \\ \hline
+Degradación del enlace C2 & Aviso de señal en DJI Fly & LQ y RSSI en OSD y radio \\ \hline
+Carga de la batería & Alertas de nivel en DJI Fly & Voltaje en OSD y alarma de batería \\ \hline
+Geocercas y zonas restringidas & Alerta de DJI Fly (GEO) & Revisión en la planificación (F-009) \\ \hline
+Límite de altura y distancia & Límites configurados en DJI Fly & OSD de altura y distancia; observador \\ \hline
+\end{longtable}
+
+Estas advertencias se incluyen en la colección de datos de seguridad operacional (SDCPS) y se monitorean mediante indicadores de rendimiento (SPI) en el SMS, entre ellos el número de pérdidas o degradaciones del enlace por cada 100 vuelos.
+
+\subsection{Demostración del enlace C2}
+
+Antes de iniciar operaciones, Skyfilms demuestra el enlace C2 de cada aeronave ante la Aerocivil, conforme al numeral 8 de la Directiva 01-23:
+
+\begin{itemize}
+\item \textbf{Vuelos:} un mínimo de 3 vuelos que muestran el funcionamiento del enlace a su alcance máximo. Si un vuelo presenta fallas, se corrigen y se repiten las 3 repeticiones.
+\item \textbf{Distancia:} el alcance aceptado es de 750 m para el Mavic 4 Pro y de 250 m para el Pavo20 Pro. El enlace se demuestra estable a esa distancia más el 20\,\% (900 m y 300 m, respectivamente), medida entre la estación de control y la aeronave, y a no más de 400 ft AGL en todas las fases.
+\item \textbf{Maniobras:} a esa distancia se hacen giros de 360° a derecha e izquierda y ángulos de alabeo de 10° o más, o traslaciones laterales uniformes.
+\item \textbf{Validación:} el video FPV (o de la cámara de la aeronave) es una de las fuentes principales para verificar la estabilidad; la telemetría se transmite de forma permanente.
+\item \textbf{Frecuencias y equipos:} se identifican las frecuencias de transmisión y recepción, y los equipos (antenas, módulos, cables, conectores, pantallas) corresponden a lo descrito en este Manual.
+\item \textbf{Aplicaciones:} el software de mando y control transmite los datos de telemetría a las pantallas y registros de la estación.
+\item \textbf{Redundancia en frecuencia:} el Pavo20 Pro usa dos bandas simultáneas (2.4 GHz y 915 MHz); el Mavic 4 Pro cambia de banda (2.4 y 5.8 GHz) de forma automática.
+\item \textbf{Registro:} los resultados de cada vuelo se anotan en el F-001 y quedan archivados con el F-009.
+\end{itemize}
+
+\subsection{Referencias técnicas}
+
+Las especificaciones técnicas particulares de cada sistema de enlace C2, incluyendo frecuencias de operación, protocolos de comunicación, configuraciones de \textit{failsafe}, firmware, equipos compatibles y demás características técnicas, se encuentran documentadas en las Fichas Técnicas de Aeronave (FTA) y en el Manual de Control de Mantenimiento (MCM), documentos controlados por Skyfilms S.A.S.
+
+Las FTA forman parte del Sistema de Gestión Documental de la organización y deberán mantenerse actualizadas conforme a las configuraciones aprobadas para cada aeronave.
+
+\begin{tcolorbox}[
+title=Nota Operacional,
+colback=blue!5,
+colframe=blue!60!black]
+
+El Piloto Remoto deberá considerar cualquier degradación del enlace C2 como una condición potencialmente insegura. Si las medidas de mitigación no restablecen un nivel aceptable de confiabilidad del enlace, la misión deberá finalizar de manera controlada y el evento será registrado conforme a los procedimientos del Sistema de Gestión de la Seguridad Operacional (SMS).
+
+\end{tcolorbox}
 
 
 
@@ -601,7 +815,9 @@ Como parte de la planificación deberán verificarse, como mínimo:
 
 
 
-%=====================================================================
+
+
+
 \section{Área de Operación (DRONPUERTOS)
 }
 %=====================================================================
@@ -945,6 +1161,178 @@ SOP-001 Planificación de la Operación.
 
 
 
+\section{Planificación de la operación}
+
+Toda operación desarrollada por Skyfilms S.A.S. deberá ser planificada antes de su ejecución, con el propósito de garantizar el cumplimiento de los requisitos operacionales, técnicos y de seguridad establecidos por la organización y por la reglamentación aeronáutica vigente.
+
+La planificación permitirá identificar las condiciones del escenario operacional, definir los recursos necesarios, evaluar los riesgos asociados y establecer las medidas de mitigación requeridas para desarrollar la misión de forma segura y eficiente.
+
+
+
+\subsection{Objetivos de la planificación}
+
+La planificación operacional tiene como objetivos:
+
+\begin{itemize}
+
+\item Verificar la viabilidad de la misión.
+
+\item Identificar peligros antes del inicio de la operación.
+
+\item Definir los recursos humanos y técnicos necesarios.
+
+\item Verificar el cumplimiento de las limitaciones operacionales.
+
+\item Coordinar las actividades de la tripulación.
+
+\item Reducir el riesgo operacional.
+
+\end{itemize}
+
+
+
+\subsection{Información mínima para la planificación}
+
+\renewcommand{\arraystretch}{1.3}
+
+\begin{longtable}{|p{5cm}|p{9cm}|}
+
+\hline
+
+\textbf{Información} &
+\textbf{Descripción}
+
+\\ \hline
+
+Cliente &
+Nombre del cliente o entidad contratante.
+
+\\ \hline
+
+Objetivo de la misión &
+Descripción del servicio solicitado.
+
+\\ \hline
+
+Lugar de operación &
+Dirección, municipio y coordenadas cuando aplique.
+
+\\ \hline
+
+Fecha y horario &
+Programación prevista para la operación.
+
+\\ \hline
+
+Tripulación &
+Piloto remoto y observador visual asignados.
+
+\\ \hline
+
+Aeronave &
+UAS seleccionado para la misión.
+
+\\ \hline
+
+Espacio aéreo &
+Clasificación del espacio aéreo y restricciones aplicables.
+
+\\ \hline
+
+Meteorología &
+Pronóstico de viento, lluvia, nubosidad y visibilidad.
+
+\\ \hline
+
+Permisos &
+Autorizaciones requeridas para la operación.
+
+\\ \hline
+
+Plan de emergencia &
+Procedimientos aplicables en caso de contingencia.
+
+\\ \hline
+
+\end{longtable}
+
+
+\subsection{Responsabilidades durante la planificación}
+
+\begin{table}[H]
+
+\renewcommand{\arraystretch}{1.4}
+
+\begin{tabularx}{\textwidth}{|p{5cm}|X|}
+
+\hline
+
+\textbf{Cargo} &
+\textbf{Responsabilidad}
+
+\\ \hline
+
+Jefe de Pilotos &
+Coordinar y aprobar la planificación de la operación.
+
+\\ \hline
+
+Piloto Remoto &
+Recopilar la información necesaria para la misión y participar en la planificación.
+
+\\ \hline
+
+Gerente SMS &
+Apoyar la identificación de peligros cuando la complejidad operacional lo requiera.
+
+\\ \hline
+
+Responsable de Mantenimiento &
+Confirmar la disponibilidad técnica de la aeronave.
+
+\\ \hline
+
+\end{tabularx}
+
+\end{table}
+
+
+\subsection{Verificaciones previas}
+
+Como parte de la planificación deberán verificarse, como mínimo:
+
+\begin{enumerate}
+
+\item Condiciones meteorológicas.
+
+\item Restricciones del espacio aéreo.
+
+\item Estado técnico del UAS.
+
+\item Estado de las baterías.
+
+\item Disponibilidad de la tripulación.
+
+\item Disponibilidad del área de despegue y aterrizaje.
+
+\item Riesgos identificados.
+
+\item Permisos y autorizaciones.
+
+\item Equipos de comunicación.
+
+\item Equipos auxiliares.
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+%=====================================================================
 \section{Evaluación del riesgo operacional}
 
 Antes de la ejecución de cualquier operación UAS, Skyfilms S.A.S. realizará una evaluación del riesgo operacional con el fin de identificar los peligros asociados a la misión, analizar el nivel de riesgo y establecer las medidas de mitigación necesarias para garantizar un nivel de seguridad aceptable.
@@ -1454,394 +1842,6 @@ PO-004 Ejecución de la Operación.
 
 \end{tcolorbox}
 
-\section{Gestión del Enlace (C2)}
-
-El enlace de Mando y Control (Command and Control - C2) constituye el medio principal de comunicación entre la estación de control en tierra y la aeronave no tripulada, permitiendo la transmisión de comandos, telemetría y demás información necesaria para el desarrollo seguro de la operación.
-
-Durante todas las fases del vuelo, el Piloto Remoto será responsable de supervisar permanentemente la calidad del enlace C2 y de adoptar las acciones necesarias cuando se presenten degradaciones o pérdidas del mismo.
-
-Skyfilms utilizará sistemas de enlace C2 certificados por los fabricantes de las aeronaves empleadas, configurados conforme a las recomendaciones técnicas y a las limitaciones establecidas por la normativa aplicable.
-
-
-\subsection{Supervisión del enlace C2}
-
-Antes y durante cada operación, el Piloto Remoto deberá verificar continuamente el estado del enlace C2 mediante los indicadores disponibles en la estación de control.
-
-Como mínimo deberán supervisarse los siguientes parámetros:
-
-\renewcommand{\arraystretch}{1.3}
-
-\begin{longtable}{|p{4.5cm}|p{4cm}|p{4cm}|}
-\hline
-
-\textbf{Parámetro} &
-\textbf{DJI Mavic 4 Pro} &
-\textbf{Pavo20 Pro}
-
-\\ \hline
-
-Calidad del enlace &
-Indicador de señal &
-RSSI / LQ
-
-\\ \hline
-
-Telemetría &
-Disponible &
-Disponible
-
-\\ \hline
-
-Alertas visuales &
-Sí &
-Sí
-
-\\ \hline
-
-Alertas sonoras &
-Sí &
-Sí
-
-\\ \hline
-
-Estado del enlace &
-En tiempo real &
-En tiempo real
-
-\\ \hline
-
-\end{longtable}
-
-
-
-\subsection{Gestión de la degradación del enlace}
-
-Cuando durante la operación se detecte una disminución en la calidad del enlace C2, el Piloto Remoto deberá adoptar, según corresponda, las siguientes acciones:
-
-\begin{itemize}
-
-\item Reducir la distancia respecto a la aeronave.
-
-\item Disminuir la altura de operación cuando resulte conveniente.
-
-\item Reorientar las antenas del sistema de control.
-
-\item Evitar obstáculos que puedan afectar la propagación de la señal.
-
-\item Mantener comunicación permanente con el Observador Visual.
-
-\item Prepararse para finalizar la misión si la condición persiste.
-
-\end{itemize}
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[
-font=\small,
-node distance=7mm,
-box/.style={
-rectangle,
-rounded corners,
-draw,
-align=center,
-minimum width=4.5cm,
-minimum height=0.9cm
-},
-arrow/.style={
--{Latex},
-thick
-}
-]
-
-\node[box] (a) {Operación normal};
-
-\node[box, below=of a] (b) {Degradación del enlace C2};
-
-\node[box, below=of b] (c) {Aplicar medidas correctivas};
-
-\node[box, below=of c] (d) {¿Se recupera el enlace?};
-
-\node[box, below left=1cm and 1.8cm of d] (e) {Continuar la operación};
-
-\node[box, below right=1cm and 1.8cm of d] (f) {Activar procedimiento de pérdida del enlace};
-
-\node[box, below=of f] (g) {RTH / LAND / Failsafe};
-
-\node[box, below=of g] (h) {Registrar evento e informar al SMS};
-
-\draw[arrow] (a)--(b);
-\draw[arrow] (b)--(c);
-\draw[arrow] (c)--(d);
-
-\draw[arrow] (d)--node[left]{Sí}(e);
-\draw[arrow] (d)--node[right]{No}(f);
-
-\draw[arrow] (f)--(g);
-\draw[arrow] (g)--(h);
-
-\end{tikzpicture}
-
-\caption{Gestión general de la degradación del enlace C2.}
-\end{figure}
-
-
-\subsection{Pérdida del enlace C2}
-
-Cuando se presente una pérdida total del enlace de mando y control, la tripulación deberá aplicar los procedimientos automáticos y operacionales definidos para cada tipo de aeronave.
-
-\renewcommand{\arraystretch}{1.3}
-
-\begin{longtable}{|p{4.5cm}|p{6cm}|p{3cm}|}
-
-\hline
-
-\textbf{Sistema} &
-\textbf{Acción inmediata} &
-\textbf{Continuidad}
-
-\\ \hline
-
-DJI Mavic 4 Pro &
-Permitir la activación automática del Return To Home (RTH) o del procedimiento configurado para pérdida de enlace. &
-Cancelar la misión.
-
-\\ \hline
-
-Pavo20 Pro &
-Permitir la ejecución del Failsafe configurado (RTH, LAND o procedimiento autorizado). &
-Cancelar la misión.
-
-\\ \hline
-
-\end{longtable}
-
-
-\subsection{Gestión de interferencias}
-
-Cuando se identifique una posible interferencia electromagnética que afecte el enlace C2, el Piloto Remoto deberá:
-
-\begin{itemize}
-
-\item Identificar el origen probable de la interferencia.
-
-\item Modificar la posición de operación cuando sea posible.
-
-\item Evitar la proximidad a fuentes conocidas de interferencia.
-
-\item Suspender la operación cuando no sea posible garantizar un enlace seguro.
-
-\end{itemize}
-
-Las interferencias podrán originarse por:
-
-\begin{itemize}
-
-\item Redes Wi-Fi.
-
-\item Infraestructura de telecomunicaciones.
-
-\item Equipos industriales.
-
-\item Condiciones atmosféricas.
-
-\item Obstáculos físicos.
-
-\end{itemize}
-
-
-\subsection{Limitaciones operacionales}
-
-La confiabilidad del enlace C2 dependerá de factores propios del entorno operacional y de las características técnicas del sistema empleado.
-
-Durante las operaciones deberán considerarse, entre otras, las siguientes limitaciones:
-
-\begin{itemize}
-
-\item Obstáculos naturales o artificiales.
-
-\item Condiciones meteorológicas adversas.
-
-\item Interferencias electromagnéticas.
-
-\item Tipo de operación autorizada (VLOS).
-
-\item Distancia entre la estación de control y la aeronave.
-
-\end{itemize}
-
-\subsection{Factores que afectan el enlace C2}
-
-Skyfilms considera, en todas las fases del vuelo, los siguientes factores que pueden afectar el enlace C2 (Directiva 01-23, numeral 7.1):
-
-\begin{itemize}
-\item \textbf{Atmósfera y meteorología:} lluvia, humedad y cambios atmosféricos que degradan la señal.
-\item \textbf{Reflexión y desvanecimiento:} la señal rebota en el suelo, edificios y en la propia estructura de la aeronave, lo que causa variaciones, retardos y desvanecimiento del nivel de señal.
-\item \textbf{Pérdida del enlace:} falla del equipo, error humano (antena mal orientada, batería de la radio baja) o interferencia electromagnética.
-\end{itemize}
-
-\subsection{Estrategia de la tripulación ante la pérdida del enlace C2}
-
-\begin{enumerate}
-\item \textbf{Alerta:} el piloto remoto recibe alerta visual y sonora de pérdida o degradación del enlace en la estación de control (aviso de la aplicación DJI Fly en el Mavic; alarma de la radio por LQ baja y mensaje en las gafas en el Pavo20 Pro).
-\item \textbf{Aviso a la tripulación:} el piloto que detecta la pérdida lo anuncia en voz alta con la frase \textit{<<Pérdida de enlace>>}. El observador mantiene contacto visual con la aeronave y su luz, y avisa a quienes participan en la mitigación.
-\item \textbf{Recuperación:} el piloto suelta los mandos para dejar actuar el failsafe, orienta la antena hacia la aeronave y, si es posible, reduce la distancia a la aeronave; no comanda maniobras bruscas mientras el enlace no se restablezca.
-\item \textbf{Tras recuperar el enlace:} el piloto espera confirmación estable de la telemetría (LQ o indicador de señal), toma el control de nuevo, cancela la misión, aterriza en el punto más cercano seguro y registra el evento en F-003 y F-006.
-\item \textbf{Pérdida definitiva:} el observador marca el último punto visto y el piloto anota la última posición registrada. La tripulación despeja a las personas del área de caída probable, ubica y recupera la aeronave de forma segura (sin tocar baterías dañadas), elabora el F-013 y, si hay lesiones o daños a terceros, notifica a la Aerocivil dentro de las 48 horas.
-\end{enumerate}
-
-En vuelo nocturno, el observador sigue las luces de la aeronave durante todo el procedimiento y se conserva la iluminación del dronpuerto para el aterrizaje.
-
-\subsection{Respuesta configurada de la aeronave ante la pérdida del enlace}
-
-Se considera pérdida del enlace cuando se degrada la señal, hay tiempo sin respuesta o retardo, o no hay reacción a los mandos. La respuesta de cada aeronave se configura así y se verifica antes de cada operación (F-002):
-
-\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|p{3cm}|p{5.5cm}|p{5.2cm}|}
-\hline
-\rowcolor[gray]{0.9}\textbf{Aeronave} & \textbf{Respuesta configurada} & \textbf{Verificación} \\ \hline
-DJI Mavic 4 Pro & Retorno a casa (RTH) automático al punto de origen. Altura de RTH por encima del obstáculo más alto del área y nunca superior a 400 ft AGL. & Punto de origen registrado y altura de RTH confirmada en la aplicación (F-002, ítem 11). \\ \hline
-BetaFPV Pavo20 Pro & Failsafe de Betaflight: rescate por GPS (retorno al punto de origen) o aterrizaje controlado. Requiere módulo GPS externo (modelo por confirmar). & Prueba de failsafe con la radio antes del primer vuelo y después de cualquier cambio de configuración (F-002, ítem 16). \\ \hline
-\end{longtable}
-
-Las acciones de continuar la misión, mantenerse estacionario o aterrizar de emergencia no se configuran como respuesta: la misión siempre se cancela ante una pérdida del enlace.
-
-\subsection{Requisitos mínimos del enlace C2}
-
-\textbf{Datos en tiempo real.} Ambas aeronaves envían a la estación de control, por el enlace, estado, posición, ubicación, altura, nivel de batería, actitud, velocidad y video en vivo.
-
-\textbf{Bandas de frecuencia empleadas.} El piloto remoto verifica en el lugar de operación que las bandas utilizadas son apropiadas.
-
-\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|p{3cm}|p{3.2cm}|p{3.5cm}|p{4cm}|}
-\hline
-\rowcolor[gray]{0.9}\textbf{Aeronave} & \textbf{Banda} & \textbf{Uso} & \textbf{Observación} \\ \hline
-Mavic 4 Pro & 2.4 y 5.8 GHz & Comandos, telemetría y video & Selección automática de banda por el sistema DJI O4 \\ \hline
-Pavo20 Pro & 2.4 GHz y 915 MHz (ELRS XBand) & Comandos y telemetría & Dos bandas de forma simultánea: redundancia en frecuencia \\ \hline
-Pavo20 Pro & 5.8 GHz (DJI O4 Pro) & Video FPV & Enlace de video independiente \\ \hline
-\end{longtable}
-
-\textbf{Estado de los equipos.} Radios, antenas, cables y conectores se revisan antes de cada operación y deben estar en buen estado físico y funcional (F-002).
-
-\textbf{Fuentes de energía de la estación de control.} El control DJI RC Pro 2 (con pantalla integrada), la radio TX16S y las gafas funcionan con sus baterías internas, cargadas por completo antes de la misión. El piloto verifica el nivel antes de cada vuelo, y se lleva batería externa de respaldo para el control y la radio. No se opera con menos del 30\,\% de carga en la estación de control.
-
-\subsection{Secuencia de transmisión y recepción de datos}
-
-\begin{center}
-\begin{tikzpicture}[font=\footnotesize, box/.style={draw, rounded corners, align=center, minimum width=2.3cm, minimum height=0.9cm}]
-\node[box] (tx) at (0,0) {Radio TX16S\\(mandos)};
-\node[box] (mod) at (3.4,0) {Módulo ELRS\\XBand};
-\node[box] (rx) at (9.0,0) {Receptor ELRS\\+ controladora};
-\node[box] (mot) at (13.0,0) {Motores\\y luces};
-\draw[-{Stealth}] (tx) -- (mod);
-\draw[{Stealth}-{Stealth}] (mod) -- node[above]{2.4 GHz y 915 MHz} (rx);
-\draw[-{Stealth}] (rx) -- (mot);
-\node[box] (cam) at (9.0,-2.4) {Cámara O4 Pro\\+ transmisor};
-\node[box] (gog) at (3.4,-2.4) {DJI Goggles 2\\(video y OSD)};
-\draw[-{Stealth}] (cam) -- node[above]{5.8 GHz} (gog);
-\node[box] (log) at (13.0,-2.4) {Registro\\(Blackbox)};
-\draw[-{Stealth}] (rx) -- (log);
-\end{tikzpicture}
-\end{center}
-
-Pavo20 Pro: el piloto da los mandos en la radio; el módulo XBand los envía a la aeronave por 2.4 GHz y 915 MHz con salto de frecuencia; la controladora los ejecuta y envía la telemetría de vuelta a la radio. El video sale en 5.8 GHz a las gafas. Los datos de vuelo se almacenan en la aeronave (Blackbox) y las gafas graban el video.
-
-Mavic 4 Pro: el control DJI envía los mandos y recibe telemetría y video por el sistema O4; la aplicación DJI Fly los muestra en la pantalla y guarda el registro de vuelo.
-
-\subsection{Limitaciones del enlace C2}
-
-\begin{itemize}
-\item \textbf{Alcance:} el Mavic 4 Pro opera hasta 750 m de distancia horizontal (límite VLOS) y el Pavo20 Pro, hasta 250 m; ninguno supera 400 ft AGL. El alcance aceptado de cada enlace se define en la demostración de este capítulo.
-\item \textbf{Obstáculos:} estructuras, árboles y terreno bloquean o reflejan la señal; el piloto mantiene línea de vista libre entre la antena y la aeronave.
-\item \textbf{Antena:} la orientación de la antena de la radio y la posición de la aeronave respecto al patrón de radiación afectan la señal; no se apunta la punta de la antena a la aeronave.
-\item \textbf{Potencia e interferencia:} zonas con mucha señal Wi-Fi, torres o equipos industriales reducen el desempeño y se evitan.
-\item \textbf{Pavo20 Pro:} por tamaño y potencia, se opera siempre con observador y a una distancia máxima de 250 m.
-\end{itemize}
-
-\subsection{Herramientas contra la interferencia y la pérdida del enlace}
-
-\begin{itemize}
-\item \textbf{Mavic 4 Pro:} enlace del fabricante con selección automática de banda y cifrado según su ficha técnica.
-\item \textbf{Pavo20 Pro:} salto de frecuencia de ExpressLRS, frase de enlace (\textit{binding phrase}) propia que impide el control por terceros, y dos bandas simultáneas con XBand.
-\end{itemize}
-
-\subsection{Cambio entre estaciones de control}
-
-Ninguna de las aeronaves de Skyfilms permite cambiar de estación de control durante el vuelo. Cada aeronave se opera desde una única estación y un único piloto remoto.
-
-\subsection{Fichas técnicas, respaldo de datos y antenas}
-
-\begin{itemize}
-\item \textbf{Datasheet:} Skyfilms conserva en el Sistema de Gestión Documental las fichas técnicas del fabricante de la radio, el módulo XBand, el receptor, el transmisor de video y el control DJI.
-\item \textbf{Respaldo de datos:} al terminar cada vuelo, el piloto descarga el registro de vuelo (DJI Fly y Blackbox de Betaflight) y lo almacena en la nube con copia de respaldo, asociado al número de F-009.
-\item \textbf{Antenas:} se documentan los tipos, la ganancia y el tipo de enlace de cada antena de la tabla siguiente. Las antenas de los equipos son omnidireccionales.
-\end{itemize}
-
-\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|p{3.4cm}|p{3.4cm}|p{3.2cm}|p{3.7cm}|}
-\hline
-\rowcolor[gray]{0.9}\textbf{Equipo} & \textbf{Antena / tipo} & \textbf{Ganancia} & \textbf{Banda} \\ \hline
-Control DJI RC Pro 2 & Integrada, omnidireccional & Por confirmar (datasheet) & 2.4 y 5.8 GHz \\ \hline
-Radio TX16S + XBand & Por confirmar, omnidireccional & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
-Receptor Pavo20 Pro & Por confirmar & Por confirmar & 2.4 GHz y 915 MHz \\ \hline
-Gafas DJI Goggles 2 & Integradas & Por confirmar (datasheet) & 5.8 GHz \\ \hline
-\end{longtable}
-
-\subsection{Advertencias, registro de eventos y seguridad operacional}
-
-El piloto visualiza y se registran en el log de eventos las siguientes advertencias; el log se conserva con respaldo y se analiza en el SMS:
-
-\renewcommand{\arraystretch}{1.3}
-\begin{longtable}{|p{5cm}|p{4.7cm}|p{4cm}|}
-\hline
-\rowcolor[gray]{0.9}\textbf{Advertencia} & \textbf{Mavic 4 Pro} & \textbf{Pavo20 Pro} \\ \hline
-Degradación de la posición & Aviso de GNSS en DJI Fly & Satélites en OSD; alarma de la radio \\ \hline
-Degradación del enlace C2 & Aviso de señal en DJI Fly & LQ y RSSI en OSD y radio \\ \hline
-Carga de la batería & Alertas de nivel en DJI Fly & Voltaje en OSD y alarma de batería \\ \hline
-Geocercas y zonas restringidas & Alerta de DJI Fly (GEO) & Revisión en la planificación (F-009) \\ \hline
-Límite de altura y distancia & Límites configurados en DJI Fly & OSD de altura y distancia; observador \\ \hline
-\end{longtable}
-
-Estas advertencias se incluyen en la colección de datos de seguridad operacional (SDCPS) y se monitorean mediante indicadores de rendimiento (SPI) en el SMS, entre ellos el número de pérdidas o degradaciones del enlace por cada 100 vuelos.
-
-\subsection{Demostración del enlace C2}
-
-Antes de iniciar operaciones, Skyfilms demuestra el enlace C2 de cada aeronave ante la Aerocivil, conforme al numeral 8 de la Directiva 01-23:
-
-\begin{itemize}
-\item \textbf{Vuelos:} un mínimo de 3 vuelos que muestran el funcionamiento del enlace a su alcance máximo. Si un vuelo presenta fallas, se corrigen y se repiten las 3 repeticiones.
-\item \textbf{Distancia:} el alcance aceptado es de 750 m para el Mavic 4 Pro y de 250 m para el Pavo20 Pro. El enlace se demuestra estable a esa distancia más el 20\,\% (900 m y 300 m, respectivamente), medida entre la estación de control y la aeronave, y a no más de 400 ft AGL en todas las fases.
-\item \textbf{Maniobras:} a esa distancia se hacen giros de 360° a derecha e izquierda y ángulos de alabeo de 10° o más, o traslaciones laterales uniformes.
-\item \textbf{Validación:} el video FPV (o de la cámara de la aeronave) es una de las fuentes principales para verificar la estabilidad; la telemetría se transmite de forma permanente.
-\item \textbf{Frecuencias y equipos:} se identifican las frecuencias de transmisión y recepción, y los equipos (antenas, módulos, cables, conectores, pantallas) corresponden a lo descrito en este Manual.
-\item \textbf{Aplicaciones:} el software de mando y control transmite los datos de telemetría a las pantallas y registros de la estación.
-\item \textbf{Redundancia en frecuencia:} el Pavo20 Pro usa dos bandas simultáneas (2.4 GHz y 915 MHz); el Mavic 4 Pro cambia de banda (2.4 y 5.8 GHz) de forma automática.
-\item \textbf{Registro:} los resultados de cada vuelo se anotan en el F-001 y quedan archivados con el F-009.
-\end{itemize}
-
-\subsection{Referencias técnicas}
-
-Las especificaciones técnicas particulares de cada sistema de enlace C2, incluyendo frecuencias de operación, protocolos de comunicación, configuraciones de \textit{failsafe}, firmware, equipos compatibles y demás características técnicas, se encuentran documentadas en las Fichas Técnicas de Aeronave (FTA) y en el Manual de Control de Mantenimiento (MCM), documentos controlados por Skyfilms S.A.S.
-
-Las FTA forman parte del Sistema de Gestión Documental de la organización y deberán mantenerse actualizadas conforme a las configuraciones aprobadas para cada aeronave.
-
-\begin{tcolorbox}[
-title=Nota Operacional,
-colback=blue!5,
-colframe=blue!60!black]
-
-El Piloto Remoto deberá considerar cualquier degradación del enlace C2 como una condición potencialmente insegura. Si las medidas de mitigación no restablecen un nivel aceptable de confiabilidad del enlace, la misión deberá finalizar de manera controlada y el evento será registrado conforme a los procedimientos del Sistema de Gestión de la Seguridad Operacional (SMS).
-
-\end{tcolorbox}
-
-
-
-
-
-
-
-
-
-
 \section{Procedimientos especiales de operación}
 
 Determinadas operaciones desarrolladas por Skyfilms requieren la adopción de medidas adicionales de planificación, coordinación y control debido a las características particulares del entorno operacional o del tipo de misión.
@@ -2112,6 +2112,42 @@ Operación suspendida.
 
 \\ \hline
 
+Falla de la estación de control (radio, control DJI o gafas) &
+Si hay control, aterrizar de inmediato; si no, dejar actuar el failsafe o el RTH, avisar al observador y proteger a terceros. &
+Operación suspendida.
+
+\\ \hline
+
+Falla de un equipo asociado (módulo XBand, GPS, tira LED, gafas) &
+Aterrizar tan pronto como sea seguro; con la tira LED apagada de noche, aterrizar de inmediato. &
+Operación suspendida hasta reparar y verificar el equipo.
+
+\\ \hline
+
+Falla o degradación de GNSS o de funciones de la UA &
+Pasar a control manual, reducir la altura y aterrizar en el punto seguro más cercano. &
+Operación suspendida.
+
+\\ \hline
+
+Falla del sistema de propulsión (motor, controlador o batería) &
+Aterrizaje inmediato en una zona segura, alejado de personas. &
+Operación suspendida.
+
+\\ \hline
+
+Pérdida definitiva del control &
+Alertar a la tripulación, anotar el último punto visto y activar el procedimiento de pérdida definitiva del enlace C2. &
+Elaborar F-013.
+
+\\ \hline
+
+Humo o incendio de batería en la aeronave &
+Aterrizar de inmediato, alejar a las personas y no tocar la batería; usar el extintor y la bolsa ignífuga. &
+Operación suspendida; reportar F-013.
+
+\\ \hline
+
 \end{longtable}
 
 
@@ -2151,6 +2187,18 @@ Operación suspendida.
 Interferencia operacional &
 Alejar la aeronave y reevaluar el escenario operacional. &
 Continuar únicamente si desaparece la condición de riesgo.
+
+\\ \hline
+
+Presencia de aves o fauna &
+Alejar la aeronave de los animales, ganar altura si es seguro y, de ser necesario, aterrizar. &
+Reanudar cuando la fauna se haya alejado.
+
+\\ \hline
+
+Extralimitación de geocercas o de los límites de altura y distancia &
+Regresar de inmediato al área autorizada o aterrizar; no ingresar a zonas restringidas. &
+Reevaluar el F-009 antes de continuar.
 
 \\ \hline
 
@@ -2201,6 +2249,12 @@ Cancelar la misión.
 
 \\ \hline
 
+Índice Kp alto o interferencia electromagnética fuerte &
+Pasar a control manual si es necesario, reducir la distancia y aterrizar si la señal se degrada. &
+Cancelar la misión si no mejora la señal.
+
+\\ \hline
+
 \end{longtable}
 
 \subsection{Emergencias Médicas}
@@ -2247,6 +2301,15 @@ Operación suspendida hasta garantizar condiciones seguras.
 
 
 
+\subsection{Criterios de decisión en emergencia}
+
+\begin{itemize}
+\item \textbf{Cuándo se activa el RTH:} ante pérdida del enlace C2, batería crítica, degradación de GNSS con control normal, o cuando el piloto decide regresar y el camino de retorno está libre.
+\item \textbf{Cuándo se toma el control manual:} si el RTH no es seguro (obstáculos en el trayecto, falla del GNSS, riesgo para terceros) o si la aeronave se comporta de forma anormal con enlace disponible. El Pavo20 Pro vuela en modo manual (acro) y su rescate por GPS solo se usa ante la pérdida del enlace.
+\item \textbf{Zonas de aterrizaje de emergencia:} el dronpuerto, el sitio alterno definido en el F-009 o la zona abierta más cercana, libre de personas y obstáculos. Se definen antes de cada operación.
+\item \textbf{Evacuación médica y orden público:} el piloto llama a la línea de emergencias 123, informa el lugar exacto y la hora, y mantiene a la tripulación junto al afectado. Ante un evento de orden público, se suspende la operación y se retira el personal del área.
+\end{itemize}
+
 \subsection{Accidentes}
 
 Cuando ocurra un accidente durante una operación UAS, la tripulación deberá:
@@ -2263,7 +2326,7 @@ Cuando ocurra un accidente durante una operación UAS, la tripulación deberá:
 
 \item Informar al Gerente SMS.
 
-\item Preservar la evidencia disponible.
+\item Preservar la evidencia disponible: no apagar ni borrar las tarjetas, registros de vuelo (logs) ni grabaciones de audio y video, y resguardar la aeronave y las baterías.
 
 \item Elaborar el reporte correspondiente conforme al SMS.
 
@@ -2438,6 +2501,10 @@ PO-006 Finalización de la Operación.
 \end{tcolorbox}
 
 
+
+\subsection{Libro de vuelo de la aeronave y bitácora del piloto}
+
+Al finalizar cada operación, el piloto remoto diligencia el mismo día el Libro de Vuelo de la aeronave (F-001): fecha, orden de vuelo, tripulación, tiempo de vuelo, ciclos de batería y novedades. También actualiza su Registro de Tiempos de Vuelo (F-014), con los minutos de día y de noche y el inicio y fin del servicio. El Jefe de Pilotos revisa y firma ambos formatos cada mes y los conserva en el Sistema de Gestión Documental, con control de acceso y copia de respaldo. La corrección de un error se hace con una nueva anotación firmada; no se borra el registro original.
 
 \section{Manejo y Transporte de Mercancías Peligrosas (Baterías UAS)}
 
