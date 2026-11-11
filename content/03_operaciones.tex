@@ -152,6 +152,10 @@ Salvo autorización expresa de la Aerocivil, Skyfilms no realizará las siguient
 
 \item Operaciones militares o de vigilancia armada.
 
+\item Captura de imágenes o datos con fines de vigilancia y seguridad privada, o para medios de comunicación masiva.
+
+\item Actividades misionales de entidades públicas, apoyo en calamidad pública y operaciones de instrucción.
+
 \item Cualquier otra operación que exceda las limitaciones establecidas en las OpSpecs.
 
 \end{itemize}
@@ -1158,7 +1162,7 @@ Una operación deberá cancelarse, suspenderse o reprogramarse cuando se present
 
 \begin{itemize}
 
-\item Condiciones meteorológicas incompatibles con una operación segura.
+\item Condiciones meteorológicas incompatibles con una operación segura, incluidas las que impidan mantener el contacto visual con la aeronave o volar por debajo de la base de la primera capa de nubes.
 
 \item Restricciones del espacio aéreo que impidan la realización de la misión.
 
@@ -1178,7 +1182,7 @@ Una operación deberá cancelarse, suspenderse o reprogramarse cuando se present
 
 \textbf{Procedimiento relacionado}
 
-SOP-001 Planificación de la Operación.
+Planificación de la operación (esta sección, 3.9) y Evaluación del riesgo operacional (3.10).
 
 \vspace{0.2cm}
 
@@ -1210,7 +1214,8 @@ La planificación permitirá identificar las condiciones del escenario operacion
 \begin{enumerate}
 \item \textbf{Solicitud:} el cliente solicita el servicio y el Jefe de Pilotos diligencia el F-008 con el tipo de producción, lugar, fecha y horario.
 \item \textbf{Viabilidad:} el Jefe de Pilotos verifica que la misión esté dentro del alcance autorizado (VLOS, aeronaves declaradas, vuelo nocturno o urbano), que el espacio aéreo y los NOTAM lo permitan y que haya piloto y observador con certificado y entrenamiento vigentes.
-\item \textbf{Autorización de vuelo:} cuando el vuelo requiera autorización de la Aerocivil, el Jefe de Pilotos la solicita con el formato y la guía vigentes, con la antelación que exija la Aerocivil, y la conserva con el F-008.
+\item \textbf{Autorización de vuelo:} toda operación en categoría específica requiere una autorización de vuelo UAS expedida por la Aerocivil (RAC 100.205 y 100.805). El Jefe de Pilotos la solicita en la Plataforma UAS Colombia, siguiendo la circular informativa MAUT-5.0-22-012 vigente, y la conserva con el F-008. Sin autorización vigente la operación no se realiza y la aeronave no se prepara para ese vuelo.
+\item \textbf{Coordinación con el ATS:} si el lugar queda en un aeródromo, en sus inmediaciones o en un espacio aéreo controlado, el Jefe de Pilotos hace la coordinación que pida la Aerocivil y espera la respuesta o el NOTAM que indique la dependencia ATS antes de programar. Cuando la autorización o la dependencia ATS exijan comunicación por radio, el piloto remoto lleva un radio VHF portátil de banda aérea y sigue las instrucciones del ATS; sin ese radio, la misión no se programa. Si el lugar queda entre 6 y 9 km medidos desde el punto de referencia del aeródromo (ARP), la coordinación con el ATS no exige un CDM siempre que la aeronave vuele por debajo de 200 ft (61 m) AGL con respecto al umbral más bajo (RAC 100.400 c).
 \item \textbf{Programación:} el Jefe de Pilotos asigna tripulación y aeronave, abre el F-009 y fija el briefing (F-010). Si el cliente cambia la misión, se repite la verificación.
 \item \textbf{Cancelación:} si no se cumple algún requisito, el Jefe de Pilotos no programa la misión y lo informa al cliente.
 \end{enumerate}
@@ -1364,6 +1369,8 @@ Como parte de la planificación deberán verificarse, como mínimo:
 \item Riesgos identificados.
 
 \item Permisos y autorizaciones.
+
+\item Documentos que el piloto remoto lleva durante la operación y que están disponibles para una inspección de la Aerocivil (RAC 100.225 c): certificado de registro de la aeronave, póliza de responsabilidad civil extracontractual, certificado de idoneidad de cada piloto, copia del certificado de explotador (CDO-U), autorización de vuelo y libro de vuelo y mantenimiento de la aeronave.
 
 \item Equipos de comunicación.
 
@@ -1768,6 +1775,8 @@ Antes del despegue, el Piloto Remoto verificará que:
 
 \item El área de operación permanezca controlada.
 
+\item El piloto remoto opere desde un punto fijo, de modo que no deba desplazarse durante el vuelo y el control de la aeronave no se comparta con otra persona (RAC 100.210 n).
+
 \item El Observador Visual se encuentre en posición.
 
 \item La aeronave disponga de suficiente autonomía para cumplir la misión.
@@ -1792,6 +1801,8 @@ Durante la ejecución de la misión, el Piloto Remoto deberá:
 \item Mantener comunicación con el Observador Visual cuando aplique.
 
 \item Monitorear continuamente el entorno operacional.
+
+\item Dar prelación a la aviación tripulada: ceder el paso y mantener la aeronave alejada de toda aeronave tripulada, en tierra o en vuelo, y suspender la operación en cuanto aparezca una (RAC 100.205 y 100.210 l).
 
 \item Interrumpir inmediatamente la operación cuando se identifique una condición insegura.
 
@@ -1906,7 +1917,7 @@ Dado que el Piloto Remoto utiliza un dispositivo de visión en primera persona (
     \item \textbf{Contacto Visual Directo (VLOS):} El Observador Visual será el responsable de mantener el contacto visual directo y constante con la aeronave (UA) y su entorno en todo momento, sin el uso de ayudas ópticas o electrónicas (diferentes a lentes correctivos).
     \item \textbf{Comunicación Efectiva:} Debe existir una comunicación verbal clara, constante y en tiempo real entre el Piloto Remoto y el Observador Visual para alertar sobre obstáculos, tráfico aéreo tripulado o incursiones de terceros.
     \item \textbf{Límites del Área de Operación:} El área de vuelo debe ser evaluada previamente para garantizar que la aeronave nunca exceda el radio visual del Observador (límite máximo legal de 750 metros horizontales).
-\end{itemize}<
+\end{itemize}
 
 
 \subsection{Operaciones en zonas urbanas}
@@ -1924,6 +1935,22 @@ Antes de operar en entornos urbanos deberá verificarse:
 \item Disponibilidad de zonas de aterrizaje de emergencia.
 
 \item Control del perímetro operacional.
+
+\end{itemize}
+
+En zona urbana se aplican, además, los límites del RAC 100.220 (b), sin excepción:
+
+\begin{itemize}
+
+\item Solo se vuela en VLOS, con el observador visual junto al piloto remoto.
+
+\item La aeronave no se acerca a menos de 30 m, medidos horizontalmente, de una persona ajena a la operación.
+
+\item La aeronave no se acerca a menos de 30 m, horizontales o verticales, de ninguna edificación.
+
+\item Si no se pueden mantener esas distancias, la operación no se realiza o se cambia la zona de vuelo; el piloto remoto lo registra en el F-009 y el F-011.
+
+\item Skyfilms no hace operaciones de apoyo en calamidad pública, desastre o emergencia, que son las únicas con excepción a estas distancias.
 
 \end{itemize}
 
@@ -2520,6 +2547,8 @@ Terminada la operación, el material audiovisual deberá descargarse, verificars
 
 La descarga del material deberá realizarse antes de reutilizar las tarjetas de memoria empleadas durante la misión.
 
+Skyfilms respeta el derecho a la intimidad (Constitución Política, art. 15) y la protección de datos personales (Ley 1581 de 2012). Antes de la misión, el Jefe de Pilotos informa al cliente que no se capta ni se entrega material que muestre el interior de viviendas o de lugares privados sin autorización de las personas afectadas, y el piloto remoto detiene la captura si detecta que se está invadiendo la intimidad de alguien. El material con personas identificables solo se entrega al cliente que lo contrató.
+
 
 \subsection{Debriefing operacional}
 
@@ -2588,7 +2617,7 @@ Procedimiento descrito en esta sección del Manual de Operaciones (Finalización
 
 \subsection{Libro de vuelo de la aeronave y bitácora del piloto}
 
-Al finalizar cada operación, el piloto remoto diligencia el mismo día el Libro de Vuelo de la aeronave (F-001): fecha, orden de vuelo, tripulación, tiempo de vuelo, ciclos de batería y novedades. También actualiza su Registro de Tiempos de Vuelo (F-014), con los minutos de día y de noche y el inicio y fin del servicio. El Jefe de Pilotos revisa y firma ambos formatos cada mes y los conserva en el Sistema de Gestión Documental, con control de acceso y copia de respaldo. La corrección de un error se hace con una nueva anotación firmada; no se borra el registro original.
+Al finalizar cada operación, el piloto remoto diligencia el mismo día el Libro de Vuelo de la aeronave (F-001): fecha, orden de vuelo, tripulación, tiempo de vuelo, ciclos de batería y novedades. También actualiza su Registro de Tiempos de Vuelo (F-014), con los minutos de día y de noche y el inicio y fin del servicio. El Jefe de Pilotos revisa y firma ambos formatos cada mes y los conserva en el Sistema de Gestión Documental, con control de acceso y copia de respaldo. La corrección de un error se hace con una nueva anotación firmada; no se borra el registro original. Al menos una vez al año, el Jefe de Pilotos certifica por escrito a cada piloto remoto el tiempo de vuelo acumulado (día y noche), con base en el F-014 y el F-001, y entrega una copia al piloto (RAC 100.510 a-5).
 
 \section{Manejo y Transporte de Mercancías Peligrosas (Baterías UAS)}
 
