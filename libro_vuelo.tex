@@ -1,0 +1,58 @@
+% ================== F-MO-LV-01 — LIBRO DE VUELO (UAS) ==================
+
+
+% ------------------ Encabezado con logo ------------------
+\clearpage
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\includegraphics[height=1.1cm]{Imagenes/LOGO.png}} 
+\rhead{\small \textbf{LIBRO DE VUELO UAS — SKYFILMS}}
+\cfoot{\thepage}
+
+
+
+% ------------------ Título del formato -------------------
+\begin{center}
+{\Large \textbf{F-MO-LV-01 \; Libro de Vuelo (UAS)}}\\[0.25em]
+{\small \textit{Registro oficial de la operación por aeronave}}
+\end{center}
+\vspace{0.3em}
+\noindent\textit{Instrucciones:} Diligenciar dentro de las 2 horas posteriores al vuelo. Escritura legible. Un registro por salida.
+
+% Para anchos de columna cómodos
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% Una caja de múltiples líneas para observaciones:
+\newcommand{\FieldLine}{\rule{0.98\linewidth}{0.6pt}}
+\newcommand{\BigBox}[1]{%
+  \par\vspace{0.1em}\noindent
+  \fbox{%
+    \parbox[t][#1][t]{0.98\linewidth}{\vspace{0.4em}}
+  }
+  \vspace{0.4em}
+}
+
+% ------------------ Formulario (un registro) --------------
+\vspace{0.2em}
+\noindent
+\begin{tabularx}{\textwidth}{@{} L{0.36\textwidth} X @{}}
+\toprule
+\textbf{1. Fecha de la operación} & \FieldLine \\[0.6em]
+\textbf{2. Identificación de la aeronave (RUAS)} & \FieldLine \\[0.6em]
+\textbf{3. Nombre del piloto y observador} & \FieldLine \\[0.6em]
+\textbf{4. Lugar de la operación (coordenadas o dirección)} & \FieldLine \\[0.6em]
+\textbf{5. Tipo de misión realizada} & \FieldLine \\[0.6em]
+\textbf{6. Tiempo total de vuelo} & \FieldLine \\[0.6em]
+\textbf{7. Número de ciclos de batería utilizados} & \FieldLine \\[0.6em]
+\textbf{8. Observaciones relevantes (fallas, eventos, condiciones especiales)}\\[0.3em]
+\textbf{9. Firma del piloto responsable} & \hfill \rule{0.80\linewidth}{0.6pt} \\[-0.2em]
+& \hfill \small (Nombre legible y firma) \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.8em}
+{\footnotesize
+\noindent \textbf{Control de formato (uso interno):} Código: F-MO-LV-01 \quad Versión: 01 \quad Vigencia: \rule{2cm}{0.4pt} \quad Página: \thepage/\pageref{LastPage}
+}

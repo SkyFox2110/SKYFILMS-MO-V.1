@@ -1,0 +1,325 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% SKYFILMS DOCUMENT DESIGN SYSTEM
+%
+% Archivo : styles.tex
+%
+% Descripción:
+% Sistema gráfico institucional para toda la documentación de Skyfilms S.A.S.
+%
+% Aplica para:
+%
+% • Manual de Operaciones (MO)
+% • Manual SMS
+% • Manual de Control de Mantenimiento (MCM)
+% • Procedimientos Operacionales (PO)
+% • Procedimientos de Mantenimiento (PM)
+% • Procedimientos SMS (PS)
+% • Fichas Técnicas de Aeronaves (FTA)
+% • Manual Administrativo
+% • Academia Skyfilms
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COLORES CORPORATIVOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{xcolor}
+
+% Azul institucional
+
+\definecolor{SkyBlue}{HTML}{1F4E79}
+
+% Gris oscuro
+
+\definecolor{SkyDark}{HTML}{404040}
+
+% Gris claro
+
+\definecolor{SkyGray}{HTML}{F3F3F3}
+
+% Gris medio
+
+\definecolor{SkyBorder}{HTML}{D5D5D5}
+
+% Verde
+
+\definecolor{SkyGreen}{HTML}{2E7D32}
+
+% Amarillo
+
+\definecolor{SkyYellow}{HTML}{FFF8E1}
+
+% Rojo
+
+\definecolor{SkyRed}{HTML}{C62828}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TIPOGRAFÍA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{lmodern}
+
+\usepackage{microtype}
+
+\renewcommand{\familydefault}{\rmdefault}
+
+\setlength{\parindent}{0pt}
+
+\setlength{\parskip}{0.6em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ESPACIADOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\onehalfspacing
+
+\setcounter{secnumdepth}{3}
+
+\setcounter{tocdepth}{3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CAPÍTULOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\chapter}[display]
+{\bfseries\Huge\color{SkyDark}}
+{\filright\Large CAPÍTULO \thechapter}
+{1ex}
+{\titlerule[1pt]\vspace{1ex}\filcenter}
+[\vspace{1ex}\titlerule]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SECCIONES Y SUBSECCIONES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\section}
+{\Large\bfseries\color{SkyBlue}}
+{\thesection}
+{0.8em}
+{}
+
+\titlespacing*{\section}
+{0pt}
+{1.5em}
+{0.8em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\subsection}
+{\large\bfseries\color{SkyDark}}
+{\thesubsection}
+{0.8em}
+{}
+
+\titlespacing*{\subsection}
+{0pt}
+{1.2em}
+{0.5em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\subsubsection}
+{\normalsize\bfseries\color{SkyDark}}
+{\thesubsubsection}
+{0.8em}
+{}
+
+\titlespacing*{\subsubsection}
+{0pt}
+{0.8em}
+{0.3em}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIGURAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{caption}
+
+\captionsetup{
+
+font=small,
+
+labelfont={bf,color=SkyBlue},
+
+textfont=it,
+
+justification=centering,
+
+singlelinecheck=false
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TABLAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{booktabs}
+
+\renewcommand{\arraystretch}{1.5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\SkyHeader}{
+\rowcolor{SkyGray}
+\color{SkyDark}\bfseries
+}
+
+\newcommand{\SkyRule}{
+\specialrule{1pt}{0pt}{0pt}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LISTAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlist[itemize]{
+
+leftmargin=1.2cm,
+
+itemsep=0.4em,
+
+topsep=0.4em
+
+}
+
+\setlist[enumerate]{
+
+leftmargin=1.2cm,
+
+itemsep=0.4em,
+
+topsep=0.4em
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{documentos}{
+
+colback=SkyGray,
+
+colframe=SkyBlue,
+
+title=Documentos Asociados,
+
+fonttitle=\bfseries,
+
+arc=2mm,
+
+boxrule=0.7pt
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{nota}{
+
+colback=white,
+
+colframe=SkyBorder,
+
+title=Nota Operacional,
+
+fonttitle=\bfseries,
+
+arc=2mm,
+
+boxrule=0.5pt
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{advertencia}{
+
+colback=SkyYellow,
+
+colframe=SkyRed,
+
+title=Advertencia,
+
+fonttitle=\bfseries,
+
+arc=2mm,
+
+boxrule=0.7pt
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcolorbox{practica}{
+
+colback=green!5,
+
+colframe=SkyGreen,
+
+title=Buena Práctica,
+
+fonttitle=\bfseries,
+
+arc=2mm,
+
+boxrule=0.7pt
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENTOS ASOCIADOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\DocumentosAsociados}[4]{
+
+\begin{documentos}
+
+\textbf{Manuales}
+
+#1
+
+\vspace{0.3cm}
+
+\textbf{Procedimientos}
+
+#2
+
+\vspace{0.3cm}
+
+\textbf{Formatos}
+
+#3
+
+\vspace{0.3cm}
+
+\textbf{Registros}
+
+#4
+
+\end{documentos}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% REFERENCIAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Referencia}[1]{
+
+\vspace{0.3cm}
+
+{\footnotesize
+\textbf{Referencia:}
+
+#1
+}
+}

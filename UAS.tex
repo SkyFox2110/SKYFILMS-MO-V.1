@@ -1,0 +1,113 @@
+
+\subsection{Especificaciones Técnicas de las Aeronaves No Tripuladas}
+
+\subsection*{DJI Mavic 4 Pro}
+\begin{tabular}{|p{6cm}|p{8cm}|}
+\hline
+\textbf{Parámetro} & \textbf{Especificación} \\ \hline
+Marca / Modelo & DJI Mavic 4 Pro \\ \hline
+Número de Serie & [Por registrar] \\ \hline
+Registro RUAS & [Por asignar Aerocivil] \\ \hline
+Clasificación & Multirrotor VTOL \\ \hline
+MTOW & 1.6 kg  \\ \hline
+Dimensiones físicas & 347 × 283 × 107 mm (plegado) \\ \hline
+Tipo de despegue / aterrizaje & Vertical automático/manual \\ \hline
+Velocidad máx. ascenso & 8 m/s \\ \hline
+Velocidad máx. descenso & 6 m/s \\ \hline
+Velocidad máx. vuelo & 21 m/s (75 km/h) \\ \hline
+Techo máx. operación & 6000 m sobre el nivel del mar \\ \hline
+Autonomía & 34–40 min (según batería y condiciones) \\ \hline
+Alcance máx. & 20 km  \\ \hline
+Viento máx. resistido & 12 m/s \\ \hline
+Rango temperatura & –10 °C a 40 °C \\ \hline
+GNSS soportados & GPS + Galileo + BeiDou + GLONASS \\ \hline
+Protección IP & No aplica \\ \hline
+Frecuencias Enlace C2 & 2.4 GHz, 5.1 GHz, 5.8 GHz \\ \hline
+Potencia Tx & Ver especificaciones FCC/CE (hasta 33 dBm) \\ \hline
+Latencia enlace C2 & 120–130 ms \\ \hline
+Encriptación enlace C2 & AES 256-bit \\ \hline
+Sistemas de detección & Omnidireccional, APAS 5.0 \\ \hline
+Carga útil & Cámara integrada 4/3 CMOS Hasselblad \\ \hline
+Estación en tierra & DJI RC Pro / DJI RC-N2 \\ \hline
+\end{tabular}
+
+
+
+
+\subsection*{iFlight Nazgul Evoque F5 6S}
+\begin{tabular}{|p{6cm}|p{8cm}|}
+\hline
+\textbf{Parámetro} & \textbf{Especificación} \\ \hline
+Marca / Modelo & iFlight Nazgul Evoque F5 6S \\ \hline
+Número de Serie & [Por registrar] \\ \hline
+Registro RUAS & [Por asignar Aerocivil] \\ \hline
+Clasificación & Multirrotor FPV VTOL \\ \hline
+MTOW & 900 gr \\ \hline
+Dimensiones (L × W × H) &  230 x 207 x 54mm \\ \hline
+Tipo de despegue / aterrizaje & Vertical manual (pilotaje FPV) \\ \hline
+Velocidad máx. ascenso & ~15 m/s (dependiendo configuración) \\ \hline
+Velocidad máx. descenso & ~10 m/s \\ \hline
+Velocidad máx. vuelo & > 160 km/h (modo acro) \\ \hline
+Techo máx. operación & 5000 m (limitado por densidad de aire y motores) \\ \hline
+Autonomía & 5–8 min (dependiendo batería y perfil de vuelo) \\ \hline
+Alcance máx. & 5–10 km (con ELRS, condiciones ideales) \\ \hline
+Viento máx. resistido & 10–12 m/s \\ \hline
+Rango temperatura & –10 °C a 40 °C (operación estándar) \\ \hline
+GNSS soportados & GPS+SBAS+Galileo+QZSS+Glonass \\ \hline
+Protección IP & No aplica \\ \hline
+Frecuencias Enlace C2 & 2.4 GHz / 915 MHz (ELRS Crossband) \\ \hline
+Potencia Tx & Hasta 1 W por banda \\ \hline
+Latencia enlace C2 & < 20 ms  \\ \hline
+Encriptación enlace C2 & Soportada por protocolo ELRS (LoRa) \\ \hline
+Sistemas de detección & No dispone de sensores de evitación \\ \hline
+Carga útil & GoPro / cámaras de acción (máx. 150 g) \\ \hline
+Estación en tierra & RadioMaster TX16S + Módulo ELRS Nomad \\ \hline
+\end{tabular}
+
+
+\subsection{Sistema de Energía y Propulsión}
+
+\textbf{1. UAS Tipo DJI (Mavic 4 Pro)}
+
+El Mavic 4 Pro opera mediante un sistema de propulsión eléctrica alimentado por baterías inteligentes de litio de alta densidad energética, equivalentes funcionalmente a un sistema de combustión en aeronaves tripuladas.
+
+Estas baterías incorporan un sistema de gestión electrónica (BMS – Battery Management System) que controla:
+
+\begin{itemize}
+    \item Voltaje nominal y distribución interna de energía.
+    \item Protección contra sobrecarga y sobredescarga.
+    \item Control de temperatura.
+    \item Balanceo automático de celdas.
+    \item Monitoreo del estado de carga en tiempo real.
+\end{itemize}
+
+La energía suministrada alimenta el sistema de propulsión (motores brushless y ESC integrados), controlador de vuelo, sistemas GNSS, enlace C2, transmisión de video y demás sistemas electrónicos generales de la aeronave. \\
+
+\textbf{2. UAS Tipo FPV}
+
+Las aeronaves FPV operadas por Skyfilms S.A.S. utilizan baterías recargables tipo Litio-Polímero (LiPo) o Litio-Ion (Li-ion), en configuraciones variables de número de celdas (S), según el diseño específico del UAS y el perfil de misión.
+
+Las configuraciones pueden incluir sistemas de 1S, 2S, 3S, 4S, 6S, 8S, 12S u otras equivalentes, con capacidades que varían típicamente entre 250 mAh y 4500 mAh o superiores, dependiendo del tipo de aeronave y requerimientos de carga útil.
+
+El sistema energético está compuesto por:
+
+\begin{itemize}
+    \item Batería recargable de alta tasa de descarga.
+    \item Sistema de distribución eléctrica (Power Distribution Board o controlador AIO).
+    \item Controladores electrónicos de velocidad (ESC).
+    \item Motores eléctricos brushless.
+\end{itemize}
+
+La batería energiza simultáneamente el sistema de propulsión y los sistemas generales de la aeronave, incluyendo controlador de vuelo, receptor del enlace C2, sistemas de transmisión de video y equipos tecnológicos asociados (ETA).
+
+Las limitaciones operacionales asociadas al sistema energético incluyen:
+
+\begin{itemize}
+    \item Tiempo máximo de vuelo determinado por capacidad nominal y consumo energético.
+    \item Límites mínimos de voltaje por celda definidos por el fabricante.
+    \item Restricciones operativas bajo temperaturas extremas.
+\end{itemize}
+
+El monitoreo del estado energético durante el vuelo es responsabilidad directa del Piloto UAS, quien deberá finalizar la operación antes de alcanzar niveles críticos de descarga.
+
+El almacenamiento, transporte y manipulación de las baterías se realiza conforme al Manual de Mercancías Peligrosas (MMP) de la organización.

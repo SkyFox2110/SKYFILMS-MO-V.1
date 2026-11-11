@@ -1,0 +1,24 @@
+
+% === Fragmento para \input{certificado_fragment.tex} ===
+\clearpage
+% Si "Generalidades" es \chapter, usa \section* + TOC; si es \section, usa \subsection* y cambia 'section' por 'subsection' en addcontentsline.
+\section*{Copia del Certificado de Operación de Skyfilms como Explotador UAS}
+\phantomsection
+\addcontentsline{toc}{section}{Copia del Certificado de Operación de Skyfilms como Explotador UAS}
+
+% Mostrar número en esta página:
+\thispagestyle{plain}
+
+% Marca de agua (texto + logo)
+\begin{tikzpicture}[remember picture,overlay]
+  \node[text opacity=0.20] at (current page.center) {%
+    \parbox{14cm}{\centering \small \textbf{ESPACIO DEJADO INTENCIONALMENTE EN BLANCO}\\[0.25cm]
+    \small PARA INSERTAR COPIA DEL CERTIFICADO DE OPERACIÓN DE SKYFILMS\\[0.25cm]
+    \small COMO EXPLOTADOR UAS}%
+  };
+  \node[opacity=0.15, yshift=2cm] at (current page.center) {%
+    \includegraphics[width=0.45\linewidth]{Imagenes/LOGO.png}%
+  };
+\end{tikzpicture}
+
+\clearpage

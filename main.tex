@@ -1,0 +1,281 @@
+\documentclass[12pt,openany]{report}
+
+% ==== Configuración Geométrica Estricta e Idéntica al MCM ====
+\usepackage{geometry}
+\geometry{
+  letterpaper,
+  top=4.7cm,         % Espacio libre calculado para el recuadro sin pisar el texto
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm,
+  headheight=80pt,   % Altura de reserva requerida para la cuadrícula del encabezado
+  headsep=1.2cm      % Distancia constante entre el encabezado y el inicio del texto
+}
+
+
+
+% ==== Paquetes necesarios ====
+\usepackage[table]{xcolor} % Única llamada con opción table para evitar Option Clash
+\usepackage{tikz}
+\usepackage{amssymb} % For \square symbol
+
+\usetikzlibrary{
+arrows.meta,
+positioning,
+calc,
+fit,
+matrix,
+shapes,
+shapes.geometric,
+shapes.multipart,
+backgrounds
+}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usepackage{afterpage}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\newcounter{pagebeforecert}
+\usepackage{tabularx}      % Esencial para expandir el recuadro al ancho de página
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}      % Requerido para crear la cuadrícula perfecta de aviación
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{ragged2e}      % Paquete crítico para forzar la justificación exacta del texto
+
+\usepackage{fontawesome5}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit, calc}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-nodecimaldot]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}     % Optimiza el espaciado para una justificación bilateral impecable
+
+\usepackage{setspace}
+\onehalfspacing
+
+
+
+
+\usetikzlibrary{matrix}
+
+\usetikzlibrary{
+positioning,
+arrows.meta,
+fit,
+calc,
+shapes.geometric
+}
+
+% =========================================================================
+% == CONTROL DE MARGENES DE PARRAFO HOMOGENEOS (SIN SANGRÍAS EN TODO EL MANUAL) ==
+% =========================================================================
+\setlength{\parindent}{0pt} % Forzado estricto: Ningún párrafo tendrá espacio al iniciar
+\setlength{\parskip}{0.6em} % Separación vertical calibrada entre párrafos para lectura técnica
+
+% ==== Control Homogéneo de Espaciados en Inicios de Capítulo ====
+\usepackage{titlesec}
+\titleformat{\chapter}{\bfseries\Large}{\thechapter.}{0.6em}{\bfseries\Large}
+\titleformat{\section}{\bfseries\large}{\thesection}{0.6em}{\bfseries\large}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{0.6em}{\bfseries}
+
+% Elimina la caída vertical por defecto de report en inicios de capítulo
+\titlespacing*{\chapter}{0pt}{-25pt}{15pt}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\usetikzlibrary{shapes.geometric, arrows, positioning}
+
+% =========================================================================
+% == ENCABEZADO INSTITUCIONAL MO (ESTANDARIZACIÓN ABSOLUTA CON SMS) ==
+% =========================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancyhead[C]{
+    \renewcommand{\arraystretch}{1.6} % Mismo aire vertical estricto del SMS
+    \begin{tabular}{|m{4cm}|m{7.5cm}|m{4.8cm}|}
+        \hline
+        % Centrado horizontal y vertical perfecto del Logo ajustado al recuadro
+        \multirow{3}{4cm}{\centering \includegraphics[width=3.2cm]{Imagenes/LOGO.png}} & 
+        % Títulos principales alineados con la misma separación vertical del SMS
+        \multirow{3}{7.5cm}{\centering \\[0.2cm]\textbf{MANUAL DE OPERACIONES}\\[0.1cm] \textbf{MO}} & 
+        \textbf{Versión: 1.0} \\
+        \cline{3-3}
+        & & \textbf{Código: MO-SKY-001} \\
+        \cline{3-3}
+        & & \textbf{Fecha de emisión: 23/06/2026} \\
+        \hline
+    \end{tabular}
+}
+\fancyfoot[R]{\thepage}
+
+% Copia exacta con el mismo formato para páginas de inicio de capítulo (Estilo Plain)
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead[C]{
+        \renewcommand{\arraystretch}{1.6}
+        \begin{tabular}{|m{4cm}|m{7.5cm}|m{4.8cm}|}
+            \hline
+            \multirow{3}{4cm}{\centering \includegraphics[width=3.2cm]{Imagenes/LOGO.png}} & 
+            \multirow{3}{7.5cm}{\centering \\[0.2cm]\textbf{MANUAL DE OPERACIONES}\\[0.1cm] \textbf{MO}} & 
+            \textbf{Versión: 1.0} \\
+            \cline{3-3}
+            & & \textbf{Código: MO-SKY-001} \\
+            \cline{3-3}
+            & & \textbf{Fecha de emisión: 23/06/2026} \\
+            \hline
+        \end{tabular}
+    }
+    \fancyfoot[R]{\thepage}
+}
+% =========================================================================
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Manual de Operaciones Skyfilms},
+  pdfauthor={Skyfilms},
+  pdfsubject={RAC 100 - Manual de Operaciones},
+  pdfcreator={LaTeX},
+  pdfproducer={Overleaf}
+}
+\usepackage{float}
+\usepackage{longtable}
+
+% == FORZADO DE JUSTIFICACIÓN BILATERAL EN LISTAS Y MANTENIMIENTO DE MARGEN ==
+\usepackage{enumitem}
+\setlist{before=\justifying}
+
+\usepackage{csquotes}
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\input{acronimos}
+
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{referencias.bib}
+
+\begin{document}
+
+% ---- PÁGINA DE PORTADA (Limpia de encabezados de control) ----
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    {\huge \textbf{Manual de Operaciones}}\\[6pt]
+    {\huge \textbf{(MO)}}\\[6pt]
+    
+    \includegraphics[width=0.6\textwidth]{Imagenes/LOGO.png}\\[14pt]
+    {\large Categoría Específica}\\[12pt]
+    {\large Operación UAS para la Simple Captura de Imágenes o Datos}\\[12pt]
+    \vfill
+    
+    \begin{tabular}{ll}
+        \textbf{Código}: & MO-SKY-001\\
+        \textbf{Versión}: & 1.0\\
+        \textbf{Fecha}: & 21/06/2026\\
+    \end{tabular}
+    \vfill
+\end{titlepage}
+
+\clearpage
+
+% ---- ÍNDICES Y PRELIMINARES ----
+
+
+\chapter*{Control Documental}
+\addcontentsline{toc}{chapter}{Control Documental}
+\input{content/control.doc}
+
+
+\chapter*{Lista de Páginas Efectivas}
+\addcontentsline{toc}{chapter}{Lista de Páginas Efectivas}
+\input{content/paginas_efectivas}
+
+\chapter*{Control de Enmiendas y Revisiones}
+
+\input{content/Registro de Revisiones}
+
+\chapter*{Lista de Distribución}
+
+\input{content/lista_distribucion}
+
+\chapter*{Declaración de Cumplimiento}
+\addcontentsline{toc}{chapter}{Declaración de Cumplimiento}
+\input{content/Declaracion cumplimiento}
+
+\chapter*{Certificado de Operación UAS (CDO-U)}
+\addcontentsline{toc}{chapter}{Certificado de Operación UAS (CDO-U)}
+\input{content/cdo}
+
+\tableofcontents
+\clearpage
+
+% =========================================================================
+% == ACTIVACIÓN DEFINITIVA DE JUSTIFICACIÓN PARA EL CUERPO DEL MANUAL ==
+% =========================================================================
+\justifying
+\tolerance=10000 % Obliga a LaTeX a justificar siempre los márgenes al 100%
+\hbadness=10000  % Silencia las alertas de "cajas malas" (Bad boxes)
+\setlength{\emergencystretch}{3em} % Da elasticidad a las palabras largas para no romper el margen
+
+% Reaseguramos que la regla de sangría cero se mantenga tras el cambio de páginas preliminares
+\setlength{\parindent}{0pt}
+
+% ---- CUERPO DEL MANUAL CON FORMATO VINCULADO SIMÉTRICO ----
+
+
+
+% Capítulo 1: Información General
+
+\chapter{Generalidades}
+\label{chap:generalidades}
+\input{content/01_generalidades}
+\label{fin_cap1} %
+
+% Capítulo 2: Organización y Responsabilidades
+
+\chapter{Organización}
+\label{chap:organizacion}
+\input{content/02_organizacion}
+\label{fin_cap2} %
+
+% Capítulo 3: Operaciones UAS
+
+\chapter{Operaciones UAS}
+\label{chap:operaciones}
+\input{content/03_operaciones}
+\label{fin_cap3} %
+
+% Capítulo 4: Entrenamiento del Personal UAS
+
+\chapter{Personal UAS}
+\label{chap:04_personal}
+\input{content/04_personal}
+\label{fin_cap4} %
+
+% Capítulo 5: Control Documental
+
+\chapter{Control Documental}
+\label{chap:documentos}
+\input{content/05_documentos}
+\label{fin_cap5} %
+% --- Fin de capítulos del MO ---
+
+\appendix 
+\renewcommand{\appendixname}{Anexo}
+
+\include{anexos/Opspecs}
+\label{fin_anexos} %
+
+\glsaddall
+\printglossary[type=\acronymtype,title=Abreviaturas y Acrónimos]
+\printglossary[title=Glosario]
+
+\printbibliography
+\end{document}
+

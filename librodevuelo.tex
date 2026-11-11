@@ -1,0 +1,57 @@
+
+% ========== F-MO-LV-01 — LIBRO DE VUELO (UAS) — SKYFILMS (Versión en TABLA) ==========
+% Archivo para \input{} dentro del MO.
+% PREÁMBULO requerido en el documento principal:
+% \usepackage{graphicx}
+% \usepackage{fancyhdr}
+% \usepackage{tabularx}
+% \usepackage{array}
+% \usepackage{lastpage}   % opcional, para Página x/Total
+% (opcional) \usepackage{xcolor} si quieres cambiar color de líneas
+%
+% LOGO: cambia el nombre si tu archivo es distinto y colócalo junto a este .tex
+\newcommand{\SkyfilmsLogo}{Imagenes/LOGO.png}
+
+% --------- Estilo de encabezado con logo ---------
+\fancypagestyle{skyfilmsform}{%
+  \fancyhf{}
+  \fancyhead[L]{\includegraphics[height=1.1cm]{Imagenes/LOGO.png}}
+  \fancyhead[R]{\small \textbf{LIBRO DE VUELO UAS — SKYFILMS}}
+  \fancyfoot[C]{\thepage/\pageref{LastPage}}
+  \renewcommand{\headrulewidth}{0pt}
+}
+\thispagestyle{skyfilmsform}
+
+% ------------------ Título -------------------
+\begin{center}
+{\Large \textbf{F-MO-LV-01 \; Libro de Vuelo (UAS)}}\\[0.25em]
+{\small \textit{Registro oficial de la operación por aeronave}}
+\end{center}
+\vspace{0.4em}
+\noindent\textit{Instrucciones:} Diligenciar dentro de las 2 horas posteriores al vuelo. Escritura legible. Un registro por salida.
+
+% ------------------ Tabla del formulario -------------------
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{6pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{|p{0.38\textwidth}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{1. Fecha de la operación} & \\ \hline
+\textbf{2. Identificación de la aeronave (RUAS)} & \\ \hline
+\textbf{3. Nombre del piloto y observador} & \\ \hline
+\textbf{4. Lugar de la operación (coordenadas o dirección)} & \\ \hline
+\textbf{5. Tipo de misión realizada} & \\ \hline
+\textbf{6. Tiempo total de vuelo} & \\ \hline
+\textbf{7. Número de ciclos de batería utilizados} & \\ \hline
+\multicolumn{2}{|l|}{\textbf{8. Observaciones relevantes (fallas, eventos, condiciones especiales)}} \\ \hline
+\multicolumn{2}{|p{\dimexpr\linewidth-2\tabcolsep-2\arrayrulewidth}|}{\vspace{5.5cm}} \\ \hline
+\textbf{9. Firma del piloto responsable} & \parbox[t]{\linewidth}{\vspace{1.2em}\rule{0.82\linewidth}{0.6pt}\\[-0.2em]\small (Nombre legible y firma)} \\ \hline
+\end{tabularx}
+
+\vspace{0.8em}
+{\footnotesize
+\noindent \textbf{Control de formato (uso interno):} Código: F-MO-LV-01 \quad Versión: 01 \quad Vigencia: \rule{2cm}{0.4pt} \quad Página: \thepage/\pageref{LastPage}
+}
+
+
